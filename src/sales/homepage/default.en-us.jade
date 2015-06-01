@@ -12,11 +12,12 @@ block marquee-tile-2
   .default-content(style="display:none;min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; height: 100%; width: 100%; position: relative;")
     include ../../tmsv2/content/homepage/gtld/banner-medium.jade
   script.
-    var tmsDefault = document.querySelectorAll("#marquee-tile-2 .tms-default");
-    if (tmsDefault.length) {
-      document.querySelectorAll("#marquee-tile-2 [data-tms-template]")[0].style.display = "none";
-      document.querySelectorAll(".default-content")[0].style.display = "block";
-    }
+    $(document).ready(function(){
+      if ($('#marquee-tile-2 .tms-default').length) {
+        $('#marquee-tile-2 [data-tms-template]').hide();
+        $('.default-content').show();
+      }
+    });
 block banner-small-1
   include ../../tmsv2/content/homepage/o365-biz-email/banner-small.jade
 block banner-small-2
@@ -25,15 +26,18 @@ block banner-small-3
   include ../../tmsv2/content/homepage/gdpro/banner-small.jade
 block banner-small-4
   include ../../tmsv2/content/homepage/gem/banner-small.jade
-append endOfPageScripts
-  script.
-    ux.eldorado.ready(function(){
-      var url=window.location.hostname.substring(window.location.hostname.indexOf('.')+1);
-      ux.util.cookie.set("fb_tmsclick",null,-1,"/;domain="+url);
-      $("div[data-tms-trackingid]").on("click", function(e) {
-        try {
-          ux.util.cookie.set("fb_tmsclick",$(this).data("tms-trackingid"),false,"/;domain="+url)
-        } catch(t){}
-        return true
-      });
-    });
+block prepend sections
+  |  
+  |  ##if(appSettingEnabled(Danica_Win_Daytona))
+  include ./sections/_danica_wins_daytona.jade
+  |  
+  |  ##elseif(appSettingEnabled(Danica_WIN_FIRST_RACE))
+  include ./sections/_danica_wins_first_race.jade
+  |  
+  |  ##elseif(appSettingEnabled(Danica_Win_Additional_Race))
+  include ./sections/_danica_wins_additional_race.jade
+  |  
+  |  ##elseif(appSettingEnabled(Danica_Win_2nd_Pole))
+  include ./sections/_danica_wins_2nd_pole.jade
+  |  
+  |  ##endif

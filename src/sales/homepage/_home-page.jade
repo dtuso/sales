@@ -4,47 +4,6 @@ include ../shared/_two-up-compare.jade
 include ../shared/_full-width-video.jade
 include ../shared/_helpers.jade
 
-mixin lazyImg2(src,classes,altText)
-  img.lazyload(
-    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-    class="#{classes}"
-    data-src!="#{src}"
-    alt=(altText ? altText : "")
-    )
-
-mixin renderTwoUpCompare2(twoUpOptions)
-  - populatedColumns = 0
-  - twoUpOptions = twoUpOptions || {};
-  - twoUpOptions.title = twoUpOptions.title || "";
-  - twoUpOptions.twoUpCompareId = twoUpOptions.twoUpCompareId || "";
-  - twoUpOptions.titleBackgroundColor = twoUpOptions.titleBackgroundColor || "";
-  - twoUpOptions.titleWhiteText = twoUpOptions.titleWhiteText || "";
-  - twoUpOptions.icode = twoUpOptions.icode || "";
-  - twoUpOptions.style = twoUpOptions.style || "";
-  - twoUpOptions.backgroundColor = twoUpOptions.backgroundColor || "";
-  - twoUpOptions.backgroundImage = twoUpOptions.backgroundImage || "";
-  - twoUpOptions.includeStyles = twoUpOptions.includeStyles
-
-  if typeof(twoUpOptions.includeStyles) == 'undefined'
-    style
-      include:css ../shared/_two-up-compare/two-up-compare-styles.css
-    style.
-      .hp-two-up-compare-img {background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/website_promo.jpg); }
-
-  div(id="#{twoUpOptions.twoUpCompareId ? twoUpOptions.twoUpCompareId : ''}" class = "two-up-title-wrap #{twoUpOptions.titleBackgroundColor}")
-    if (twoUpOptions.title)
-      div(class="#{twoUpOptions.whiteText ? 'white-text' : ''}")
-        .container
-          .row
-            .col-sm-12
-              h2.h0.text-center.two-up-title !{twoUpOptions.title}
-    div(class="two-up-wrap-compare #{twoUpOptions.backgroundColor} lazyload", 
-        style!= "#{twoUpOptions.style ? twoUpOptions.style : ''};", 
-        data-src!=("#{twoUpOptions.backgroundImage}") data-img-class!="hp-two-up-compare-img")
-      .container
-        .row
-          block
-
 extends ../shared/_page
 
 block append vars
@@ -55,9 +14,6 @@ block append vars
   - page.openGraph.title = "[@L[cds.sales/homepage:og-title]@L]";
   - page.openGraph.description = "[@L[cds.sales/homepage:og-content]@L]";
 
-block fonts
-  //- prevent fonts.css from being loaded
-
 block append pageStyles
   // home page styling
   style
@@ -65,8 +21,11 @@ block append pageStyles
       /* delete this? */
       .text-white{color:#fff}
       .bg-green-official{background-color:#77c043;}
+      .walsheim-regular{font-family:'Walsheim-Regular', Arial, sans-serif;}
+      .walsheim-medium{font-family:'Walsheim-Medium', Arial, sans-serif;}
       .walsheim-bold{font-family:'Walsheim-Bold', 'Arial Black', sans-serif;}
       .walsheim-black{font-family:'Walsheim-Black', 'Arial Black', sans-serif;}
+      .tungsten{font-family:Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif;}
 
       .hero-wrapper{min-height:300px;}
 
@@ -116,45 +75,30 @@ block append pageStyles
         #hero-wrapper { font-size: 16px;}
       }
 
-//- override headscripts to remove lazyload
-block headScripts
+append headScripts
   script.
-    function loadJsAsync(sourceUrl, id) {
-       var js, fjs = document.getElementsByTagName('script')[0];
-       if (document.getElementById(id)) {return;}
-       js = document.createElement('script'); js.type = 'text/javascript'; js.ansyc = true;
-       js.id = id;
-       js.src = sourceUrl;
-       fjs.parentNode.insertBefore(js, fjs);
-    }
-
-    function endOfPageScripts() {
-
+    var tms = function(data) {
+      $(document).ready(function(){
+        for (var key in data) {
+          if ((data[key]) && (data[key].trim() != '')) {
+            var elem = document.getElementById(key)
+            if (elem != null) {
+              $('#' + key).html(data[key]);
+            }
+          }
+        }
+      });
     }
 
 block endOfPageScripts
-  script.
 
-    ux.eldorado.ready(function(){
-      loadJsAsync("https://img1.wsimg.com/fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
-      loadJsAsync("https://img1.wsimg.com/fos/liveperson/js/liveperson_20150217.min.js", 'livepersonLibrary');
-      loadJsAsync("https://img1.wsimg.com/starfield/fos.share/v1.3/fos.share-20140505.min.js", 'fosShareScript');
+  script(type="text/javascript").
+    $('body').on('click','[data-url]',function(event){
+      var $clickedElement = $(event.currentTarget);
+      var $clickedUrl = $clickedElement.attr('data-url'); 
+      event.stopPropagation();
+      window.location.href=$clickedUrl;
     });
-
-    ux.eldorado.ready(function(){
-      $('body').on('click','[data-url]',function(event){
-        var $clickedElement = $(event.currentTarget);
-        var $clickedUrl = $clickedElement.attr('data-url'); 
-        event.stopPropagation();
-        window.location.href=$clickedUrl;
-      });
-
-      reSizeTiles();
-
-      ux.util.lazy.loadViaSelector('.domain-promo-content'); 
-      ux.util.lazy.loadViaSelector('.lazyload'); 
-    });
-
     function limitationsModal() {$('#limitationsModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });}
     var reSizeTiles = function(){
       var maxTitleHeight = 0;
@@ -166,8 +110,17 @@ block endOfPageScripts
         }
     }
 
+    $(window).load(function () {
+      reSizeTiles();
+      $('.bigtext').bigtext().css('visibility', 'visible');
+      setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
+    });
+  script(src!="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js")
+  script(src!="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript")
+  
+  script(type="text/javascript").
     var ignoreLivePerson = true;
-    ux.eldorado.ready(function(){
+    $(document).ready(function() {
       var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
                    qs = [],
                    date = new Date();
@@ -181,27 +134,6 @@ block endOfPageScripts
         $('#shareme').fosShare({});
       }, 2000);
     });
-
-block delayLoadedScripts
-  //- page.jade's delay loading is actually broken
-  //- fix here for now, and do it there (so all pages get it) eventually...
-
-block head
-  //- exclude chat_window CSS
-
-
-block pcHead
-  script.
-    window.ux = window.ux || {};
-    window.ux.disable = {
-      'ga': true,
-      'tealium': true
-    };
-    
-  | 
-  |[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Application" value="salescpo" /><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
-  |[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Application" value="salescpo" /><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
-  |[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Application" value="salescpo" /><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
 
 block content
   
@@ -255,13 +187,9 @@ block content
         style
           :less
             #domain-promo { color: #fff; 
-              .jones-bg-image { background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg); }
               .domain-promo-content{
                 @media only screen and (max-width:767px) {background-image:none !important;}
-                background-repeat: no-repeat;
-                background-size: 50% 100%;
-                background-color: #333333;
-                background-size: cover;
+                background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg) 50% 100% #333 no-repeat;background-size:cover;
               }
               .domain-promo-text{padding:7% 2% 1%;}
               .text-center{color:#333;margin:0;padding:30px 0;text-transform:uppercase;}
@@ -274,7 +202,7 @@ block content
 
       section#domain-promo.bg-green-official
         h2.text-center [@L[cds.sales/homepage/sections/_domain-promo:header-text]@L]
-        div.domain-promo-content(data-src!="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg" data-img-class="jones-bg-image")
+        div.domain-promo-content
           .container
             .row
               .col-sm-6.col-sm-offset-6.col-xs-8.col-xs-offset-2.domain-promo-text
@@ -298,9 +226,9 @@ block content
                 block why-godaddy-feature-1
                   .why-gd-registrar
                     <!--[if lt IE 9]>
-                    +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png','','Pin Point Globe')
+                    +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png','Pin Point Globe')
                     <![endif]-->
-                    +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.svg','svgfallback','Pin Point Globe')
+                    +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.svg','Pin Point Globe')
                     h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading1]@L]
                     p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body1]@L]
             .col-sm-4
@@ -308,9 +236,9 @@ block content
                 block why-godaddy-feature-2
                   .why-gd-prices
                   <!--[if lt IE 9]>
-                  +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.png','','TLD Boards')
+                  +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.png','TLD Boards')
                   <![endif]-->
-                  +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.svg','svgfallback','TLD Boards')
+                  +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.svg','TLD Boards')
                   h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading2]@L]
                   p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body2]@L]
             .col-sm-4
@@ -318,9 +246,9 @@ block content
                 block why-godaddy-feature-3
                   .why-gd-support
                   <!--[if lt IE 9]>
-                  +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png','','Support Icon')
+                  +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png','Support Icon')
                   <![endif]-->
-                  +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg','svgfallback','Support Icon')
+                  +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg','Support Icon')
                   h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading3]@L]
                   p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body3]@L]
 
@@ -336,7 +264,7 @@ block content
             .two-up-speech-shape.two-up-speech-shape-gold,.two-up-speech-shape.two-up-speech-shape-gold:after{background-color:#fedc45;}
             .two-up-speech-shape.two-up-speech-shape-gold:before{border-top-color:#fedc45;}
       section#website-promo
-        +renderTwoUpCompare2({title: "[@L[cds.sales/homepage/sections/_website-promo:promo-title-text]@L]", twoUpCompareId: "website-promo", titleBackgroundColor: "bg-green-official", backgroundImage: "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/website_promo.jpg", style: "min-height: 100%;"})
+        +renderTwoUpCompare({title: "[@L[cds.sales/homepage/sections/_website-promo:promo-title-text]@L]", twoUpCompareId: "website-promo", titleBackgroundColor: "bg-green-official", backgroundImage: "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/website_promo.jpg", style: "min-height: 100%;"})
           +twoUpCompareColumn({title: "[@L[cds.sales/homepage/sections/_website-promo:website-title-text]@L]", backgroundColor: "bg-gray-darkest", shapeText: "[@L[cds.sales/homepage/sections/_website-promo:website-shape-text]@L]", shapeColor: "gold", whiteText:"WhiteText"})
             ul
               li [@L[cds.sales/homepage/sections/_website-promo:website-feature-line1]@L]
@@ -360,7 +288,7 @@ block content
             #o365-promo h2{font-size:4.5rem;}
             #o365-promo h3{font-size:4rem;text-transform:uppercase;}
             #o365-promo .o365-promo-text p{max-width:420px;}
-            #o365-promo .promo-flag{color:#000; font-family: 'Walsheim-Black', 'Arial Black', sans-serif;font-size:1.25em;padding:15px 20px;text-transform:uppercase;line-height:1;background-size:cover;overflow:visible;position:absolute;margin-top:100px;right:25%;background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;}
+            #o365-promo .promo-flag{color:#000; font-family:Tungsten, 'Tungsten A', 'Tungsten B', Arial, sans-serif;font-size:28px;font-size:2.8rem;padding:10px 20px;text-transform:uppercase;line-height:1;background-size:cover;overflow:visible;position:absolute;margin-top:100px;right:25%;background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;}
             .Explorer8 #o365-promo .promo-flag{background-color:#fedc45}
             .o365-promo-text ul{list-style-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAABaElEQVQ4y53UsWoVQRSA4e9eJCCIZXCLVDZ2+giWlrGToIXiWk1hY2OVGAVTpchWTmWTwkZCVFRs7AxYpEtESRdGfAEhoKbIBG7W3bu798DC7J6Z//x7mJmRGaOsiodYwQ98z8+30Yyw8zjApVrq9XhWwQYYrA42LKtiLv/mQi21FUNanMXwXgOMk34aZDjF7kMM6QYMNWyzWz4d9DbsY3fGsKyKq2VVXJjCvNNi92TyZVRWxTye4y5+YRUvYkhHE8XOYR+Xa7DPMaTrkx/G2M4wmMcG9sqqWCqr4rQltxtgZ3o3aXgFO7jYsGAXj3ORTjsYx5D2sYS/DcBreNdi97Sp0WOIIb3NJn1jJ4b0qRWYoWvY7AlcbkvUN/Z9fO1h974XMIb0G4v4OQX4bFq1/45eDOkQN3HUMH8XbwYBM/QLHjSkVmJI/wYDM/Ql1mt2Wzqi67Z5hI95vNZl1wmMIf3BrWz2qgsGx1qqaedhoYAzAAAAAElFTkSuQmCC);margin:0 0 20px -12px}
             .o365-promo-image{padding-top:115px;}
@@ -380,9 +308,9 @@ block content
             .col-sm-6
               .promo-flag [@L[cds.sales/homepage/sections/_o365-promo:promo-flag]@L]
               <!--[if lt IE 9]>
-              +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/office365_laptop_002.png','o365-promo-image','Office 365 image')
+              +lazyImg('o365-promo-image','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/office365_laptop_002.png','Office 365 image')
               <![endif]-->
-              +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop_v2.svg','svgfallback o365-promo-image','Office 365 image')
+              +lazyImg('svgfallback o365-promo-image','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop_v2.svg','Office 365 image')
       | 
       | ##endif
 
@@ -407,9 +335,9 @@ block content
           .row
             .col-xs-6.text-center
               <!--[if lt IE 9]>
-              +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.png','support-promo-img','GoDaddy Support')        
+              +lazyImg('support-promo-img','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.png','GoDaddy Support')        
               <![endif]-->
-              +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.svg','svgfallback support-promo-img','GoDaddy Support')
+              +lazyImg('svgfallback support-promo-img','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.svg','GoDaddy Support')
             .col-xs-6
               .support-promo-text.text-white
                 h3.walsheim-black [@L[cds.sales/homepage/sections/_support-promo:sub-header-text]@L]
@@ -419,7 +347,7 @@ block content
                     .col-md-4.col-xs-12
                       a.btn.btn-default-light(data-url!="[@T[link:<external linktype='COMMUNITYURL'><param name='ci' value='95789' /></external>]@T]") [@L[cds.sales/homepage/sections/_support-promo:cta-text]@L]
                     .col-md-8.col-xs-12
-                      .support-promo-number [@T[supportphone:<technical />]@T]
+                      .support-promo-number.walsheim-medium [@T[supportphone:<technical />]@T]
 
   block limitations
     section#limitations-social
