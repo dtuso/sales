@@ -4,12 +4,8 @@ append styles
     .gdhp-search-box .domainSearchBox{width:780px;}
 
 block marquee
-  |  ##if(splitTestingSideIsActive(1462, B))
-  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/hosting-flash/default_template" /> ]@P]
-  |  ##elseif(splitTestingSideIsActive(1462, C))
-  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/hosting-flash-jazzy/default_template" /> ]@P]
-  |  ##elseif(targetMessageTagAny(sales_hp_default,hp_existing_customer))
-  |   [@P[cdsDocument:<data app="sales" location="homepage/locals/es-ar/topmarquee" /> ]@P]
+  |  ##if(splitTestingSideIsActive(1463, B))
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/mwp-flash-jazzy/default_template" /> ]@P]
   |  ##else
   |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
   |  ##endif
