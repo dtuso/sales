@@ -439,6 +439,8 @@
       <Package id="dc_websitebuilder" />
       <Package id="dc_websitebuilderandhosting" />
       <Package id="dc_wsbandhostingnoemailcredits" />
+      <Package id="dc_ssl" />
+      <Package id="dc_wordpressandhosting" />
     </Packages>
   </PackageGroup>
   <PackageGroup Name="domainbackorders" ProductGroupId="1">
@@ -1545,6 +1547,22 @@
       <Package id="plesk_tier3_036mo" />
       <Package id="plesk_tier3_048mo" />
       <Package id="plesk_tier3_060mo" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="cms-email">
+    <Packages>
+      <Package id="email_tier1_012mo" />
+      <Package id="email_tier1_024mo" />
+      <Package id="email_tier1_036mo" />
+      <Package id="email_tier1_060mo" />
+      <Package id="email_tier2_012mo" />
+      <Package id="email_tier2_024mo" />
+      <Package id="email_tier2_036mo" />
+      <Package id="email_tier2_060mo" />
+      <Package id="email_tier3_012mo" />
+      <Package id="email_tier3_024mo" />
+      <Package id="email_tier3_036mo" />
+      <Package id="email_tier3_060mo" />
     </Packages>
   </PackageGroup>
 </PackageGroups>

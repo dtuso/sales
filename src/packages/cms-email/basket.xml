@@ -1,0 +1,38 @@
+<Packages>
+  <Package id="email_tier1_012mo" QtyIsDuration="false">
+    <ProductId>1865</ProductId>
+  </Package>
+  <Package id="email_tier1_024mo" QtyIsDuration="false">
+    <ProductId>6601</ProductId>
+  </Package>
+  <Package id="email_tier1_036mo" QtyIsDuration="false">
+    <ProductId>6602</ProductId>
+  </Package>
+  <Package id="email_tier1_060mo" QtyIsDuration="false">
+    <ProductId>6604</ProductId>
+  </Package>
+  <Package id="email_tier2_012mo" QtyIsDuration="false">
+    <ProductId>1866</ProductId>
+  </Package>
+  <Package id="email_tier2_024mo" QtyIsDuration="false">
+    <ProductId>6611</ProductId>
+  </Package>
+  <Package id="email_tier2_036mo" QtyIsDuration="false">
+    <ProductId>6612</ProductId>
+  </Package>
+  <Package id="email_tier2_060mo" QtyIsDuration="false">
+    <ProductId>6614</ProductId>
+  </Package>
+  <Package id="email_tier3_012mo" QtyIsDuration="false">
+    <ProductId>759</ProductId>
+  </Package>
+  <Package id="email_tier3_024mo" QtyIsDuration="false">
+    <ProductId>761</ProductId>
+  </Package>
+  <Package id="email_tier3_036mo" QtyIsDuration="false">
+    <ProductId>762</ProductId>
+  </Package>
+  <Package id="email_tier3_060mo" QtyIsDuration="false">
+    <ProductId>764</ProductId>
+  </Package>
+</Packages>
