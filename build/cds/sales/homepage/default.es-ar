@@ -60,10 +60,8 @@
         </form>
       </div>
     </div>
-     ##if(splitTestingSideIsActive(1462, B))
-      [@P[cdsDocument:<data app="sales" location="homepage/marquee/hosting-flash/default_template" /> ]@P]
-     ##elseif(splitTestingSideIsActive(1462, C))
-      [@P[cdsDocument:<data app="sales" location="homepage/marquee/hosting-flash-jazzy/default_template" /> ]@P]
+     ##if(splitTestingSideIsActive(1463, B))
+      [@P[cdsDocument:<data app="sales" location="homepage/marquee/mwp-flash-jazzy/default_template" /> ]@P]
      ##elseif(targetMessageTagAny(sales_hp_default,hp_existing_customer))
       [@P[cdsDocument:<data app="sales" location="homepage/locals/es-ar/topmarquee" /> ]@P]
      ##else
