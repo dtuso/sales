@@ -206,7 +206,7 @@
 
               </style>
             </atlantis:webstash>
-            <form onSubmit="return validateSearch(this)" method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single" class="domain-search-form">
+            <form method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single" class="domain-search-form">
               <input type="hidden" name="ci" value=""/>
               <input type="hidden" name="checkAvail" value="1"/>
               <div class="input-group">
@@ -216,13 +216,13 @@
               </div>
             </form>
             <script>
-              validateSearch = function(e) {
-                var input = e.domainToCheck.value;
-                if (input == "") {
+              $(".domain-search-form").on('submit', function(e) {
+                var input = $(this).find("input[name='domainToCheck']");
+                if (input && (input.val() == null || input.val() == "")) {
+                  e.preventDefault();
                   window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
-                  return false;
                 }
-              };
+              });
               
             </script>
           </div>
