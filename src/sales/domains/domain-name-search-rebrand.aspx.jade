@@ -161,6 +161,13 @@ append endOfPageScripts
               $container.data('hasIframe', true);
           }
       });
+    $(document).ready(function() {
+      $("#top-carousel").html($("#top-carousel").html().replace("{def-2-0}",'<a href="[@T[link:<relative path="/tlds/club"><param name="ci" value="89140" /></relative>]@T]">.club</a>'));
+      $("#top-carousel").html($("#top-carousel").html().replace("{def-2-1}",'<a href="[@T[link:<relative path="/tlds/guru"><param name="ci" value="90584" /></relative>]@T]">.guru</a>'));
+      $("#top-carousel").html($("#top-carousel").html().replace("{def-2-2}",'<a href="[@T[link:<relative path="/tlds/news"><param name="ci" value="99292" /></relative>]@T]">.news</a>'));
+      $("#top-carousel").html($("#top-carousel").html().replace("{def-2-3}",'<a href="[@T[link:<relative path="/tlds/video"><param name="ci" value="99242" /></relative>]@T]">.video</a>'));
+      $("#top-carousel").html($("#top-carousel").html().replace("{def-2-4}",'<a href="[@T[link:<relative path="/tlds/team"><param name="ci" value="99293" /></relative>]@T]">.team</a>'));
+    });
 
 block domainSearch
   //- remove domain search from top of page

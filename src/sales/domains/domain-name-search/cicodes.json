@@ -215,6 +215,18 @@
           { "ITC Code" : "SliderVideoLink" },
           { "Description" : "Slide .VIDEO Link" }
         ]
+      },
+      { "Slide .NEWS Link" : [
+          { "ITC ID" : "99292" },
+          { "ITC Code" : "SliderNewsLink" },
+          { "Description" : "Slide .NEWS Link" }
+        ]
+      },
+      { "Slide .TEAM Link" : [
+          { "ITC ID" : "99293" },
+          { "ITC Code" : "SliderTeamLink" },
+          { "Description" : "Slide .TEAM Link" }
+        ]
       }
     ],
   "Top Tld Pods" : [

@@ -793,8 +793,8 @@ and
 are now available. 
 <phrase key="CarouselSlideDefaultSearch" />
 Search domains now.
-<phrase key="CarouselSlide2DefaultRebrand" comment="{N} holds tld links"/>
-SAVE 30% or more on new domains: <br />{0}, {1}, {2}, {3}, {4}, and more.
+<phrase key="CarouselSlide2DefaultRebrand" comment="{def-2-N} holds tld links"/>
+SAVE 30% or more on new domains: <br />{def-2-0}, {def-2-1}, {def-2-2}, {def-2-3}, {def-2-4}, and more.
 <phrase key="CarouselSlide2DefaultRebrand2" />
 30% OFF 
 <phrase key="CarouselSlide2DefaultNow" />
