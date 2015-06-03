@@ -49,14 +49,15 @@ block append marqueeStyles
 block marqueeContent
   .marquee-content
     .text
-      | 
-      | ##if(countrySiteAny(dk,at,ch,de,gr,ie,za,es,fi,be,fr,it,no,nl,pl,pt,ru,se,tr,ua))
-      | 
-      .support-flag.pull-right [@L[cds.sales/homepage/marquee/gybo:gybo-support-flag]@L]
-      | 
-      | ##endif
-      | 
-      .headline [@L[cds.sales/homepage/marquee/gybo:gybo-headline]@L]
+      .header
+        | 
+        | ##if(countrySiteAny(dk,at,ch,de,gr,ie,za,es,fi,be,fr,it,no,nl,pl,pt,ru,se,tr,ua))
+        | 
+        .support-flag.pull-right [@L[cds.sales/homepage/marquee/gybo:gybo-support-flag]@L]
+        | 
+        | ##endif
+        | 
+        .headline [@L[cds.sales/homepage/marquee/gybo:gybo-headline]@L]
       .middle-wrapper
         .domain.image
         .product-text.tungsten [@L[cds.sales/homepage/marquee/gybo:gybo-marq-domain]@L]
