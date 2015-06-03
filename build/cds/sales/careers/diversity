@@ -135,49 +135,588 @@
     <!-- HEADERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="header" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
-    <div class="container">
-      <atlantis:webstash type="css">
-        <style>.search-text {
-  display: none;
-}
-.search-icon {
-  font-size: 22px;
-}
-@media (min-width: 768px) {
-  .search-text {
-    display: inline;
-  }
-  .search-icon {
-    display: none;
+    
+    <section id="marquee"> 
+      <div class="container-fluid">
+        <div class="row">
+          <nav class="career-navigation">
+            <div class="container ul-container">
+              <div class="row">
+                <ul>
+                  <li class="overview"><a href="[@T[link:<relative path="~/careers/overview" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationHome]@L]        </a></li>
+                  <li class="culture"><a href="[@T[link:<relative path="~/careers/culture" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationCulture]@L]  </a></li>
+                  <li class="diversity"><a href="[@T[link:<relative path="~/careers/diversity" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationDiversity]@L]</a></li>
+                  <li class="benefits"><a href="[@T[link:<relative path="~/careers/benefits" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationBenefits]@L]</a></li>
+                  <li class="locations"><a href="[@T[link:<relative path="~/careers/locations" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationLocations]@L]</a></li>
+                  <li class="interdiversityns"><a href="[@T[link:<relative path="~/careers/interns" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationInterns]@L]</a></li>
+                  <li class="work"><a href="[@T[link:<relative path="~/careers/work" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationWork]@L]</a></li>
+                  <li class="opportunities"><a href="[@T[link:<relative path="~/careers/opportunities" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationopportunities]@L]</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="row">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-6">
+                <h1 class="plackard-title alternate">[@L[cds.sales/gd/careers/diversity:MainBannerTitle]@L]</h1>
+                <p class="alternate">[@L[cds.sales/gd/careers/diversity:MainBannerSubtitle]@L]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="wit" class="plackard light-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-8">
+            <div class="clearfix">
+              <h2 class="plackard-title light-text">[@T[companyname:name]@T]<sup>&reg;</sup></h2>
+              <div class="careers-speech-shape careers-speech-shape-green"> 
+                <div class="shape-text">[@L[cds.sales/gd/careers/diversity:WitBannerTitle]@L]</div>
+              </div>
+            </div>
+            <div class="separator separator-big light-text"></div>
+            <p class="plackard-subtitle light-text">[@L[cds.sales/gd/careers/diversity:WitBannerSubtitle]@L]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="united" class="plackard">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-8">
+            <div class="clearfix">
+              <h2 class="plackard-title">[@T[companyname:name]@T]<sup>&reg;</sup></h2>
+              <div class="careers-speech-shape careers-speech-shape-yellow"> 
+                <div class="shape-text">[@L[cds.sales/gd/careers/diversity:UnitedBannerTitle]@L]</div>
+              </div>
+            </div>
+            <div class="separator separator-big "></div>
+            <p class="plackard-subtitle">[@L[cds.sales/gd/careers/diversity:UnitedBannerSubtitle]@L]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="veterans" class="plackard light-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-8">
+            <div class="clearfix">
+              <h2 class="plackard-title light-text">[@T[companyname:name]@T]<sup>&reg;</sup></h2>
+              <div class="careers-speech-shape careers-speech-shape-orange"> 
+                <div class="shape-text">[@L[cds.sales/gd/careers/diversity:VeteransBannerTitle]@L]</div>
+              </div>
+            </div>
+            <div class="separator separator-big light-text"></div>
+            <p class="plackard-subtitle light-text">[@L[cds.sales/gd/careers/diversity:VeteransBannerSubtitle]@L]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="lit" class="plackard light-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-8">
+            <div class="clearfix">
+              <h2 class="plackard-title light-text">[@T[companyname:name]@T]<sup>&reg;</sup></h2>
+              <div class="careers-speech-shape careers-speech-shape-green"> 
+                <div class="shape-text">[@L[cds.sales/gd/careers/diversity:LitBannerTitle]@L]</div>
+              </div>
+            </div>
+            <div class="separator separator-big light-text"></div>
+            <p class="plackard-subtitle light-text">[@L[cds.sales/gd/careers/diversity:LitBannerSubtitle]@L]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="fit" class="plackard light-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-8">
+            <div class="clearfix">
+              <h2 class="plackard-title light-text">[@T[companyname:name]@T]<sup>&reg;</sup></h2>
+              <div class="careers-speech-shape careers-speech-shape-orange"> 
+                <div class="shape-text">[@L[cds.sales/gd/careers/diversity:FitBannerTitle]@L]</div>
+              </div>
+            </div>
+            <div class="separator separator-big light-text"></div>
+            <p class="plackard-subtitle light-text">[@L[cds.sales/gd/careers/diversity:FitBannerSubtitle]@L]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <atlantis:webstash type="css">
+      <style>
+        #diversity-carousel h3.carousel-inner-title {
+          color: #7db701;
+          font-size: 50px;
+        }
+        #diversity-carousel p.carousel-inner-text {
+          color: #333;
+          font-size: 16px;
+        }
+        #diversity-carousel .diversity-carousel-item {
+          padding: 50px 20px;
+        }
+      </style>
+    </atlantis:webstash>
+    <section class="diversity-carousel-title">
+      <div class="container">
+        <div class="row">
+          <h3>[@L[cds.sales/gd/careers/culture:ReasonsCarouselTitle]@L]</h3>
+          <div class="separator separator-title separator-alternate"></div>
+        </div>
+      </div>
+    </section>
+    <style>.item-wrapper { padding: 35px 0 20px; }
+.carousel-wrap { padding-bottom: 70px; }
+
+@media only screen and (min-width: 768px){
+  .carousel-container .carousel {
+    padding: 0 120px;
   }
 }
 
-        </style>
-      </atlantis:webstash>
-      <form method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single" class="domain-search-form">
-        <input type="hidden" name="ci" value=""/>
-        <input type="hidden" name="checkAvail" value="1"/>
-        <div class="input-group">
-          <label for="domain-name-input" class="searchInput sr-only">[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]</label>
-          <input id="domain-name-input" type="text" placeholder="[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]" name="domainToCheck" maxlength="63" class="searchInput form-control input-lg"/><span class="input-group-btn">
-            <button type="submit" data-ci="" class="btn btn-primary btn-lg"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]</span></button></span>
+.carousel {
+  position: relative;
+  padding: 0 0 45px 0;
+}
+
+.carousel-container .carousel .carousel-indicators {
+  bottom: -35px;
+}
+
+@media screen and (min-width: 768px){
+  .carousel-indicators {
+    bottom: -5px;
+  }
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  z-index: 15;
+  width: 80%;
+  margin-left: -40%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+.carousel-container .carousel .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin: 5px;
+  background-color: #d9d9d9;
+}
+.carousel-indicators .active {
+  background-color: #008a32;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 32px;
+  height: 10px;
+  margin: 8px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-inner > .active {
+  
+}
+.carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev {
+  display: block;
+}
+.carousel-inner > .item {
+  display: none;
+  position: relative;
+  -webkit-transition: left 0.6s ease-in-out;
+  -moz-transition: left 0.6s ease-in-out;
+  transition: left 0.6s ease-in-out;
+  overflow: hidden;
+}
+.carousel-container .carousel-panel, .carousel-container .testimonial {
+  padding: 0;
+}
+.carousel-panel .img-center {
+  margin: 15px auto;
+}
+.carousel-panel .carousel-panel-text {
+  margin-bottom: 25px;
+}
+.carousel-panel h2 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.carousel-container .carousel-control.left {
+  left: 0px;
+}
+.carousel-control {
+  position: absolute;
+  top: -11%;
+  bottom: 0;
+  color: #999999;
+  text-align: center;
+}
+.carousel-icon.arrow-left-icon {
+  background-position: 0 0;
+  width: 51px;
+  height: 50px;
+}
+
+.carousel-control .uxicon-chevron-left-lt, .carousel-control .arrow-left-icon, .carousel-control .arrow-left-white-icon {
+  left: 50%;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+.carousel-icon {
+  background-image: url('[@T[link:<imageroot />]@T]/fos/hp/sahara-rebrand-sprite-20141114.png');
+  display: inline-block;
+  background-size: 205px auto;
+}
+.carousel-container .carousel-control.right {
+  right: 0px;
+}
+.carousel-icon.arrow-right-icon {
+  background-position: 0 -52px;
+  width: 51px;
+  height: 50px;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+
+.carousel {
+    position: relative;
+    padding: 0 0 45px 0;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-inner > .item {
+    display: none;
+    position: relative;
+    -webkit-transition: left 0.6s ease-in-out;
+    -moz-transition: left 0.6s ease-in-out;
+    transition: left 0.6s ease-in-out;
+    overflow: hidden;
+}
+
+.carousel-inner > .item.show-item {
+    display: block;
+}
+
+.carousel-inner > .item > h1,
+.carousel-inner > .item > h2,
+.carousel-inner > .item > h3,
+.carousel-inner > .item > h4,
+.carousel-inner > .item > h5,
+.carousel-inner > .item > h6 {
+    margin-top: 0;
+}
+
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    display: block;
+}
+
+.carousel-inner > .active {
+    left: 0;
+}
+
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.carousel-inner > .next {
+    left: 100%;
+}
+
+.carousel-inner > .prev {
+    left: -100%;
+}
+
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+    left: 0;
+}
+
+.carousel-inner > .active.left {
+    left: -100%;
+}
+
+.carousel-inner > .active.right {
+    left: 100%;
+}
+
+.carousel-text-item {
+    margin-bottom: 20px;
+}
+
+.carousel-text-item h1 {
+    font-size: 14px;
+    display: inline;
+    margin: 0;
+    font-weight: bold;
+    font-weight: 600;
+}
+
+.carousel-control {
+    position: absolute;
+    top: -11%;
+    bottom: 0;
+    color: #999999;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-control {
+        top: -6%;
+    }
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+    outline: none;
+    color: #000;
+    text-decoration: none;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .uxicon-chevron-right-lt {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    margin-top: -15px;
+}
+
+.carousel-control .arrow-left-white-icon,
+.carousel-control .arrow-right-white-icon,
+.carousel-control .arrow-left-icon,
+.carousel-control .arrow-right-icon {
+    position: absolute;
+    top: 50%;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .arrow-left-icon {
+    left: 50%;
+}
+
+.carousel-control .uxicon-chevron-right-lt,
+.carousel-control .arrow-right-icon {
+    right: 50%;
+}
+
+.carousel-control.left {
+    left: -40px;
+}
+@media only screen and (max-width: 768px){
+  .carousel-container .carousel-control {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+    .carousel-control.left {
+        left: -10px;
+    }
+}
+
+.carousel-control.right {
+    right: -40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-control.right {
+        right: -10px;
+    }
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    z-index: 15;
+    width: 80%;
+    margin-left: -40%;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 32px;
+    height: 10px;
+    margin: 8px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #d9d9d9;
+}
+
+.carousel-indicators .active {
+    background-color: #008a32;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-indicators {
+        bottom: -5px;
+    }
+}
+.carousel-panel .include-check {
+position: relative;
+padding-left: 45px;
+margin-top: 20px;
+}
+.carousel-panel .include-check:before {
+content: "";
+background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+background-position: 0 -668px;
+background-size: 205px auto;
+width: 25px;
+height: 27px;
+padding-right: 5px;
+position: absolute;
+left: 0;
+top: -6px;
+}
+    </style>
+    <div class="carousel-wrap">
+      <div class="carousel-container container">
+        <div id="diversity-carousel" data-ride="carousel" data-interval="false" class="carousel slide">
+          <ol class="carousel-indicators">
+            <li data-target="#diversity-carousel" data-slide-to="0" data-ci=""></li>
+            <li data-target="#diversity-carousel" data-slide-to="1" data-ci=""></li>
+            <li data-target="#diversity-carousel" data-slide-to="2" data-ci=""></li>
+            <li data-target="#diversity-carousel" data-slide-to="3" data-ci=""></li>
+            <li data-target="#diversity-carousel" data-slide-to="4" data-ci=""></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item">
+              <div class="item-wrapper text-center">
+                <div data-icode="" data-ci="" class="carousel-panel container">
+                  <div class="container-fluid diversity-carousel-item">
+                    <div class="row">
+                      <div class="col-xs-12 text-center">
+                        <h3 class="carousel-inner-title">[@L[cds.sales/gd/careers/culture:ReasonsCarousel1Title]@L]</h3>
+                        <p class="carousel-inner-text">[@L[cds.sales/gd/careers/culture:ReasonsCarousel1Content]@L]</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-wrapper text-center">
+                <div data-icode="" data-ci="" class="carousel-panel container">
+                  <div class="container-fluid diversity-carousel-item">
+                    <div class="row">
+                      <div class="col-xs-12 text-center">
+                        <h3 class="carousel-inner-title">[@L[cds.sales/gd/careers/culture:ReasonsCarousel2Title]@L]</h3>
+                        <p class="carousel-inner-text">[@L[cds.sales/gd/careers/culture:ReasonsCarousel2Content]@L]</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-wrapper text-center">
+                <div data-icode="" data-ci="" class="carousel-panel container">
+                  <div class="container-fluid diversity-carousel-item">
+                    <div class="row">
+                      <div class="col-xs-12 text-center">
+                        <h3 class="carousel-inner-title">[@L[cds.sales/gd/careers/culture:ReasonsCarousel3Title]@L]</h3>
+                        <p class="carousel-inner-text">[@L[cds.sales/gd/careers/culture:ReasonsCarousel3Content]@L]</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-wrapper text-center">
+                <div data-icode="" data-ci="" class="carousel-panel container">
+                  <div class="container-fluid diversity-carousel-item">
+                    <div class="row">
+                      <div class="col-xs-12 text-center">
+                        <h3 class="carousel-inner-title">[@L[cds.sales/gd/careers/culture:ReasonsCarousel4Title]@L]</h3>
+                        <p class="carousel-inner-text">[@L[cds.sales/gd/careers/culture:ReasonsCarousel4Content]@L]</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item-wrapper text-center">
+                <div data-icode="" data-ci="" class="carousel-panel container">
+                  <div class="container-fluid diversity-carousel-item">
+                    <div class="row">
+                      <div class="col-xs-12 text-center">
+                        <h3 class="carousel-inner-title">[@L[cds.sales/gd/careers/culture:ReasonsCarousel5Title]@L]</h3>
+                        <p class="carousel-inner-text">[@L[cds.sales/gd/careers/culture:ReasonsCarousel5Content]@L]</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><a href="#diversity-carousel" data-slide="prev" data-ci="" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#diversity-carousel" data-slide="next" class="right carousel-control"><span data-ci="" class="carousel-icon arrow-right-icon"></span></a>
         </div>
-      </form>
-      <script>
-        $(".domain-search-form").on('submit', function(e) {
-          var input = $(this).find("input[name='domainToCheck']");
-          if (input && (input.val() == null || input.val() == "")) {
-            e.preventDefault();
-            window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
-          }
-        });
-        
-      </script>
+        <script>
+          $('.carousel .carousel-indicators li:first-child').addClass("active");
+          $('.carousel .carousel-inner .item:first-child').addClass("active");
+        </script>
+      </div>
     </div>
-    <section id="marquee">
-      <div class="container marquee marquee-white">
+    <section id="more-jobs">
+      <div class="container">
         <div class="row">
-          <div class="col-sm-7 marquee-content-wrapper">
+          <h2>[@L[cds.sales/gd/careers/locations:MoreJobsTitle]@L]</h2>
+          <p class="subtitle">[@L[cds.sales/gd/careers/locations:MoreJobsSubtitle]@L]</p>
+        </div>
+        <div class="row">
+          <div class="col-xs-4">
+            <div class="column icon"><i class="career-ico career-ico-customer-care"></i></div>
+            <div class="column">
+              <h3>[@L[cds.sales/gd/careers/locations:MoreJobsWork1Title]@L]</h3>
+              <p>[@L[cds.sales/gd/careers/locations:MoreJobsWork1Content]@L]</p><a href="[@T[link:&lt;relative path='~/careers/work' /&gt;]@T]#work-customer-care">[@L[cds.sales/gd/careers/locations:MoreJobsMoreButton]@L]</a>
+            </div>
           </div>
         </div>
       </div>
@@ -347,11 +886,235 @@ ul li.no-check {
           cursor: pointer;
         }
       </style>
+      <atlantis:webstash type="css">
+        <link href="[@T[link:<css path='fos/201401/careers/css/career_main.css'/>]@T]" rel="stylesheet" type="text/css">
+        <style>p.dominic {
+  background: url([@T[link:<imageroot />]@T]fos/201401/careers/img/ajax-loader_lg.gif);
+}
+section {
+  margin: 0;
+  padding: 0;
+}
+/* undo uxcore to make this more compatible with the other careers pages */
+p {
+  font-size: 14px;
+}
+/* undo uxcore to make this more compatible with the other careers pages */
+h1,
+section h1,
+h2,
+section h2 {
+  text-transform: none;
+  font-size: 60px;
+}
+/* undo uxcore to make this more compatible with the other careers pages */
+.career-navigation {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+}
+.career-navigation a {
+  text-decoration: none;
+}
+.career-navigation ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+.career-navigation li {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  float: left;
+  height: 2.77777777em;
+  line-height: 2.77777777em;
+  font-weight: 200;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.career-navigation li.overview {
+  font-weight: 400;
+  font-size: 24px;
+  height: .625em;
+  line-height: .45em;
+  margin-top: .75em;
+  border-right: 1px solid #aaa;
+  margin-right: .25em;
+  margin-left: 0;
+  padding-right: 1em;
+  overflow: visible;
+}
+.career-navigation li.opportunities {
+  float: right;
+  font-weight: 400;
+  margin-right: 1.33333333em;
+}
+.career-navigation li.opportunities a {
+  color: #7db701;
+  text-decoration: none;
+}
+.career-navigation li a {
+  color: #333333;
+}
+.career-navigation .diversity a {
+  text-decoration: underline;
+}
+.lt-ie9 .career-navigation {
+  background: url("[@T[link:<css path='global/img/ie-opacity-bckg.png?version=1'/>]@T]") repeat 0 0 transparent;
+}
+#marquee {
+  background-image: url([@T[link:<imageroot />]@T]fos/201401/careers/img/bg-main-banner-interns-2.jpg?version=1);
+  background-position: center top;
+  height: 720px;
+}
+#marquee .ul-container {
+  padding: 0;
+}
+.separator.light-text {
+  background: #fff;
+}
+.separator.separator-big {
+  width: 68px;
+  height: 8px;
+  margin: 2em 0;
+}
+.separator {
+  background: #333;
+  width: 30px;
+  height: 4px;
+}
+#wit.plackard {
+  background-image: url([@T[link:<imageroot />]@T]fos/201401/careers/img/bg-main-banner-mission.jpg);
+}
+#united.plackard {
+  background-image: url([@T[link:<imageroot />]@T]fos/201401/careers/img/bg-main-banner-creativity.jpg);
+}
+#veterans.plackard {
+  background-image: url([@T[link:<imageroot />]@T]fos/201401/careers/img/bg-main-banner-veterans.jpg);
+}
+#lit.plackard {
+  background-image: url([@T[link:<imageroot />]@T]fos/201401/careers/img/bg-main-banner-small-business.jpg);
+}
+#fit.plackard {
+  background-image: url([@T[link:<imageroot />]@T]fos/201401/careers/img/bg-main-banner-know-real-us.jpg);
+}
+section.plackard {
+  padding: 80px 0;
+  background-color: #ccc;
+  background-size: cover;
+  background-position: 50% 0%;
+}
+section.plackard.light-text {
+  background-color: #333;
+}
+section.plackard h2,
+section.plackard p {
+  color: #333;
+}
+section.plackard h2.light-text,
+section.plackard p.light-text {
+  color: #fff;
+}
+section.plackard h2.plackard-title {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 0;
+  font-size: 60px;
+  text-transform: none;
+}
+.careers-speech-shape {
+  font-family: 'Walsheim-Medium';
+  font-size: 32px;
+  padding: 5px 10px 5px 17px;
+  color: #fff;
+  float: left;
+  position: relative;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+.careers-speech-shape .shape-text {
+  position: relative;
+  z-index: 40;
+}
+.careers-speech-shape:before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  border-top: 15px solid;
+  border-right: 15px solid transparent;
+}
+.careers-speech-shape:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 99%;
+  top: 0;
+  transform: skew(-12deg, 0);
+  z-index: 1;
+}
+.careers-speech-shape.careers-speech-shape-green {
+  background-color: #008a32;
+}
+.careers-speech-shape.careers-speech-shape-green:before {
+  border-top-color: #008a32;
+}
+.careers-speech-shape.careers-speech-shape-green:after {
+  background-color: #008a32;
+}
+.careers-speech-shape.careers-speech-shape-orange {
+  background-color: #ef6c0f;
+}
+.careers-speech-shape.careers-speech-shape-orange:before {
+  border-top-color: #ef6c0f;
+}
+.careers-speech-shape.careers-speech-shape-orange:after {
+  background-color: #ef6c0f;
+}
+.careers-speech-shape.careers-speech-shape-white {
+  background-color: #fff;
+}
+.careers-speech-shape.careers-speech-shape-white:before {
+  border-top-color: #fff;
+}
+.careers-speech-shape.careers-speech-shape-white:after {
+  background-color: #fff;
+}
+.careers-speech-shape.careers-speech-shape-yellow {
+  background-color: #ffde2d;
+}
+.careers-speech-shape.careers-speech-shape-yellow:before {
+  border-top-color: #ffde2d;
+}
+.careers-speech-shape.careers-speech-shape-yellow:after {
+  background-color: #ffde2d;
+}
+
+        </style>
+      </atlantis:webstash>
     </atlantis:webstash>
     <script type="text/javascript">
       endOfPageScripts();
       
     </script>
+    <atlantis:webstash type="js">
+      <script>
+        var wpHosting = {
+          sfDialogOkButton: {text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } },  
+          itc: 'slp_wordpress',
+          supportPhone: '[@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]',
+          imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/',
+          canOfferOls: true,
+          animationTime: 800,
+          animationEasingType: 'swing',
+          showDeveloperPlan: true,
+          isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us'
+        };
+        $(document).ready(function(){
+          console.log('here');
+        });
+        
+      </script>
+    </atlantis:webstash>
     <script>
       $(window).load(function() {
         
