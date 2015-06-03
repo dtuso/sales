@@ -1563,4 +1563,28 @@
       <Package id="email_tier3_060mo" />
     </Packages>
   </PackageGroup>
+  <PackageGroup Name="cms-accounting" ProductGroupId="98">
+    <Packages>
+      <Package id="bookkeeping_tier1_001mo"/>
+      <Package id="bookkeeping_tier1_012mo" />
+      <Package id="getpaid_tier1_001mo" />
+      <Package id="getpaid_tier1_012mo" />
+      <Package id="getpaid_tier1_024mo" />
+      <Package id="getpaid_tier1_036mo" />
+      <Package id="getpaid_tier1_048mo" />
+      <Package id="getpaid_tier1_060mo" />
+      <Package id="getpaid_tier2_001mo" />
+      <Package id="getpaid_tier2_012mo" />
+      <Package id="getpaid_tier2_024mo" />
+      <Package id="getpaid_tier2_036mo" />
+      <Package id="getpaid_tier2_048mo" />
+      <Package id="getpaid_tier2_060mo" />
+      <Package id="getpaid_tier3_001mo" />
+      <Package id="getpaid_tier3_012mo" />
+      <Package id="getpaid_tier3_024mo" />
+      <Package id="getpaid_tier3_036mo" />
+      <Package id="getpaid_tier3_048mo" />
+      <Package id="getpaid_tier3_060mo" />
+    </Packages>
+  </PackageGroup>
 </PackageGroups>
