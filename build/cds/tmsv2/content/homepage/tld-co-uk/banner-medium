@@ -36,8 +36,7 @@
           var savings = '[@T[productcompare:<percent primaryproductid="57465" secondaryproductid="57465" showsymbol="true" hidebelow="5"/>]@T]';
           var element = document.querySelectorAll('.banner-medium.co-uk .text-primary')[0];
           if (price) {
-            price.innerHTML = price.innerHTML.replace('{0}','[@T[productprice:<current productid="57465" period="yearly" />]@T]'));
-            price.style.display = "block";
+            price.innerHTML = price.innerHTML.replace('{0}','[@T[productprice:<current productid="57465" period="yearly" />]@T]');
           }
           if (!savings) {
             element.innerHTML = '100% BRILLIANT';

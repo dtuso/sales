@@ -88,7 +88,7 @@
 
               </style>
             </atlantis:webstash>
-            <form method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single" class="domain-search-form">
+            <form onSubmit="return validateSearch(this)" method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single" class="domain-search-form">
               <input type="hidden" name="ci" value="54814"/>
               <input type="hidden" name="checkAvail" value="1"/>
               <div class="input-group">
@@ -98,13 +98,13 @@
               </div>
             </form>
             <script>
-              $(".domain-search-form").on('submit', function(e) {
-                var input = $(this).find("input[name='domainToCheck']");
-                if (input && (input.val() == null || input.val() == "")) {
-                  e.preventDefault();
+              validateSearch = function(e) {
+                var input = e.domainToCheck.value;
+                if (input == "") {
                   window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
+                  return false;
                 }
-              });
+              };
               
             </script>
           </div>
@@ -310,18 +310,19 @@
 }
 
             </style>
-            <div data-url="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]" data-ci='97911' class="banner-small 0365-biz-email">
+            <div data-url="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]" data-ci='97911' class="banner-small o365-biz-email">
               <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/o365-biz-email/banner-small/pro-email-icon.png" alt="[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:title]@L]"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjQzIiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgNDMgMzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQzIDM1IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjNzdDMDQzIiBkPSJNMS40IDBsNDEgOC4yTDI0LjYgMjQuNSAxLjQgMHpNNDMgMTAuN2wtMiAyMi4xTDAuNyAzNSAwIDMuM2wyNC4zIDIzTDQzIDEwLjd6Ii8+PC9zdmc+" alt="[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:title]@L]" class="svgfallback"><span><span>[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:title]@L]</span></span>
               </div>
               <div class="body">[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:body]@L]</div><a href="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:cta]@L] </a>
               <script>
-                var savings = Math.max([@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" />]@T],[@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31825" />]@T],[@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" />]@T]);
-                $cta=$('.banner-small.0365-biz-email a');
-                if(savings<5)
-                  $cta.html('[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:cta-fallback]@L]')
-                else
-                  $cta.html($cta.html().replace("{0}", savings));
-                $cta.show();
+                (function() { 
+                  var savings = Math.max([@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" />]@T],[@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31825" />]@T],[@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" />]@T]);
+                  var cta = document.querySelectorAll('.banner-small.o365-biz-email a')[0];
+                  if (savings < 5)
+                    cta.innerHTML = '[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:cta-fallback]@L]';
+                  else
+                    cta.innerHTML = cta.innerHTML.replace("{0}", savings);
+                })();
               </script>
             </div>
           </div>
@@ -554,7 +555,7 @@
 }
 #domain-promo .domain-promo-content {
   background-repeat: no-repeat;
-  background-size: 50% 100%;
+  background-position: 50% 100%;
   background-color: #333333;
   background-size: cover;
 }
