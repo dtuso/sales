@@ -145,7 +145,6 @@ block endOfPageScripts
       $('body').on('click','[data-url]',function(event){
         var $clickedElement = $(event.currentTarget);
         var $clickedUrl = $clickedElement.attr('data-url'); 
-        event.stopPropagation();
         window.location.href=$clickedUrl;
       });
 
