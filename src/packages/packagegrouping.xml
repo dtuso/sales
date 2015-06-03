@@ -1563,4 +1563,10 @@
       <Package id="email_tier3_060mo" />
     </Packages>
   </PackageGroup>
+  <PackageGroup Name="cms-bookkeeping" ProductGroupId="98">
+    <Packages>
+      <Package id="bookkeeping_tier1_001mo"/>
+      <Package id="bookkeeping_tier1_012mo" />
+    </Packages>
+  </PackageGroup>
 </PackageGroups>

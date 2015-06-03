@@ -1,0 +1,38 @@
+<Packages>
+  <Package id="bookkeeping_tier1_001mo" QtyIsDuration="false">
+    <ProductId>2697</ProductId>
+    <Rules>
+      <Rule Name="AddCustomXML">
+        <OrionAccountAttributes>
+          <AccountAttribute>
+            <Name>key</Name>
+            <AccountElements>
+              <AccountElement>
+                <Name>outrightToken</Name>
+                <Value>{0}</Value>
+              </AccountElement>
+            </AccountElements>
+          </AccountAttribute>
+        </OrionAccountAttributes>
+      </Rule>
+    </Rules>
+  </Package>
+  <Package id="bookkeeping_tier1_012mo" QtyIsDuration="false">
+    <ProductId>2699</ProductId>
+    <Rules>
+      <Rule Name="AddCustomXML">
+        <OrionAccountAttributes>
+          <AccountAttribute>
+            <Name>key</Name>
+            <AccountElements>
+              <AccountElement>
+                <Name>outrightToken</Name>
+                <Value>{0}</Value>
+              </AccountElement>
+            </AccountElements>
+          </AccountAttribute>
+        </OrionAccountAttributes>
+      </Rule>
+    </Rules>
+  </Package>
+</Packages>
