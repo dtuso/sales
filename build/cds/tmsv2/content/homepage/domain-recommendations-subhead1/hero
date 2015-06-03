@@ -91,10 +91,15 @@
 <script>
   var domainRecommendations = {
     dynamicContent: JSON.parse('[@D[tms.message.rule_data]@D]'),
-    domainPlaceholder: $('.domain'),
-    url:"[@T[link:<relative path='/domains/searchresults.aspx'><param name='domainToCheck' value='{0}' /><param name='checkAvail' value='1' /><param name='ci' value='99098' /></relative>]@T]",
-    hero:$('.hero.domain-recommendations')
+    url:"[@T[link:<relative path='/domains/searchresults.aspx'><param name='domainToCheck' value='{0}' /><param name='checkAvail' value='1' /><param name='ci' value='99098' /></relative>]@T]"
   };
-  $(domainRecommendations.hero).attr('data-url',domainRecommendations.url.replace('%7b0%7d',domainRecommendations.dynamicContent.domain_recommendations[0]));
-  $(domainRecommendations.domainPlaceholder).text(domainRecommendations.dynamicContent.domain_recommendations[0])
+  var btn = document.querySelectorAll('.hero .btn-purchase')[0];
+  btn.href = domainRecommendations.url.replace('%7b0%7d',domainRecommendations.dynamicContent.domain_recommendations[0]);
+  var domainText = document.querySelectorAll('.hero.domain-recommendations .domain')[0];
+  if (domainText) {
+    domainText.innerHTML = domainRecommendations.dynamicContent.domain_recommendations[0];
+  }
+  ux.eldorado.ready(function() {
+    $('.hero.domain-recommendations').attr('data-url',domainRecommendations.url.replace('%7b0%7d',domainRecommendations.dynamicContent.domain_recommendations[0]));
+  });
 </script>
