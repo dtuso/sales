@@ -538,6 +538,11 @@
 #domain-promo .jones-bg-image {
   background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg);
 }
+@media only screen and (max-width: 767px) {
+  #domain-promo .jones-bg-image {
+    background-image: none !important;
+  }
+}
 #domain-promo .domain-promo-content {
   background-repeat: no-repeat;
   background-size: 50% 100%;
@@ -1426,18 +1431,6 @@ section {
         }, 2000);
       });
       
-    </script>
-    <script>
-      ux.eldorado.ready(function(){
-        var url=window.location.hostname.substring(window.location.hostname.indexOf('.')+1);
-        ux.util.cookie.set("fb_tmsclick",null,-1,"/;domain="+url);
-        $("div[data-tms-trackingid]").on("click", function(e) {
-          try {
-            ux.util.cookie.set("fb_tmsclick",$(this).data("tms-trackingid"),false,"/;domain="+url)
-          } catch(t){}
-          return true
-        });
-      });
     </script>
   </body>
 </html>

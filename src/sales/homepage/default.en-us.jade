@@ -25,15 +25,4 @@ block banner-small-3
   include ../../tmsv2/content/homepage/gdpro/banner-small.jade
 block banner-small-4
   include ../../tmsv2/content/homepage/gem/banner-small.jade
-append endOfPageScripts
-  script.
-    ux.eldorado.ready(function(){
-      var url=window.location.hostname.substring(window.location.hostname.indexOf('.')+1);
-      ux.util.cookie.set("fb_tmsclick",null,-1,"/;domain="+url);
-      $("div[data-tms-trackingid]").on("click", function(e) {
-        try {
-          ux.util.cookie.set("fb_tmsclick",$(this).data("tms-trackingid"),false,"/;domain="+url)
-        } catch(t){}
-        return true
-      });
-    });
+

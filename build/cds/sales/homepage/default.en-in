@@ -598,7 +598,7 @@
     </atlantis:webstash>
     <section id="domain-promo" class="bg-green-official">
       <h2 class="text-center">[@L[cds.sales/homepage/sections/_domain-promo:header-text]@L]</h2>
-      <div class="domain-promo-content">
+      <div data-src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/nutcutlal-background.jpg" data-img-class="nutcutlal-bg-image" class="domain-promo-content">
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-sm-offset-6 col-xs-8 col-xs-offset-2 domain-promo-text">

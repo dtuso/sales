@@ -547,6 +547,11 @@
 #domain-promo .jones-bg-image {
   background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg);
 }
+@media only screen and (max-width: 767px) {
+  #domain-promo .jones-bg-image {
+    background-image: none !important;
+  }
+}
 #domain-promo .domain-promo-content {
   background-repeat: no-repeat;
   background-size: 50% 100%;

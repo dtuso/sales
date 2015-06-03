@@ -254,7 +254,11 @@ block content
         style
           :less
             #domain-promo { color: #fff; 
-              .jones-bg-image { background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg); }
+              .jones-bg-image { 
+                background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg); 
+                @media only screen and (max-width:767px) {background-image:none !important;}
+              }
+
               .domain-promo-content{
                 @media only screen and (max-width:767px) {background-image:none !important;}
                 background-repeat: no-repeat;
