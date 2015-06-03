@@ -7,6 +7,14 @@ block hero
   |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]
 block marquee-tile-1
   |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="banner-medium" rank="1" />]@P]
+  .default-content(style="display:none;min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; height: 100%; width: 100%; position: relative;")
+    include ../../tmsv2/content/homepage/gtld/banner-medium.jade
+  script.
+    var tmsDefault = document.querySelectorAll("#marquee-tile-1 .tms-default");
+    if (tmsDefault.length) {
+      document.querySelectorAll("#marquee-tile-1 [data-tms-template]")[0].style.display = "none";
+      document.querySelectorAll(".default-content")[0].style.display = "block";
+    }
 block marquee-tile-2
   include ../../tmsv2/content/homepage/tld-com-rajesh/banner-medium.jade
 block banner-small-1
@@ -23,9 +31,14 @@ block domain-promo
         style
           :less
             #domain-promo { color: #fff;
+
+              .nutcutlal-bg-image { background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/nutcutlal-background.jpg); }
               .domain-promo-content{
                 @media only screen and (max-width:767px) {background-image:none !important;}
-                background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/nutcutlal-background.jpg) 50% 100% #333 no-repeat;background-size:cover;
+                background-repeat: no-repeat;
+                background-size: 50% 100%;
+                background-color: #333333;
+                background-size: cover;
               }
               .domain-promo-text{padding:7% 2% 7% 0;}
               .text-center{color:#333;margin:0;padding:30px 0;text-transform:uppercase;}
@@ -49,17 +62,17 @@ block domain-promo
 block why-godaddy-feature-1
   .why-gd-registrar
     <!--[if lt IE 9]>
-    +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.png','Pin Point Globe')
+    +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.png','','Pin Point Globe')
     <![endif]-->
-    +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.svg','Pin Point Globe')
+    +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.svg','svgfallback','Pin Point Globe')
     h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading1]@L]
     p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body1]@L]
 block why-godaddy-feature-2
   .why-gd-support
     <!--[if lt IE 9]>
-    +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/more-names-icon.png','TLD Boards')
+    +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/more-names-icon.png','','TLD Boards')
     <![endif]-->
-    +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/more-names-icon.svg','TLD Boards')
+    +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/more-names-icon.svg','svgfallback','TLD Boards')
     h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading2]@L]
     p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body2]@L]
 block website-promo
@@ -74,7 +87,7 @@ block website-promo
         .two-up-speech-shape.two-up-speech-shape-gold,.two-up-speech-shape.two-up-speech-shape-gold:after{background-color:#fedc45;}
         .two-up-speech-shape.two-up-speech-shape-gold:before{border-top-color:#fedc45;}
   section#website-promo
-    +renderTwoUpCompare({title: "[@L[cds.sales/homepage/sections/_website-promo:promo-title-text]@L]", twoUpCompareId: "website-promo", titleBackgroundColor: "bg-green-official", backgroundImage: "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/east-website_promo.png", style: "min-height: 100%;"})
+    +renderTwoUpCompare2({title: "[@L[cds.sales/homepage/sections/_website-promo:promo-title-text]@L]", twoUpCompareId: "website-promo", titleBackgroundColor: "bg-green-official", backgroundImage: "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/east-website_promo.png", style: "min-height: 100%;"})
       +twoUpCompareColumn({title: "[@L[cds.sales/homepage/sections/_website-promo:website-title-text]@L]", backgroundColor: "bg-gray-darkest", shapeText: "[@L[cds.sales/homepage/sections/_website-promo:website-shape-text]@L]", shapeColor: "gold", whiteText:"WhiteText"})
         ul
           li [@L[cds.sales/homepage/sections/_website-promo:website-feature-line1]@L]
@@ -104,9 +117,9 @@ block prepend support-promo
   section#testimonial
     .container.walsheim-bold
       <!--[if lt IE 9]>
-      +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/testimonial-icon.png','TLD Boards')
+      +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/testimonial-icon.png','','TLD Boards')
       <![endif]-->
-      +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/testimonial-icon.svg','TLD Boards')
+      +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/testimonial-icon.svg','svgfallback','TLD Boards')
       .testimony "Our style of business is simple and straightforward, and I appreciate the same quality in GoDaddy. I found the plans easy to understand, pricing reasonable and their reputation is among the best."
       .customer
         span.referance Ms. Jaya Prasad, 
