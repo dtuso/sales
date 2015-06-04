@@ -78,12 +78,12 @@
 <div data-url="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='99188' /></relative>]@T]" data-ci='99188' class="hero hero-arrow hosting-flash-jazzy">
   <div style="background:white;" class="left-container">
     <div class="left-content">
-      <p class="bold font-md act-fast">Act Fast. Save Half.</p>
-      <h2 class="black big-green font-lg">[@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" hidebelow="5" showsymbol="true" />]@T] off</br> web hosting</h2>
+      <p class="bold font-md act-fast">[@L[cds.tmsv2/content/homepage/hosting-flash/hero:subhead]@L]</p>
+      <h2 class="black big-green font-lg">[@L[cds.tmsv2/content/homepage/hosting-flash/hero:headline]@L]</h2>
       <p class="bold font-md">[@L[cds.tmsv2/content/homepage/hosting-flash/hero:free-domain]@L]</p>
-      <mark class="bold font-sm">Sale ends [@T[localization:<display type="date" date="6-8-2015" />]@T]</mark>
-      <p class="black price">Starting at <span class="black text-purchase">[@T[productprice:<current productid="32051" period="monthly" checktmspromocode="true" htmlsymbol="false" />]@T]/mo</span></p><a class="black btn btn-md btn-primary">Get Started</a>
-      <p class="font-sm disclaimer">Annual purchase required.</p>
+      <mark class="bold font-sm">[@L[cds.tmsv2/content/homepage/hosting-flash/hero:flag]@L]</mark>
+      <p class="bold price font-md">[@L[cds.tmsv2/content/homepage/hosting-flash/hero:price]@L]</p><a class="black btn btn-md btn-primary">[@L[cds.tmsv2/content/homepage/hosting-flash/hero:cta]@L]</a>
+      <p class="font-sm disclaimer">[@L[cds.tmsv2/content/homepage/hosting-flash/hero:disclaimer]@L]</p>
     </div>
   </div>
   <div class="right-container">
