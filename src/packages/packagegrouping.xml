@@ -1547,4 +1547,36 @@
       <Package id="plesk_tier3_060mo" />
     </Packages>
   </PackageGroup>
+  <PackageGroup Name="cms-email" ProductGroupId="4">
+    <Packages>
+      <Package id="email_tier1_012mo" />
+      <Package id="email_tier1_024mo" />
+      <Package id="email_tier1_036mo" />
+      <Package id="email_tier1_060mo" />
+      <Package id="email_tier2_012mo" />
+      <Package id="email_tier2_024mo" />
+      <Package id="email_tier2_036mo" />
+      <Package id="email_tier2_060mo" />
+      <Package id="email_tier3_012mo" />
+      <Package id="email_tier3_024mo" />
+      <Package id="email_tier3_036mo" />
+      <Package id="email_tier3_060mo" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="cms-bookkeeping" ProductGroupId="98">
+    <Packages>
+      <Package id="bookkeeping_tier1_001mo"/>
+      <Package id="bookkeeping_tier1_012mo" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="cms-codesigning" ProductGroupId="65">
+    <Packages>
+      <Package id="codesigning_tier1_012mo" />
+      <Package id="codesigning_tier1_024mo" />
+      <Package id="codesigning_tier1_036mo" />
+      <Package id="driversigning_tier1_012mo" />
+      <Package id="driversigning_tier1_024mo" />
+      <Package id="driversigning_tier1_036mo" />
+    </Packages>
+  </PackageGroup>
 </PackageGroups>

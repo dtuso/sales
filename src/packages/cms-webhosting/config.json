@@ -129,8 +129,8 @@
     "CurrentPlanName":"Deluxe",
     "CurrentPlanDuration":"1",
     "CurrentPlanOs":"Linux",
-    "PlanListPrices":[
-      "Economy-cpanel_tier1_001mo",
+    "PlanListPrices":[ 
+      "Economy-cpanel_tier1_003mo",
       "Deluxe-cpanel_tier2_001mo",
       "Ultimate-cpanel_tier3_001mo"
     ],

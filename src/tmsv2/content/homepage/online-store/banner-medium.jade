@@ -13,9 +13,9 @@ block content
   .btn.btn-sm.btn-purchase(href!=ctaLink) [@L[cds.tmsv2/content/homepage/online-store/banner-medium:cta]@L] 
   script.
     (function() { 
-      var $price = $('.banner-medium.online-store span.text-purchase');
-      if ($price.length) {
-        $price.html($price.html().replace('{0}','[@T[productprice:<current productid="40966" period="monthly" />]@T]'));
-        $price.show();
+      var price = document.querySelectorAll('.banner-medium.online-store span.text-purchase')[0];
+      if (price) {
+        price.innerHTML = price.innerHTML.replace('{0}','[@T[productprice:<current productid="40966" period="monthly" />]@T]');
+        price.style.display = "inline";
       }
     })();

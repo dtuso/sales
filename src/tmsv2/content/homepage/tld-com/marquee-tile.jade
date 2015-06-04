@@ -27,7 +27,8 @@ block prepend tileContent
     .sale-ends-text.tungsten [@L[cds.sales/homepage:saleEnds]@L]
     script(type='text/javascript').
       var d = new Date("2015","01","17");
-      saleEndDate = d.toLocaleDateString();
-      $(".sale-ends-text").text($(".sale-ends-text").text().replace("{0}",saleEndDate));
+      saleEndDate = d.toLocaleDateString(); 
+      var saleElement = document.querySelectorAll('.sale-ends-text')[0];  
+      saleElement.text = saleElement.text.replace("{0}",saleEndDate));    
   |  
   |  ##endif
