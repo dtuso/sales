@@ -15,7 +15,11 @@ block bugBar
 block primaryTile
   //- include ../../sales/homepage/tiles/hosting-old-brand.jade
   | 
+  | ##if(splitTestingSideIsActive(1467, B))
+  | [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+  | ##else
   | [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting/default_template" /> ]@P]
+  | ##endif
 
 block secondaryTile
   | 
