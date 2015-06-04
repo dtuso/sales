@@ -59,7 +59,7 @@ var got1Page = {
   got1Page.tldInfo.addTldIf('in', false);
 ##endif
 ##if(countrySiteAny(uk) || isManager())
-  got1Page.tldInfo.addTldIf('co.uk', true);
+  got1Page.tldInfo.addTldIf('co.uk', false);
   got1Page.tldInfo.addTldIf('uk',    false);
 ##endif
 ##if(countrySiteAny(fr) || isManager())
