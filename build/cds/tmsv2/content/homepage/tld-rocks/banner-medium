@@ -13,10 +13,10 @@
   <div class="cta">[@L[cds.tmsv2/content/homepage/marquee-tile-tld:price]@L]</div>
   <script>
     (function() { 
-      var $price = $('.rocks.banner-medium .text-purchase');
-      if ($price.length) {
-        $price.html($price.html().replace('{0}','[@T[productprice:<current productid="221207" period="yearly" />]@T]'));
-        $price.show();
+      var price = document.querySelectorAll('.rocks.banner-medium .text-purchase')[0];
+      if (price) {
+        price.innerHTML = price.innerHTML.replace('{0}','[@T[productprice:<current productid="221207" period="yearly" />]@T]');
+        price.style.display = "block";
       }
     })();
   </script>

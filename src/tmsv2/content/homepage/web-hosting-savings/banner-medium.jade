@@ -21,7 +21,7 @@ block content
     (function() { 
       var savings = "[@T[productcompare:<percent primaryproductid='32082' secondaryproductid='32082' showsymbol='true'/>]@T]";
       if (savings) {
-        var $savingsElement = $('.banner-medium.web-hosting-savings .text-purchase');
-        $savingsElement.text("[@L[cds.tmsv2/content/homepage/web-hosting-savings/marquee-tile:saveupto]@L]".replace(/\{0\}/gi, savings));
+        var savingsElement = document.querySelectorAll('.banner-medium.web-hosting-savings .text-purchase')[0];
+        savingsElement.text = "[@L[cds.tmsv2/content/homepage/web-hosting-savings/marquee-tile:saveupto]@L]".replace(/\{0\}/gi, savings);
       }
     })();
