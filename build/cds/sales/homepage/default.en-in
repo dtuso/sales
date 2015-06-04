@@ -229,7 +229,7 @@
                     <div class="left-content">
                       <div class="black">Big dreams.<br>Small price.</div>
                       <h2 class="black text-primary-o">New .com<br><span class="text-purchase">[@T[productprice:<current productid='101' period='yearly' checktmspromocode='true' />]@T]*</span></h2>
-                      <div class="disclaimer">*2 year minimum registration required. Subsequent years charged at [@T[productprice:<current productid='101' period='yearly' promocode='0' />]@T]/yr.</div>
+                      <div class="disclaimer">*2 year minimum registration required. Subsequent years charged at [@T[productprice:<list productid='101' period='yearly'/>]@T]/yr.</div>
                     </div>
                   </div>
                   <div class="right-container">
