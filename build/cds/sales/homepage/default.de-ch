@@ -95,7 +95,11 @@
     <div class="gdhp-tile-wrap">
       <div class="gdhp-tile-area">
          
+        ##if(splitTestingSideIsActive(1467, B))
+        [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+        ##else
         [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting/default_template" /> ]@P]
+        ##endif
          
         [@P[cdsDocument:<data app="sales" location="homepage/tile/ch-free-transfer/default_template" /> ]@P]</div>
     </div>
