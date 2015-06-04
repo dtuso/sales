@@ -1067,6 +1067,18 @@
           { "ITC Code" : "NewAvailTech" },
           { "Description" : "New Available TLD's Column - .TECH" }
         ]
+      },
+      { "New Domains Available TLD's Column - .TEAM" : [
+          { "ITC ID" : "99299" },
+          { "ITC Code" : "NewAvailTeam" },
+          { "Description" : "New Available TLD's Column - .TEAM" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .SHOW" : [
+          { "ITC ID" : "99298" },
+          { "ITC Code" : "NewAvailShow" },
+          { "Description" : "New Available TLD's Column - .SHOW" }
+        ]
       }
     ],
   "Coming Soon Tlds" : [
@@ -1182,6 +1194,12 @@
           { "ITC ID" : "99237" },
           { "ITC Code" : "ComingSoonGROUP" },
           { "Description" : "Coming Soon TLD's Column - .GROUP" }
+        ]
+      },
+      { "Coming Soon TLD's Column - .FAMILY" : [
+          { "ITC ID" : "99300" },
+          { "ITC Code" : "ComingSoonFAMILY" },
+          { "Description" : "Coming Soon TLD's Column - .FAMILY" }
         ]
       }
     ],

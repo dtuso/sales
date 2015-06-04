@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/domains/domain-name-search/en
-id: 556f6fb6f778fc1bf05e4d5f
+id: 5570ad57f778fc06084fa19d
 name: MCXMO-1089
 comments: merch updates for 6/10/2015
 ---
@@ -674,6 +674,10 @@ Be seen online with <strong>.video</strong>.
 <strong>.group</strong>
 <phrase key="TldDotFamily" />
 <strong>.family</strong>
+<phrase key="TldDotTeam" />
+<strong>.team</strong>
+<phrase key="TldDotShow" />
+<strong>.show</strong>
 <phrase key="CarouselSlide1Default" />
 Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.work</strong>, <strong>.world</strong>, <strong>.space</strong>, <strong>.guru</strong>, and <strong>.rocks</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1AU" />
