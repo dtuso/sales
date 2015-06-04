@@ -79,7 +79,7 @@ append pageStyles
         .separator.separator-big {
           width: 68px;
           height: 8px;
-          margin: 20px 0;
+          margin: 10px 0;
         }
         .separator {
           background: #333;
@@ -97,6 +97,12 @@ block marquee
       @headerLarge: 60px;
       @headerMedium: 42px;
       @headerSmall: 22px;
+      @menu1Large: 24px;
+      @menu1Medium: 20.8px;
+      @menu1Small: 17.6px;
+      @menu2Large: 18px;
+      @menu2Medium: 15.6px;
+      @menu2Small: 13.2px;
 
       /* MARQUEE */
       #marquee {
@@ -116,11 +122,28 @@ block marquee
       #marquee .ul-container {
         padding: 0;
       }
-      #marquee .career-navigation {background-color:rgba(256,256,256,0.8);font-size:18px}
+      #marquee .career-navigation {
+        background-color:rgba(256,256,256,0.8);
+        font-size: @menu2Small;
+        @media only screen and (min-width: 479px) {
+          font-size: @menu2Medium;
+        }
+        @media only screen and (min-width: 992px) {
+          font-size: @menu2Large;
+        }
+      }
       #marquee .career-navigation a {text-decoration: none;}
       #marquee .career-navigation ul{list-style-type:none;margin:0 auto; padding:0;}
-      #marquee .career-navigation li{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;float:left;height:2.77777777em;line-height:2.77777777em;font-weight:200;margin-left:1em;margin-right:1em; margin-bottom: 0; margin-top: 0}
-      #marquee .career-navigation li.overview{font-weight:400;font-size:24px;height:.625em;line-height:.45em;margin-top:.75em;border-right:1px solid #aaa;margin-right:.25em;margin-left:0;padding-right:1em;overflow:visible}
+      #marquee .career-navigation li{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;float:left;height:2.77777777em;line-height:2.77777777em;font-weight:200;margin-left:1em;margin-right:1em; margin-bottom: 0; margin-top: 0;}
+      #marquee .career-navigation li.overview{font-weight:400;height:.625em;line-height:.45em;margin-top:.75em;border-right:1px solid #aaa;margin-right:.25em;margin-left:0;padding-right:1em;overflow:visible;
+        font-size: @menu1Small;
+        @media only screen and (min-width: 479px) {
+          font-size: @menu1Medium;
+        }
+        @media only screen and (min-width: 992px) {
+          font-size: @menu1Large;
+        }
+      }
       #marquee .career-navigation li.opportunities{float:right;font-weight:400;margin-right:1.3333333333333333em}
       #marquee .career-navigation li.opportunities a{color:#7db701;text-decoration:none}
       #marquee .career-navigation li a{color:#333}
@@ -135,24 +158,25 @@ block marquee
         .col-xs-12
           nav.career-navigation
             .container.ul-container
-              .row
-                ul
-                  li.overview
-                    a(href!='[@T[link:<relative path="~/careers/overview" />]@T]') [@L[cds.sales/gd/careers/diversity:CareerNavigationHome]@L]        
-                  li.culture
-                    a(href!='[@T[link:<relative path="~/careers/culture" />]@T]') [@L[cds.sales/gd/careers/diversity:CareerNavigationCulture]@L]  
-                  li.diversity
-                    a(href!='[@T[link:<relative path="~/careers/diversity" />]@T]') [@L[cds.sales/gd/careers/diversity:CareerNavigationDiversity]@L]
-                  li.benefits
-                    a(href!='[@T[link:<relative path="~/careers/benefits" />]@T]') [@L[cds.sales/gd/careers/diversity:CareerNavigationBenefits]@L]
-                  li.locations
-                    a(href!='[@T[link:<relative path="~/careers/locations" />]@T]') [@L[cds.sales/gd/careers/diversity:CareerNavigationLocations]@L]
-                  li.interdiversityns
-                    a(href!='[@T[link:<relative path="~/careers/interns" />]@T]') [@L[cds.sales/gd/careers/diversity:CareerNavigationInterns]@L]
-                  li.work
-                    a(href!='[@T[link:<relative path="~/careers/work" />]@T]') [@L[cds.sales/gd/careers/diversity:CareerNavigationWork]@L]
-                  li.opportunities
-                    a(href!='[@T[link:<relative path="~/careers/opportunities" />]@T]') [@L[cds.sales/gd/careers/diversity:CareerNavigationopportunities]@L]
+              .col-xs-12
+                    .row
+                      ul
+                        li.overview
+                          a(href!='[@T[link:<relative path="~/careers/overview" />]@T]') [@L[cds.sales/gd/careers/diversity:CareerNavigationHome]@L]        
+                        li.culture
+                          a(href!='[@T[link:<relative path="~/careers/culture" />]@T]') [@L[cds.sales/gd/careers/diversity:CareerNavigationCulture]@L]  
+                        li.diversity
+                          a(href!='[@T[link:<relative path="~/careers/diversity" />]@T]') [@L[cds.sales/gd/careers/diversity:CareerNavigationDiversity]@L]
+                        li.benefits
+                          a(href!='[@T[link:<relative path="~/careers/benefits" />]@T]') [@L[cds.sales/gd/careers/diversity:CareerNavigationBenefits]@L]
+                        li.locations
+                          a(href!='[@T[link:<relative path="~/careers/locations" />]@T]') [@L[cds.sales/gd/careers/diversity:CareerNavigationLocations]@L]
+                        li.interdiversityns
+                          a(href!='[@T[link:<relative path="~/careers/interns" />]@T]') [@L[cds.sales/gd/careers/diversity:CareerNavigationInterns]@L]
+                        li.work
+                          a(href!='[@T[link:<relative path="~/careers/work" />]@T]') [@L[cds.sales/gd/careers/diversity:CareerNavigationWork]@L]
+                        li.opportunities
+                          a(href!='[@T[link:<relative path="~/careers/opportunities" />]@T]') [@L[cds.sales/gd/careers/diversity:CareerNavigationopportunities]@L]
       .row
         .container
           .row
@@ -339,6 +363,12 @@ block sections
   style
     :less
       @imgPath: '[@T[link:<imageroot />]@T]fos/201401/careers/img/';
+      @headerLarge: 50px;
+      @headerMedium: 32px;
+      @headerSmall: 18px;
+      @innerLarge: 16px;
+      @innerMedium: 14px;
+      @innerSmall: 12px;
 
       /* DIVERSITY CAROUSEL */
       .diversity-carousel-title {
@@ -354,12 +384,24 @@ block sections
       }
       #diversity-carousel h3.carousel-inner-title {
         color: #7db701;
-        font-size: 50px;
         text-transform: none;
+        font-size: @headerSmall;
+        @media only screen and (min-width: 479px) {
+          font-size: @headerMedium;
+        }
+        @media only screen and (min-width: 992px) {
+          font-size: @headerLarge;
+        }
       }
       #diversity-carousel p.carousel-inner-text {
         color: #333;
-        font-size: 16px;
+        font-size: @innerSmall;
+        @media only screen and (min-width: 479px) {
+          font-size: @innerMedium;
+        }
+        @media only screen and (min-width: 992px) {
+          font-size: @innerLarge;
+        }
       }
       #diversity-carousel .diversity-carousel-item {
         padding: 0px 20px;

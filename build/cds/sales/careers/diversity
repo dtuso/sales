@@ -159,7 +159,17 @@
 }
 #marquee .career-navigation {
   background-color: rgba(255, 255, 255, 0.8);
-  font-size: 18px;
+  font-size: 13.2px;
+}
+@media only screen and (min-width: 479px) {
+  #marquee .career-navigation {
+    font-size: 15.6px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #marquee .career-navigation {
+    font-size: 18px;
+  }
 }
 #marquee .career-navigation a {
   text-decoration: none;
@@ -182,7 +192,6 @@
 }
 #marquee .career-navigation li.overview {
   font-weight: 400;
-  font-size: 24px;
   height: .625em;
   line-height: .45em;
   margin-top: .75em;
@@ -191,6 +200,17 @@
   margin-left: 0;
   padding-right: 1em;
   overflow: visible;
+  font-size: 17.6px;
+}
+@media only screen and (min-width: 479px) {
+  #marquee .career-navigation li.overview {
+    font-size: 20.8px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #marquee .career-navigation li.overview {
+    font-size: 24px;
+  }
 }
 #marquee .career-navigation li.opportunities {
   float: right;
@@ -221,17 +241,19 @@
           <div class="col-xs-12">
             <nav class="career-navigation">
               <div class="container ul-container">
-                <div class="row">
-                  <ul>
-                    <li class="overview"><a href="[@T[link:<relative path="~/careers/overview" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationHome]@L]        </a></li>
-                    <li class="culture"><a href="[@T[link:<relative path="~/careers/culture" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationCulture]@L]  </a></li>
-                    <li class="diversity"><a href="[@T[link:<relative path="~/careers/diversity" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationDiversity]@L]</a></li>
-                    <li class="benefits"><a href="[@T[link:<relative path="~/careers/benefits" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationBenefits]@L]</a></li>
-                    <li class="locations"><a href="[@T[link:<relative path="~/careers/locations" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationLocations]@L]</a></li>
-                    <li class="interdiversityns"><a href="[@T[link:<relative path="~/careers/interns" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationInterns]@L]</a></li>
-                    <li class="work"><a href="[@T[link:<relative path="~/careers/work" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationWork]@L]</a></li>
-                    <li class="opportunities"><a href="[@T[link:<relative path="~/careers/opportunities" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationopportunities]@L]</a></li>
-                  </ul>
+                <div class="col-xs-12">
+                  <div class="row">
+                    <ul>
+                      <li class="overview"><a href="[@T[link:<relative path="~/careers/overview" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationHome]@L]        </a></li>
+                      <li class="culture"><a href="[@T[link:<relative path="~/careers/culture" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationCulture]@L]  </a></li>
+                      <li class="diversity"><a href="[@T[link:<relative path="~/careers/diversity" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationDiversity]@L]</a></li>
+                      <li class="benefits"><a href="[@T[link:<relative path="~/careers/benefits" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationBenefits]@L]</a></li>
+                      <li class="locations"><a href="[@T[link:<relative path="~/careers/locations" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationLocations]@L]</a></li>
+                      <li class="interdiversityns"><a href="[@T[link:<relative path="~/careers/interns" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationInterns]@L]</a></li>
+                      <li class="work"><a href="[@T[link:<relative path="~/careers/work" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationWork]@L]</a></li>
+                      <li class="opportunities"><a href="[@T[link:<relative path="~/careers/opportunities" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationopportunities]@L]</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </nav>
@@ -481,12 +503,32 @@ section.plackard h2.plackard-title {
 }
 #diversity-carousel h3.carousel-inner-title {
   color: #7db701;
-  font-size: 50px;
   text-transform: none;
+  font-size: 18px;
+}
+@media only screen and (min-width: 479px) {
+  #diversity-carousel h3.carousel-inner-title {
+    font-size: 32px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #diversity-carousel h3.carousel-inner-title {
+    font-size: 50px;
+  }
 }
 #diversity-carousel p.carousel-inner-text {
   color: #333;
-  font-size: 16px;
+  font-size: 12px;
+}
+@media only screen and (min-width: 479px) {
+  #diversity-carousel p.carousel-inner-text {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #diversity-carousel p.carousel-inner-text {
+    font-size: 16px;
+  }
 }
 #diversity-carousel .diversity-carousel-item {
   padding: 0px 20px;
@@ -1223,7 +1265,7 @@ section h2 {
 .separator.separator-big {
   width: 68px;
   height: 8px;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 .separator {
   background: #333;
