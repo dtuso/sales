@@ -1603,4 +1603,14 @@
       <Package id="getfound_tier4_060mo" />
     </Packages>
   </PackageGroup>
+  <PackageGroup Name="cms-webdesign" ProductGroupId="54">
+    <Packages>
+      <Package id="webdesign_tier1_001mo" />
+      <Package id="webdesign_tier1_012mo" />
+      <Package id="webdesign_tier1_024mo" />
+      <Package id="webdesign_tier2_001mo" />
+      <Package id="webdesign_tier2_012mo" />
+      <Package id="webdesign_tier2_024mo" />
+    </Packages>
+  </PackageGroup>
 </PackageGroups>
