@@ -1613,4 +1613,23 @@
       <Package id="webdesign_tier2_024mo" />
     </Packages>
   </PackageGroup>
+  <PackageGroup Name="cms-calendar" ProductGroupId="32">
+    <Packages>
+      <Package id="calendar_tier1_012mo" />
+      <Package id="calendar_tier1_024mo" />
+      <Package id="calendar_tier1_036mo" />
+      <Package id="calendar_tier1_060mo" />
+      <Package id="calendar_tier1_120mo" />
+      <Package id="calendar_tier2_012mo" />
+      <Package id="calendar_tier2_024mo" />
+      <Package id="calendar_tier2_036mo" />
+      <Package id="calendar_tier2_060mo" />
+      <Package id="calendar_tier2_120mo" />
+      <Package id="calendar_tier3_012mo" />
+      <Package id="calendar_tier3_024mo" />
+      <Package id="calendar_tier3_036mo" />
+      <Package id="calendar_tier3_060mo" />
+      <Package id="calendar_tier3_120mo" />
+    </Packages>
+  </PackageGroup>
 </PackageGroups>
