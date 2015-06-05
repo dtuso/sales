@@ -392,12 +392,11 @@
               <div class="body">[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:body]@L]</div><a href="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95801' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:cta]@L] </a>
               <script>
                 var savings = Math.max([@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" />]@T],[@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" />]@T],[@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" />]@T]);
-                $cta=$('.banner-small.web-hosting-price a');
+                var cta = document.querySelectorAll('.banner-small.web-hosting-price a')[0];
                 if(savings<5)
-                  $cta.html('[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:cta-fallback]@L]')
+                  cta.innerHTML = '[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:cta-fallback]@L]';
                 else
-                  $cta.html($cta.html().replace("{0}", savings));
-                $cta.show();
+                  cta.innerHTML = cta.innerHTML.replace("{0}", savings);
               </script>
             </div>
           </div>
