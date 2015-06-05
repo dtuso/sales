@@ -2,8 +2,8 @@
 url: http://www.dev-godaddy.com/business/office-365.aspx
 location: sales/business/office-365.aspx
 id: 
-name: GCE-38369
-comments: Monthly Term Removal Split
+name: MCX-40728
+comments: Update 1459 split
 metaTitle: "[@L[cds.sales/business/office-365:lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy]@L]"
 metaDescription: "[@L[cds.sales/business/office-365:lp-36-MSOffice365IsEasyToSetUp]@L]"
 metaKeywords: "[@L[cds.sales/business/office-365:lp-18-Office365MicrosoftOffice365Office365Pricing]@L]"
@@ -1731,7 +1731,7 @@ assetPath: false
       var url = '[@T[link:<relative path="/api/package/add{0}"/>]@T]'.replace('{0}', urlFragment);
 
       var redirectUrl = '[@T[link:<relative path="~/business/office-365-config.aspx"></relative>]@T]';
-      redirectUrl += (redirectUrl.indexOf('?') > 0 ? '&' : '?') + 'plan=' + packageId;
+      redirectUrl += (redirectUrl.indexOf('?') > 0 ? '&' : '?') + 'plan=' + packageId + '&lprefer=office';
 
       $.ajax({
         type: 'POST',

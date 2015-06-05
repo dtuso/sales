@@ -1,9 +1,9 @@
 ---
 url: http://www.dev-godaddy.com/business/office-365-config.aspx
 location: sales/business/office-365-config.aspx
-id: 55245218f778fc18a4f86b08
-name: GCE-33982
-comments: removing split 1414
+id: 
+name: MCX-40728
+comments: Update 1459 split
 ---
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="[@T[localization:<language full="true" />]@T]"> <![endif]-->
@@ -34,7 +34,6 @@ comments: removing split 1414
   <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/global.min.css" rel="stylesheet" type="text/css">
 
   <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico" />
-  <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/global.min.css" rel="stylesheet" type="text/css">
   <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery/1.8.3/jquery.min.js"></script>
   <!--[if lt IE 9]>
   <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/html5shiv.js"></script>
@@ -42,7 +41,7 @@ comments: removing split 1414
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
   <!-- build:css(app) /css/main.css -->
-  <link rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/office365/_bower_components/bootstrap3-godaddy/index.css" />
+  <link rel="stylesheet" href="[@T[link:<css path='fos/office365/_bower_components/bootstrap3-godaddy/index.css?v=2' />]@T]" />
   <link rel="stylesheet" href="[@T[link:<css path='fos/office365/css/main.20150219.css' /> ]@T]" /> 
   <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='/business/office-365-config.aspx' parammode='explicit'/>]@T]"/> 
   <!--[if lt IE 8]>
@@ -97,7 +96,7 @@ comments: removing split 1414
               <div class="config-product-wrapper" data-planLevel="Economy" data-product="Original" style="display: none;">
                 <div class="config-product-wide">
                   <h3 class="product-name">[@L[cds.sales/business/office-365-config:cp-6-EmailEssentialsPoweredByOffice365]@L]</h3>
-                  ##if(splitTestingSideIsActive(1459, B))
+                  ##if(splitTestingSideIsActive(1459, B) && queryValueHas(lprefer, email))
                   <div class="orange-text product-price"><span class="product-price-amount js-product-price-amount0"></span>  <span class="product-price-text price-per-month-text">[@L[cds.sales/business/office-365-config:cp-3-PerUserYear]@L]</span>
                   </div>
                   ##else
@@ -118,7 +117,7 @@ comments: removing split 1414
               <div class="config-product-wrapper" data-planLevel="Business" data-product="Original" style="display: none;">
                 <div class="config-product-wide">
                   <h3 class="product-name">[@L[cds.sales/business/office-365-config:cp-6-BusinessPremiumPoweredByOffice365]@L]</h3>
-                  ##if(splitTestingSideIsActive(1459, B))
+                  ##if(splitTestingSideIsActive(1459, B) && queryValueHas(lprefer, email))
                   <div class="orange-text product-price"><span class="product-price-amount js-product-price-amount1"></span>  <span class="product-price-text price-per-month-text">[@L[cds.sales/business/office-365-config:cp-3-PerUserYear]@L]</span>
                   </div>
                   ##else
@@ -141,7 +140,7 @@ comments: removing split 1414
               <div class="config-product-wrapper config-product-last" data-planLevel="Premium" data-product="Original" style="display: none;">
                 <div class="config-product-wide">
                   <h3 class="product-name">[@L[cds.sales/business/office-365-config:cp-6-ProductivityPlusPoweredByOffice365]@L]</h3>
-                  ##if(splitTestingSideIsActive(1459, B))
+                  ##if(splitTestingSideIsActive(1459, B) && queryValueHas(lprefer, email))
                   <div class="orange-text product-price"><span class="product-price-amount js-product-price-amount2"></span>  <span class="product-price-text price-per-month-text">[@L[cds.sales/business/office-365-config:cp-3-PerUserYear]@L]</span>
                   </div>
                   ##else
@@ -165,7 +164,7 @@ comments: removing split 1414
               <div class="config-product-wrapper" data-planLevel="Email_A" data-product="Email" style="display: none;">
                 <div class="config-product-wide">
                   <h3 class="product-name">[@L[cds.sales/business/office-365-config:email-essentials-pwd]@L]</h3>
-                  ##if(splitTestingSideIsActive(1459, B))
+                  ##if(splitTestingSideIsActive(1459, B) && queryValueHas(lprefer, email))
                   <div class="orange-text product-price"><span class="product-price-amount js-product-price-amount3"></span>  <span class="product-price-text price-per-month-text">[@L[cds.sales/business/office-365-config:cp-3-PerUserYear]@L]</span>
                   </div>
                   ##else
@@ -186,7 +185,7 @@ comments: removing split 1414
               <div class="config-product-wrapper" data-planLevel="Email_B" data-product="Email"  style="display: none;">
                 <div class="config-product-wide">
                   <h3 class="product-name">[@L[cds.sales/business/office-365-config:cp-6-OnlineEssentialsPoweredByOffice365]@L]</h3>
-                  ##if(splitTestingSideIsActive(1459, B))
+                  ##if(splitTestingSideIsActive(1459, B) && queryValueHas(lprefer, email))
                   <div class="orange-text product-price"><span class="product-price-amount js-product-price-amount4"></span>  <span class="product-price-text price-per-month-text">[@L[cds.sales/business/office-365-config:cp-3-PerUserYear]@L]</span>
                   </div>
                   ##else
@@ -209,7 +208,7 @@ comments: removing split 1414
               <div class="config-product-wrapper config-product-last" data-planLevel="Email_C" data-product="Email"  style="display: none;">
                 <div class="config-product-wide">
                   <h3 class="product-name">[@L[cds.sales/business/office-365-config:business-premium-pwd]@L]</h3>
-                  ##if(splitTestingSideIsActive(1459, B))
+                  ##if(splitTestingSideIsActive(1459, B) && queryValueHas(lprefer, email))
                   <div class="orange-text product-price"><span class="product-price-amount js-product-price-amount5"></span>  <span class="product-price-text price-per-month-text">[@L[cds.sales/business/office-365-config:cp-3-PerUserYear]@L]</span>
                   </div>
                   ##else
@@ -233,7 +232,7 @@ comments: removing split 1414
               <div class="config-product-wrapper" data-planLevel="Office_A" data-product="Office" style="display: none;">
                 <div class="config-product-wide">
                   <h3 class="product-name">[@L[cds.sales/business/office-365-config:online-essentials-pwd]@L]</h3>
-                  ##if(splitTestingSideIsActive(1459, B))
+                  ##if(splitTestingSideIsActive(1459, B) && queryValueHas(lprefer, email))
                   <div class="orange-text product-price"><span class="product-price-amount js-product-price-amount6"></span>  <span class="product-price-text price-per-month-text">[@L[cds.sales/business/office-365-config:cp-3-PerUserYear]@L]</span>
                   </div>
                   ##else
@@ -256,7 +255,7 @@ comments: removing split 1414
               <div class="config-product-wrapper" data-planLevel="Office_B" data-product="Office" style="display: none;">
                 <div class="config-product-wide">
                   <h3 class="product-name">[@L[cds.sales/business/office-365-config:Business-pwd]@L]</h3>
-                  ##if(splitTestingSideIsActive(1459, B))
+                  ##if(splitTestingSideIsActive(1459, B) && queryValueHas(lprefer, email))
                   <div class="orange-text product-price"><span class="product-price-amount js-product-price-amount7"></span>  <span class="product-price-text price-per-month-text">[@L[cds.sales/business/office-365-config:cp-3-PerUserYear]@L]</span>
                   </div>
                   ##else
@@ -279,7 +278,7 @@ comments: removing split 1414
               <div class="config-product-wrapper config-product-last" data-planLevel="Office_C" data-product="Office" style="display: none;">
                 <div class="config-product-wide">
                   <h3 class="product-name">[@L[cds.sales/business/office-365-config:business-premium-pwd]@L]</h3>
-                  ##if(splitTestingSideIsActive(1459, B))
+                  ##if(splitTestingSideIsActive(1459, B) && queryValueHas(lprefer, email))
                   <div class="orange-text product-price"><span class="product-price-amount js-product-price-amount8"></span>  <span class="product-price-text price-per-month-text">[@L[cds.sales/business/office-365-config:cp-3-PerUserYear]@L]</span>
                   </div>
                   ##else
@@ -320,7 +319,7 @@ comments: removing split 1414
               <div class="term-length-selector-wrapper">
                 <div class="term-length-selector">
                   <select class="selectstyle js-duration" name="terms-selector">
-                    ##if(splitTestingSideIsActive(1459, B))
+                    ##if(splitTestingSideIsActive(1459, B) && queryValueHas(lprefer, email))
                     <option value="12">[@L[cds.sales/business/office-365-config:cp-2-1Year]@L]</option>
                     <option value="24">[@L[cds.sales/business/office-365-config:cp-2-2Years]@L]</option>
                     ##else
@@ -346,7 +345,7 @@ comments: removing split 1414
               <div class="term-length-selector-wrapper">
                 <div class="term-length-selector">
                   <select class="selectstyle js-duration" name="terms-selector">
-                    ##if(splitTestingSideIsActive(1459, B))
+                    ##if(splitTestingSideIsActive(1459, B) && queryValueHas(lprefer, email))
                     <option value="12">[@L[cds.sales/business/office-365-config:cp-2-1Year]@L]</option>
                     <option value="24">[@L[cds.sales/business/office-365-config:cp-2-2Years]@L]</option>
                     ##else
@@ -919,7 +918,7 @@ comments: removing split 1414
               },500);
             } 
           })
-          ##if(splitTestingSideIsActive(1459, B))
+          ##if(splitTestingSideIsActive(1459, B) && queryValueHas(lprefer, email))
           $(".js-duration").change(function(){
             office365config.planDuration = $(".js-duration").val();
             office365config.buildProductOrder();
