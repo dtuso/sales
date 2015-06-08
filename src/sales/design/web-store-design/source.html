@@ -1,9 +1,10 @@
 ---
 location: sales/design/web-store-design.aspx
-id: 
-name: GCE-34158
-comments:  P4P - Phase 3 - PWS Lineup Updates
-cssVersionOverride : 3
+id: 5570ef8ff778fc06084fa1f9
+name: GCE-40670
+comments: Remove the word Free in Free Hosting
+cssVersionOverride : 4
+salesheader: false
 ---
 {% extends 'layouts/base.html' %}
 
@@ -40,12 +41,12 @@ cssVersionOverride : 3
 
 {% endblock metahead %}
 
-{% block footer %}   
+{% block footer %}
 <script type="text/javascript">
       $('.chatSupportLink').attr('data-ci','93511');
     function openPopUpWithParams (url, windowName, windowParams) {
             window.open(url, windowName, windowParams);
-    }    
+    }
     $(function () {
       $('.equal-height').setColumnsEqualHeight();
       $('.select-box').setSelectBox();
@@ -55,7 +56,7 @@ cssVersionOverride : 3
 
       $(".view-our-designs-link").click(function(){
         openPopUpWithParams("http://ourdesignexamples.com#stores", "customweb_popup", "left=50,top=50,resizable=yes,scrollbars=yes,width=1000,height=950");
-      });    
+      });
 
       // CI code click tracker
       if (typeof FastballEvent_MouseClick === 'function' && typeof fbiLibCheckQueue === 'function') {
@@ -65,7 +66,7 @@ cssVersionOverride : 3
           fbiLibCheckQueue();
         });
       }
-      
+
       $('body').on('click', 'a[data-popup]', function(e) {
         e.preventDefault();
         var defaults = {
@@ -94,14 +95,14 @@ cssVersionOverride : 3
           window.location.hash = '';
           $('a[href="#plan-pricing"]').tab('show');
           window.location.hash = '#pricing';
-      }); 
+      });
 
       cartURL = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
       managerCartUrl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
       managerView=false;
       ##if(isManager())
         managerView=true;
-      ##endif  
+      ##endif
       $('.addtocart-form').on('submit', function (e) {
         $('button[type="submit"]', this).addClass('waiting');
         e.preventDefault();
@@ -115,15 +116,15 @@ cssVersionOverride : 3
                contentType: "application/json",
                data: "requestData=" + JSON.stringify({ pkgid: fields['package'], qty: fields['qty'], itc: fields['itc'], ci: fields['ci'] }),
                dataType: "jsonp",
-               success: function (response) { 
+               success: function (response) {
                  window.location = (managerView === true) ? managerCartUrl : cartURL;
                },
-               failure: function (response) { 
+               failure: function (response) {
                   window.location = (managerView === true) ? managerCartUrl : cartURL;
                }
               });
-      });   
-    });    
+      });
+    });
 </script>
 {% endblock footer %}
 
@@ -176,8 +177,8 @@ cssVersionOverride : 3
                <p class="starting-at">
                  <span class="starting-at-above">[@L[cds.sales/gd/design/web-store-design2:PlanBoxOneTimeFeeat_34158]@L]</span>
                  <span>[@T[productprice:<current productid="618052" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses"/>]@T]</current></span>
-               </p> 
-               <p class="starting-at"> 
+               </p>
+               <p class="starting-at">
                <span class="starting-at-bottom">[@L[cds.sales/gd/design/web-store-design2:PlanBoxPlus_34158]@L]</span>
                </p>
             <form  name="frmWebDesign" id="addtocart-form0" class="addtocart-form" action="[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]" method="post" data-addtocart="[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]">
@@ -208,7 +209,7 @@ cssVersionOverride : 3
                     <li class="selected">
                       <label>
                         <input type="radio" name="package" value="ecommdesign_webstore_1_year"/>
-                        <div> 
+                        <div>
                             <span>[@L[cds.sales/gd/design/web-store-design2:12-months]@L]&nbsp;-&nbsp;</span>
                             <span>[@T[productprice:<current productid="618040" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T]</span><span>[@L[cds.sales/gd/design/web-store-design2:PlanBoxHostingPerMo_34158]@L]</span>
                               <span></span>
@@ -255,7 +256,7 @@ cssVersionOverride : 3
         </div>
       </div>
 
-      
+
     </section>
     <!-- End content -->
 
@@ -281,7 +282,7 @@ cssVersionOverride : 3
                 <div class="tab-pane active" id="ps-plan-includes">
                   <ul class="plan-summary-tab-pane-list">
                     <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText2]@L]</li>
-                    <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText3_34158]@L]</li>
+                    <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText3_40670]@L]</li> 
                     <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText4]@L]</li>
                     <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText5]@L]</li>
                     <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText11]@L]</li>
@@ -291,7 +292,7 @@ cssVersionOverride : 3
                     <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText8]@L]</li>
                     <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText1]@L]</li>
                     <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText14]@L]</li>
-                    
+
                     ##if(areAdCreditsEnabled(google))
                     <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText9]@L]</li>
                     ##endif
@@ -326,7 +327,7 @@ cssVersionOverride : 3
             </div>
             <!-- End Plan-summary Tab panes -->
           </div>
-        </div>    
+        </div>
       </div>
     </section>
     <!-- End plan-summary -->
@@ -383,7 +384,7 @@ cssVersionOverride : 3
                 <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures3FeatureListItems4_34158]@L]</li>
                 <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures3FeatureListItems5]@L]</li>
                 <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures3FeatureListItems6_34158]@L]</li>
-                
+
 		   ##if(areAdCreditsEnabled(bing))
                 <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures3FeatureListItems7]@L]</li>
                 ##endif
@@ -486,7 +487,7 @@ cssVersionOverride : 3
               <p>[@L[cds.sales/gd/design/web-store-design2:FaqList5Item1_34158]@L]</p>
               <p>[@L[cds.sales/gd/design/web-store-design2:FaqList5Item2_34158]@L]</p>
               <p class="no-margin-bottom">[@L[cds.sales/gd/design/web-store-design2:FaqList5Item3_34158]@L]</p>
-        
+
             </div>
           </div>
         </div>

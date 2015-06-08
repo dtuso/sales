@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/design/web-store-design2/en
-id: 
-name: GCE-34158
+id: 5570efa0f778fc06084fa1fa
+name: GCE-40670
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="Meta0Description" />
@@ -144,6 +144,8 @@ Support
 <strong class="secondary-color">FREE</strong> Hosting: 50 GB disk space & 1,000 GB of bandwidth
 <phrase key="PlansIncludeText3_34158" />
 <strong class="secondary-color">FREE</strong> Hosting: 50 GB disk space & 1,000 GB bandwidth
+<phrase key="PlansIncludeText3_40670" />
+Hosting: 50 GB disk space &amp; 1,000 GB bandwidth
 <phrase key="PlansIncludeText4" />
 <strong class="secondary-color">FREE</strong> 1,000 email accounts
 <phrase key="PlansIncludeText5" />
