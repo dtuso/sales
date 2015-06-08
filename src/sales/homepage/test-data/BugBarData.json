@@ -1,4 +1,4 @@
-var bugBarData = {
+{
   bugCatalog:{
   "co":{      path: "/tlds/co-domain.aspx",  ci: 93296,  tld:"co"},
   "org":{     path: "/tlds/org.aspx",        ci: 93297,  tld:"org"},
@@ -86,5 +86,6 @@ var bugBarData = {
     "frch" : ["net","club","ch","co","design"],
     "itch" : ["net","club","ch","co","design"],
     "trtr" : ["net","club","org","co","design"],
+    "ukua" : ["net","club","org","co","design"]
   }
-};
+}
