@@ -99,6 +99,8 @@ disableSavingCheck is needed since the product token would show as being no sale
 // determine how the product is normally sold, by the month or by the year
 // percentages always use the product tokens for the year since products are not normally discounted with only monthly plans
 
+// for the domain_com_mx pod the 41901 is the PFID for .MX. This is to quickly fix the pod to show the right pricing. If the business wants to create a pod for .COM.MX we will need to restructure this properly. 
+
 #}{
   'coupons_lp_pods':{
 
@@ -111,7 +113,7 @@ disableSavingCheck is needed since the product token would show as being no sale
       "domain_com_top_deal":           {"period":"yearly",   "allPlans":  ["101"]                    },
       "domain_com":                    {"period":"yearly",   "allPlans":  ["101"]                    },
       "domain_co":                     {"period":"yearly",   "allPlans":  ["56401"]                  },
-      "domain_com_mx":                 {"period":"yearly",   "allPlans":  ["12801"],  "disableSavingCheck":"true",  "checktmspromocode":"true"},
+      "domain_com_mx":                 {"period":"yearly",   "allPlans":  ["41901"],  "disableSavingCheck":"true",  "checktmspromocode":"true"}, 
       "domain_co_uk":                  {"period":"yearly",   "allPlans":  ["57465"],  "checktmspromocode":"true"},
       "domain_ca":                     {"period":"yearly",   "allPlans":  ["9405"],  "disableSavingCheck":"true",   "checktmspromocode":"true"},
       "domain_com_top_deal_no_promo":  {"period":"yearly",   "allPlans":  ["101"]                    },
