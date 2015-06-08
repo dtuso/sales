@@ -1632,4 +1632,21 @@
       <Package id="calendar_tier3_120mo" />
     </Packages>
   </PackageGroup>
+<<<<<<< HEAD
+=======
+  <PackageGroup Name="cms-onlinestorage" ProductGroupId="50">
+    <Packages>
+      <Package id="onlinestorage_tier1_012mo" />
+      <Package id="onlinestorage_tier1_024mo" />
+      <Package id="onlinestorage_tier1_036mo" />
+      <Package id="onlinestorage_tier1_060mo" />
+      <Package id="onlinestorage_tier1_120mo" />
+      <Package id="onlinestorage_tier2_012mo" />
+      <Package id="onlinestorage_tier2_024mo" />
+      <Package id="onlinestorage_tier2_036mo" />
+      <Package id="onlinestorage_tier2_060mo" />
+      <Package id="onlinestorage_tier2_120mo" />
+    </Packages>
+  </PackageGroup>
+>>>>>>> 191336f559903395ee79a2de18fcf3814f81a75b
 </PackageGroups>
