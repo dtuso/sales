@@ -42,7 +42,8 @@
   "work":{    "path": "/tlds/work",            "ci": 98022,  "tld":"work"},
   "eu":{      "path": "/tlds/eu-domain",       "ci": 97868,  "tld":"eu"},
   "design":{  "path": "/tlds/design",          "ci": 99118,  "tld":"design"},
-  "com-mx":{  "path": "/tlds/com-mx-domain",   "ci": 99232,  "tld":"com-mx"}
+  "com-mx":{  "path": "/tlds/com-mx-domain",   "ci": 99232,  "tld":"com-mx"},
+  "video":{   "path": "/tlds/video",           "ci": 99342,  "tld":"video"}
   },
   "bugLocations":{
     "enau" : ["com","co","com-au","video"],
