@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/pro/managed-vps-config/en
-id: 551daa38f778fc18089b86b9
-name: GCE-37474
+id: false
+name: GCE-38884
 comments: Web Pro Config Page Content Updates
 ---
 
@@ -80,7 +80,7 @@ Add [@T[productprice:<current productid="483562" dropdecimal="false"  htmlsymbol
 <phrase key="selfmanagedHeader" />
 Subtract [@T[productprice:<current productid="483560" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo
 <phrase key="managedWindowsOS" />
-Windows 2008
+Windows 2008 or Windows 2012
 <phrase key="managedWindowsIncludes" />
 Includes: Parallels® Plesk | Patching | Security | Monitoring | Backups 
 <phrase key="fullymanagedWindowsIncludes" />
