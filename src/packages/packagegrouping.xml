@@ -1613,6 +1613,7 @@
       <Package id="webdesign_tier2_024mo" />
     </Packages>
   </PackageGroup>
+<<<<<<< HEAD
   <PackageGroup Name="cms-dns" ProductGroupId="89">
     <Packages>
       <Package id="dns_tier1_001mo" />
@@ -1634,6 +1635,8 @@
       <Package id="dedicatedip_tier1_060mo" />
     </Packages>
   </PackageGroup>
+=======
+>>>>>>> 9ee646c2625a5b0335132bdbc497237d62b72ebf
   <PackageGroup Name="cms-cashparking" ProductGroupId="7">
     <Packages>
       <Package id="cashparking_tier1_001mo" />
