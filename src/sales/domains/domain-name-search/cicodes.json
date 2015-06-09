@@ -215,6 +215,18 @@
           { "ITC Code" : "SliderVideoLink" },
           { "Description" : "Slide .VIDEO Link" }
         ]
+      },
+      { "Slide .NEWS Link" : [
+          { "ITC ID" : "99292" },
+          { "ITC Code" : "SliderNewsLink" },
+          { "Description" : "Slide .NEWS Link" }
+        ]
+      },
+      { "Slide .TEAM Link" : [
+          { "ITC ID" : "99293" },
+          { "ITC Code" : "SliderTeamLink" },
+          { "Description" : "Slide .TEAM Link" }
+        ]
       }
     ],
   "Top Tld Pods" : [
@@ -499,6 +511,18 @@
           { "ITC Code" : "TopPodCOMMXLink" },
           { "Description" : "Top Pod - .COM.MX link" }
         ]
+      },
+      { "Top TLD Pods - .VIDEO link" : [
+          { "ITC ID" : "99294" },
+          { "ITC Code" : "TopPodVIDEOLink" },
+          { "Description" : "Top Pod - .VIDEO link" }
+        ]
+      },
+      { "Top TLD Pods - .ME link" : [
+          { "ITC ID" : "99295" },
+          { "ITC Code" : "TopPodMELink" },
+          { "Description" : "Top Pod - .ME link" }
+        ]
       }
     ],
   "Buttom Tld Pods" :  [
@@ -777,6 +801,12 @@
           { "ITC Code" : "ButtomPodNews" },
           { "Description" : "Buttom TLD Pods - .NEWS" }
         ]
+      },
+      { "Buttom TLD Pods - .WORLD" : [
+          { "ITC ID" : "99297" },
+          { "ITC Code" : "ButtomPodWorld" },
+          { "Description" : "Buttom TLD Pods - .WORLD" }
+        ]
       }
     ],
   "New Available Tlds" : [
@@ -1037,6 +1067,18 @@
           { "ITC Code" : "NewAvailTech" },
           { "Description" : "New Available TLD's Column - .TECH" }
         ]
+      },
+      { "New Domains Available TLD's Column - .TEAM" : [
+          { "ITC ID" : "99299" },
+          { "ITC Code" : "NewAvailTeam" },
+          { "Description" : "New Available TLD's Column - .TEAM" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .SHOW" : [
+          { "ITC ID" : "99298" },
+          { "ITC Code" : "NewAvailShow" },
+          { "Description" : "New Available TLD's Column - .SHOW" }
+        ]
       }
     ],
   "Coming Soon Tlds" : [
@@ -1152,6 +1194,12 @@
           { "ITC ID" : "99237" },
           { "ITC Code" : "ComingSoonGROUP" },
           { "Description" : "Coming Soon TLD's Column - .GROUP" }
+        ]
+      },
+      { "Coming Soon TLD's Column - .FAMILY" : [
+          { "ITC ID" : "99300" },
+          { "ITC Code" : "ComingSoonFAMILY" },
+          { "Description" : "Coming Soon TLD's Column - .FAMILY" }
         ]
       }
     ],
