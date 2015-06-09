@@ -218,6 +218,7 @@ comments: fr-FR,es-ES:Layout issue displays
                                               float: left;
                                               min-height: 1px;
                                               box-sizing: border-box;
+                                              display: block;
                                             }
                                             .select-box .col-A {min-width: 60px;}
                                             .select-box .col-B {min-width: 90px;}
@@ -226,8 +227,8 @@ comments: fr-FR,es-ES:Layout issue displays
                                         <div class="select-box-head">
                                             <div  class="select-box-current">
                                               <div class="row">
-                                                <div class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:1-year]@L]</div>
-                                                <div class="price col-B">[@T[productprice:<current productid="3681" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</div>
+                                                <span class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:1-year]@L]</span>
+                                                <span class="price col-B">[@T[productprice:<current productid="3681" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
                                               </div>
                                             </div>
                                             <div class="select-box-cta"><i class="ico ico-download"></i></div>
@@ -238,9 +239,9 @@ comments: fr-FR,es-ES:Layout issue displays
                                                     <label>
                                                       <input type="radio" name="product" id="3681_1_1" value="3681|1|1" checked="true">
                                                       <div class="row">
-                                                        <div class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:1-year]@L]</div>
-                                                        <div class="price col-B">[@T[productprice:<current productid="3681" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</div>
-                                                        <div class="save col-C"></div>
+                                                        <span class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:1-year]@L]</span>
+                                                        <span class="price col-B">[@T[productprice:<current productid="3681" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
+                                                        <span class="save lastChild col-C"></span>
                                                       </div>
                                                     </label>
                                                 </li>
@@ -248,12 +249,12 @@ comments: fr-FR,es-ES:Layout issue displays
                                                     <label>
                                                       <input type="radio" name="product" id="3682_1_1" value="3682|1|1">
                                                       <div class="row">
-                                                        <div class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:2-year]@L]</div>
-                                                        <div class="price col-B">[@T[productprice:<current productid="3682" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</div>
+                                                        <span class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:2-year]@L]</span>
+                                                        <span class="price col-B">[@T[productprice:<current productid="3682" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
                                                         ##if(productHasSavingsMoreThan(3682, 3681, 0))
-                                                        <div class="save col-C">[@T[productcompare:<percent primaryproductid="3682" secondaryproductid="3681" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/ssl/code-signing-certificate2:save]@L] {0}&#8225;]]></html></percent>]@T]</div>
+                                                        <span class="save lastChild col-C">[@T[productcompare:<percent primaryproductid="3682" secondaryproductid="3681" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/ssl/code-signing-certificate2:save]@L] {0}&#8225;]]></html></percent>]@T]</span>
                                                         ##else
-                                                        <div class="save col-C"></div>
+                                                        <span class="save lastChild col-C"></span>
                                                         ##endif
                                                       </div>
                                                     </label>
@@ -262,12 +263,12 @@ comments: fr-FR,es-ES:Layout issue displays
                                                     <label>
                                                       <input type="radio" name="product" id="3683_1_1" value="3683|1|1">
                                                       <div class="row">
-                                                        <div class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:3-year]@L]</div>
-                                                        <div class="price col-B">[@T[productprice:<current productid="3683" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</div>
+                                                        <span class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:3-year]@L]</span>
+                                                        <span class="price col-B">[@T[productprice:<current productid="3683" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
                                                         ##if(productHasSavingsMoreThan(3683, 3681, 0))
-                                                        <div class="save col-C">[@T[productcompare:<percent primaryproductid="3683" secondaryproductid="3681" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/ssl/code-signing-certificate2:save]@L] {0}&#8225;]]></html></percent>]@T]</div>
+                                                        <span class="save lastChild col-C">[@T[productcompare:<percent primaryproductid="3683" secondaryproductid="3681" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/ssl/code-signing-certificate2:save]@L] {0}&#8225;]]></html></percent>]@T]</span>
                                                         ##else
-                                                        <div class="save col-C"></div>
+                                                        <span class="save lastChild col-C"></span>
                                                         ##endif
                                                       </div>
                                                     </label>
@@ -394,8 +395,8 @@ comments: fr-FR,es-ES:Layout issue displays
                                         <div class="select-box-head">
                                             <div class="select-box-current">
                                               <div class="row">
-                                                <div class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:1-year]@L]</div>
-                                                <div class="price col-B">[@T[productprice:<current productid="1130" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</div>
+                                                <span class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:1-year]@L]</span>
+                                                <span class="price col-B">[@T[productprice:<current productid="1130" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
                                               </div>
                                             </div>
                                             <div class="select-box-cta"><i class="ico ico-download"></i></div>
@@ -406,9 +407,9 @@ comments: fr-FR,es-ES:Layout issue displays
                                                     <label>
                                                       <input type="radio" name="product" id="1130_1_1" value="1130|1|1" checked="true">
                                                       <div class="row">
-                                                        <div class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:1-year]@L]</div>
-                                                        <div class="price col-B">[@T[productprice:<current productid="1130" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</div>
-                                                        <div class="save col-C"></div>
+                                                        <span class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:1-year]@L]</span>
+                                                        <span class="price col-B">[@T[productprice:<current productid="1130" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
+                                                        <span class="save lastChild col-C"></span>
                                                       </div>
                                                     </label>
                                                 </li>
@@ -416,12 +417,12 @@ comments: fr-FR,es-ES:Layout issue displays
                                                     <label>
                                                       <input type="radio" name="product" id="1132_1_1" value="1132|1|1">
                                                       <div class="row">
-                                                        <div class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:2-year]@L]</div>
-                                                        <div class="price col-B">[@T[productprice:<current productid="1132" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</div>
+                                                        <span class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:2-year]@L]</span>
+                                                        <span class="price col-B">[@T[productprice:<current productid="1132" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
                                                         ##if(productHasSavingsMoreThan(1132, 1130, 0))
-                                                        <div class="save lastChild col-C">[@T[productcompare:<percent primaryproductid="1132" secondaryproductid="1130" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/ssl/code-signing-certificate2:save]@L] {0}&#8225;]]></html></percent>]@T]</div>
+                                                        <span class="save lastChild col-C">[@T[productcompare:<percent primaryproductid="1132" secondaryproductid="1130" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/ssl/code-signing-certificate2:save]@L] {0}&#8225;]]></html></percent>]@T]</span>
                                                         ##else
-                                                        <div class="save col-C"></div>
+                                                        <span class="save lastChild col-C"></span>
                                                         ##endif
                                                       </div>
                                                     </label>
@@ -430,12 +431,12 @@ comments: fr-FR,es-ES:Layout issue displays
                                                     <label>
                                                       <input type="radio" name="product" id="1153_1_1" value="1153|1|1">
                                                       <div class="row">
-                                                        <div class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:3-year]@L]</div>
-                                                        <div class="price col-B">[@T[productprice:<current productid="1153" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</div>
+                                                        <span class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:3-year]@L]</span>
+                                                        <span class="price col-B">[@T[productprice:<current productid="1153" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
                                                         ##if(productHasSavingsMoreThan(1153, 1130, 0))
-                                                        <div class="save lastChild col-C">[@T[productcompare:<percent primaryproductid="1153" secondaryproductid="1130" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/ssl/code-signing-certificate2:save]@L] {0}&#8225;]]></html></percent>]@T]</div>
+                                                        <span class="save lastChild col-C">[@T[productcompare:<percent primaryproductid="1153" secondaryproductid="1130" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/ssl/code-signing-certificate2:save]@L] {0}&#8225;]]></html></percent>]@T]</span>
                                                         ##else
-                                                        <div class="save col-C"></div>
+                                                        <span class="save lastChild col-C"></span>
                                                         ##endif
                                                       </div>
                                                     </label>
