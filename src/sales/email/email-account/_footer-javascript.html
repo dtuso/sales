@@ -133,9 +133,9 @@
                     var response = $.parseJSON(data.responseText);
                     if (response.Success) {
                       ##if(isManager())
-                        window.location = '[@T[link:<relative path="~/business/office-365-config.aspx" parammode="explicit" />]@T]?plan=' + packageId+'&mgrshopper='+ managerId;
+                        window.location = '[@T[link:<relative path="~/business/office-365-config.aspx" parammode="explicit" />]@T]?plan=' + packageId+'&mgrshopper='+ managerId + '&lprefer=email';
                       ##else
-                        window.location = '[@T[link:<relative path="~/business/office-365-config.aspx" parammode="explicit" />]@T]?plan=' + packageId;
+                        window.location = '[@T[link:<relative path="~/business/office-365-config.aspx" parammode="explicit" />]@T]?plan=' + packageId + '&lprefer=email';
                       ##endif
                     } 
                 },
