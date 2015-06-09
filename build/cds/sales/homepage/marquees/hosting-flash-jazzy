@@ -104,7 +104,7 @@
 .marquee#hosting-flash-jazzy .content .disclaimer {
   color: #333;
   font-size: 10px;
-  margin-top: 2em;
+  margin-top: .75em;
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 }
 .Explorer8 .marquee#hosting-flash-jazzy .content {
@@ -120,8 +120,8 @@
   <div class="container l-main-container">
     <div class="content">
       <p class="bold font-md">[@L[cds.tmsv2/content/homepage/hosting-flash/hero:subhead]@L]</p>
-      <h2 class="black text-primary-o">[@L[cds.tmsv2/content/homepage/hosting-flash/hero:headline]@L]</h2>
-      <p class="bold font-md">[@L[cds.tmsv2/content/homepage/hosting-flash/hero:free-domain]@L]</p>
+      <h2 class="black text-primary-o font-lg">[@L[cds.tmsv2/content/homepage/hosting-flash/hero:headline]@L]</h2>
+      <p class="bold font-sm">[@L[cds.tmsv2/content/homepage/hosting-flash/hero:free-domain]@L]</p>
       <mark class="bold font-sm">[@L[cds.tmsv2/content/homepage/hosting-flash/hero:flag]@L]</mark>
       <p class="bold price font-md">[@L[cds.tmsv2/content/homepage/hosting-flash/hero:price]@L]</p><a class="bold btn btn-lg btn-primary">[@L[cds.tmsv2/content/homepage/hosting-flash/hero:cta]@L]</a>
       <p class="font-sm disclaimer">[@L[cds.tmsv2/content/homepage/hosting-flash/hero:disclaimer]@L]</p>
