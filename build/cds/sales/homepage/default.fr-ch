@@ -60,10 +60,8 @@
         </form>
       </div>
     </div>
-    ##if(splitTestingSideIsActive(1461, B))
-      [@P[cdsDocument:<data app="sales" location="homepage/marquee/tld-com-flash/default_template" /> ]@P]
-    ##elseif(splitTestingSideIsActive(1461, C))
-      [@P[cdsDocument:<data app="sales" location="homepage/marquee/tld-com-flash-jazzy/default_template" /> ]@P]
+    ##if(splitTestingSideIsActive(1467, B))
+      [@P[cdsDocument:<data app="sales" location="homepage/marquee/hosting-flash-jazzy/default_template" /> ]@P]
     ##elseif(targetMessageTagAny(sales_hp_default,hp_existing_customer))
       [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
     ##else
@@ -100,7 +98,11 @@
     </atlantis:webstash>
     <div class="gdhp-tile-wrap">
       <div class="gdhp-tile-area"> 
+        ##if(splitTestingSideIsActive(1467, B))
+        [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+        ##else
         [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting/default_template" /> ]@P]
+        ##endif
          
         [@P[cdsDocument:<data app="sales" location="homepage/tile/ch-free-transfer/default_template" /> ]@P]
       </div>

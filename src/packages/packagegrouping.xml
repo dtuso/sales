@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <PackageGroups>
   <PackageGroup Name="Hosting" ProductGroupId="1">
     <Packages>
@@ -449,13 +449,13 @@
   </PackageGroup>
   <PackageGroup Name="dslp" ProductGroupId="24">
     <Packages>
-      <Package id="dsprodata"/>
+      <Package id="dsprodata" />
     </Packages>
   </PackageGroup>
   <PackageGroup Name="vpslp" ProductGroupId="25">
     <Packages>
       <Package id="vpsdata" />
-      <Package id="vpsprodata"/>
+      <Package id="vpsprodata" />
     </Packages>
   </PackageGroup>
   <PackageGroup Name="vps" ProductGroupId="25">
@@ -1565,8 +1565,85 @@
   </PackageGroup>
   <PackageGroup Name="cms-bookkeeping" ProductGroupId="98">
     <Packages>
-      <Package id="bookkeeping_tier1_001mo"/>
+      <Package id="bookkeeping_tier1_001mo" />
       <Package id="bookkeeping_tier1_012mo" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="cms-codesigning" ProductGroupId="65">
+    <Packages>
+      <Package id="codesigning_tier1_012mo" />
+      <Package id="codesigning_tier1_024mo" />
+      <Package id="codesigning_tier1_036mo" />
+      <Package id="driversigning_tier1_012mo" />
+      <Package id="driversigning_tier1_024mo" />
+      <Package id="driversigning_tier1_036mo" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="cms-getfound" ProductGroupId="104">
+    <Packages>
+      <Package id="getfound_tier1_003mo" />
+      <Package id="getfound_tier1_012mo" />
+      <Package id="getfound_tier1_024mo" />
+      <Package id="getfound_tier1_036mo" />
+      <Package id="getfound_tier1_060mo" />
+      <Package id="getfound_tier2_003mo" />
+      <Package id="getfound_tier2_012mo" />
+      <Package id="getfound_tier2_024mo" />
+      <Package id="getfound_tier2_036mo" />
+      <Package id="getfound_tier2_060mo" />
+      <Package id="getfound_tier3_003mo" />
+      <Package id="getfound_tier3_012mo" />
+      <Package id="getfound_tier3_024mo" />
+      <Package id="getfound_tier3_036mo" />
+      <Package id="getfound_tier3_060mo" />
+      <Package id="getfound_tier4_003mo" />
+      <Package id="getfound_tier4_012mo" />
+      <Package id="getfound_tier4_024mo" />
+      <Package id="getfound_tier4_036mo" />
+      <Package id="getfound_tier4_060mo" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="cms-webdesign" ProductGroupId="54">
+    <Packages>
+      <Package id="webdesign_tier1_001mo" />
+      <Package id="webdesign_tier1_012mo" />
+      <Package id="webdesign_tier1_024mo" />
+      <Package id="webdesign_tier2_001mo" />
+      <Package id="webdesign_tier2_012mo" />
+      <Package id="webdesign_tier2_024mo" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="cms-calendar" ProductGroupId="32">
+    <Packages>
+      <Package id="calendar_tier1_012mo" />
+      <Package id="calendar_tier1_024mo" />
+      <Package id="calendar_tier1_036mo" />
+      <Package id="calendar_tier1_060mo" />
+      <Package id="calendar_tier1_120mo" />
+      <Package id="calendar_tier2_012mo" />
+      <Package id="calendar_tier2_024mo" />
+      <Package id="calendar_tier2_036mo" />
+      <Package id="calendar_tier2_060mo" />
+      <Package id="calendar_tier2_120mo" />
+      <Package id="calendar_tier3_012mo" />
+      <Package id="calendar_tier3_024mo" />
+      <Package id="calendar_tier3_036mo" />
+      <Package id="calendar_tier3_060mo" />
+      <Package id="calendar_tier3_120mo" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="cms-onlinestorage" ProductGroupId="50">
+    <Packages>
+      <Package id="onlinestorage_tier1_012mo" />
+      <Package id="onlinestorage_tier1_024mo" />
+      <Package id="onlinestorage_tier1_036mo" />
+      <Package id="onlinestorage_tier1_060mo" />
+      <Package id="onlinestorage_tier1_120mo" />
+      <Package id="onlinestorage_tier2_012mo" />
+      <Package id="onlinestorage_tier2_024mo" />
+      <Package id="onlinestorage_tier2_036mo" />
+      <Package id="onlinestorage_tier2_060mo" />
+      <Package id="onlinestorage_tier2_120mo" />
     </Packages>
   </PackageGroup>
 </PackageGroups>

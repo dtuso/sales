@@ -12,7 +12,6 @@
     <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
     <meta name="y_key" content="1e39c508e0d87750">
     <link rel="canonical" href="[@T[link:<relative parammode='explicit' />]@T]">
-    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
     <title>[@L[cds.sales/homepage:page-title]@L]</title>
     <meta name="description" content="[@L[cds.sales/homepage:meta-description]@L]">
     <meta name="keywords" content="[@L[cds.sales/homepage:meta-keywords]@L]"> 
@@ -37,40 +36,9 @@
       };
       
     </script> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
-    
-    <atlantis:webstash type="css">
-      <style>
-        *[data-tokenize] {visibility: hidden;}
-        
-      </style>
-    </atlantis:webstash>
-    <atlantis:webstash type="js">
-      <script>
-        $(document).ready(function(){
-          $('[data-tokenize]').each(function(){
-            var $this = $(this),
-              val = $this.data('tokenize'),
-              attrName = $this.data('tokenize-attr'),
-              jsVar = $this.data('tokenize-jsvar'),
-              text = attrName ? $this.attr(attrName) : $this.html(),
-              tokenized = text.replace(/\{0\}/gi, jsVar ? eval(jsVar) : val);
-        
-            if(attrName) {
-              $this.attr(attrName, tokenized);
-            } else {
-              $this.html(tokenized);
-            }
-        
-            $this.removeAttr('data-tokenize');
-          });
-        });
-      </script>
-    </atlantis:webstash>
-    <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
-    </script>
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Application" value="salescpo" /><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Application" value="salescpo" /><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Application" value="salescpo" /><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
     <script>
       function loadJsAsync(sourceUrl, id) {
          var js, fjs = document.getElementsByTagName('script')[0];
@@ -83,65 +51,13 @@
       
       function endOfPageScripts() {
       
-        $(document).ready(function(){
-          // fix centering elements
-          window.triggerResize = function(){
-            setTimeout(function(){
-              $(window).trigger('resize');
-            },50);
-          }
-          setTimeout(function(){
-            triggerResize();
-          },200);
-      
-          // Wire up tooltips
-          if($(document).sfTipper){
-            $(document).sfTipper({ wireup: true });
-          }
-          
-        });
-      
-        $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
-          $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-          }, 500);
-          return false;
-        });
-      
-        // Track all the icodes (tcodes handled by gtm.js)
-        window._trfq = window._trfq || [];
-        $('[data-icode]').each(function(index, element) {
-          window._trfq.push(['cmdLogImpression', $(element).attr('data-icode'), null, element]);
-        });
-      }
-      
-    </script>
-    <script>
-      var tms = function(data) {
-        $(document).ready(function(){
-          for (var key in data) {
-            if ((data[key]) && (data[key].trim() != '')) {
-              var elem = document.getElementById(key)
-              if (elem != null) {
-                $('#' + key).html(data[key]);
-              }
-            }
-          }
-        });
       }
       
     </script><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
     <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
-    <script type="text/javascript">
-      loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
-      ##if(siteContextAny(gd))
-      loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/[@T[appSetting:<setting name="sales_livepersonchat_file_js" />]@T]", 'livepersonLibrary');
-      ##endif
-      
-    </script>
-    <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css"> 
+     
     ##if(IsManager())
     <link rel="Stylesheet" type="text/css" href="[@T[link:<javascriptroot />]@T]pc_css/gd_20110801_https.min.css" />
     ##endif
@@ -172,7 +88,7 @@
 
               </style>
             </atlantis:webstash>
-            <form method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single" class="domain-search-form">
+            <form onSubmit="return validateSearch(this)" method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single" class="domain-search-form">
               <input type="hidden" name="ci" value="54814"/>
               <input type="hidden" name="checkAvail" value="1"/>
               <div class="input-group">
@@ -182,13 +98,13 @@
               </div>
             </form>
             <script>
-              $(".domain-search-form").on('submit', function(e) {
-                var input = $(this).find("input[name='domainToCheck']");
-                if (input && (input.val() == null || input.val() == "")) {
-                  e.preventDefault();
+              validateSearch = function(e) {
+                var input = e.domainToCheck.value;
+                if (input == "") {
                   window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
+                  return false;
                 }
-              });
+              };
               
             </script>
           </div>
@@ -217,7 +133,66 @@
           <div id="hero-wrapper" class="col-md-8 col-sm-12">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]</div>
           <div id="marquee-tile-wrapper" class="col-md-4 col-sm-12">
             <div class="row">
-              <div id="marquee-tile-1" class="col-md-12 col-sm-6">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="banner-medium" rank="1" />]@P]</div>
+              <div id="marquee-tile-1" class="col-md-12 col-sm-6">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="banner-medium" rank="1" />]@P]
+                <div style="display:none;min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; height: 100%; width: 100%; position: relative;" class="default-content">
+                  <style>
+                    .banner-medium { min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; height: 100%; width: 100%; position: relative; }
+                    .banner-medium .font-lg { font-size: 2.25em; }
+                    .banner-medium .font-md { font-size: 1.5em; }
+                    .banner-medium .font-sm { font-size: 1.25em; }
+                    .banner-medium .black { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase; }
+                    .banner-medium .bold { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; }
+                    .banner-medium .disclaimer { font-size: 10px; }
+                    
+                    
+                    .banner-medium.split {padding: 0;background-color:#333; color: #fff; }
+                    .banner-medium.split .left-container, .banner-medium .right-container { width: 50%; float: left; min-height: inherit; position: relative; }
+                    .banner-medium.split .left-content, .banner-medium .right-content { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%); padding: 0 5%;}
+                    .Explorer8 .banner-medium.split .left-content, .Explorer8 .banner-medium .right-content { position: relative;top: 0;}
+                    
+                    .banner-medium.split .left-content > *, .banner-medium.split .right-content > * { margin-top: .25em; margin-bottom: .25em;}
+                    .banner-medium.split .left-content > *:first-child, .banner-medium.split .right-content > *:first-child { margin-top: 0;}
+                    .banner-medium.split .left-content > *:last-child, .banner-medium.split .right-content > *:last-child { margin-bottom: 0;}
+                    
+                  </style>
+                  <style>
+                    .banner-medium.gtld h2 {font-size:2.5em;margin:0;}
+                    .banner-medium.gtld ul{list-style-type:none;}
+                    .banner-medium.gtld li {margin: 0;}
+                    .banner-medium.gtld a{text-transform: none;font-size:1.25em;text-decoration:none;} 
+                    .banner-medium.gtld a:hover{color: #77c043;}
+                    .Explorer8 .banner-medium.gtld,.Explorer7 .banner-medium.gtld {background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gtld-tile-background.png);}
+                    
+                  </style>
+                  <div data-url="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95897' /></relative>]@T]" data-ci="95897" class="banner-medium split gtld">
+                    <div style="background-color: #77c043;" class="left-container">
+                      <div class="left-content">
+                        <h2 class="black text-center">[@L[cds.sales/homepage/tile/marquee-tile-gtld:header-text]@L]</h2>
+                      </div>
+                    </div>
+                    <div class="right-container">
+                      <svg preserveAspectRatio="xMinYMid slice" style="position: absolute; height: 100%;left:-1px;" viewBox="0 0 100 100">
+                        <polygon points="0,0 10,100 0,100" style="fill:#77c043;"></polygon>
+                      </svg>
+                      <div class="right-content">
+                        <ul>
+                          <li><a href="[@T[link:<relative path='/tlds/guru'><param name='ci' value='95716' /></relative>]@T]" class="black text-purchase tld-guru">.guru</a></li>
+                          <li><a href="[@T[link:<relative path='/tlds/club'><param name='ci' value='95713' /></relative>]@T]" class="black text-purchase tld-club">.club</a></li>
+                          <li><a href="[@T[link:<relative path='/tlds/global'><param name='ci' value='98104' /></relative>]@T]" class="black text-purchase tld-global">.global</a></li>
+                          <li><a href="[@T[link:<relative path='/tlds/life'><param name='ci' value='98105' /></relative>]@T]" class="black text-purchase tld-life">.life</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <script>
+                  var tmsDefault = document.querySelectorAll("#marquee-tile-1 .tms-default");
+                  if (tmsDefault.length) {
+                    document.querySelectorAll("#marquee-tile-1 [data-tms-template]")[0].style.display = "none";
+                    document.querySelectorAll(".default-content")[0].style.display = "block";
+                  }
+                </script>
+              </div>
               <div id="marquee-tile-2" class="col-md-12 col-sm-6">
                 <style>
                   .banner-medium { min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; height: 100%; width: 100%; position: relative; }
@@ -254,7 +229,7 @@
                     <div class="left-content">
                       <div class="black">Big dreams.<br>Small price.</div>
                       <h2 class="black text-primary-o">New .com<br><span class="text-purchase">[@T[productprice:<current productid='101' period='yearly' checktmspromocode='true' />]@T]*</span></h2>
-                      <div class="disclaimer">*2 year minimum registration required. Subsequent years charged at [@T[productprice:<current productid='101' period='yearly' promocode='0' />]@T]/yr.</div>
+                      <div class="disclaimer">*2 year minimum registration required. Subsequent years charged at [@T[productprice:<list productid='101' period='yearly'/>]@T]/yr.</div>
                     </div>
                   </div>
                   <div class="right-container">
@@ -335,18 +310,19 @@
 }
 
             </style>
-            <div data-url="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]" data-ci='97911' class="banner-small 0365-biz-email">
+            <div data-url="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]" data-ci='97911' class="banner-small o365-biz-email">
               <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/o365-biz-email/banner-small/pro-email-icon.png" alt="[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:title]@L]"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjQzIiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgNDMgMzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQzIDM1IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjNzdDMDQzIiBkPSJNMS40IDBsNDEgOC4yTDI0LjYgMjQuNSAxLjQgMHpNNDMgMTAuN2wtMiAyMi4xTDAuNyAzNSAwIDMuM2wyNC4zIDIzTDQzIDEwLjd6Ii8+PC9zdmc+" alt="[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:title]@L]" class="svgfallback"><span><span>[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:title]@L]</span></span>
               </div>
               <div class="body">[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:body]@L]</div><a href="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:cta]@L] </a>
               <script>
-                var savings = Math.max([@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" />]@T],[@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31825" />]@T],[@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" />]@T]);
-                $cta=$('.banner-small.0365-biz-email a');
-                if(savings<5)
-                  $cta.html('[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:cta-fallback]@L]')
-                else
-                  $cta.html($cta.html().replace("{0}", savings));
-                $cta.show();
+                (function() { 
+                  var savings = Math.max([@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" />]@T],[@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31825" />]@T],[@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" />]@T]);
+                  var cta = document.querySelectorAll('.banner-small.o365-biz-email a')[0];
+                  if (savings < 5)
+                    cta.innerHTML = '[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:cta-fallback]@L]';
+                  else
+                    cta.innerHTML = cta.innerHTML.replace("{0}", savings);
+                })();
               </script>
             </div>
           </div>
@@ -418,12 +394,11 @@
               <div class="body">[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:body]@L]</div><a href="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95801' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:cta]@L] </a>
               <script>
                 var savings = Math.max([@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" />]@T],[@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" />]@T],[@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" />]@T]);
-                $cta=$('.banner-small.web-hosting-price a');
+                var cta = document.querySelectorAll('.banner-small.web-hosting-price a')[0];
                 if(savings<5)
-                  $cta.html('[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:cta-fallback]@L]')
+                  cta.innerHTML = '[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:cta-fallback]@L]';
                 else
-                  $cta.html($cta.html().replace("{0}", savings));
-                $cta.show();
+                  cta.innerHTML = cta.innerHTML.replace("{0}", savings);
               </script>
             </div>
           </div>
@@ -570,8 +545,18 @@
       <style>#domain-promo {
   color: #fff;
 }
+#domain-promo .nutcutlal-bg-image {
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/nutcutlal-background.jpg);
+}
+@media only screen and (max-width: 767px) {
+  #domain-promo .nutcutlal-bg-image {
+    background-image: none !important;
+  }
+}
 #domain-promo .domain-promo-content {
-  background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/nutcutlal-background.jpg) 50% 100% #333333 no-repeat;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-color: #333333;
   background-size: cover;
 }
 @media only screen and (max-width: 767px) {
@@ -614,7 +599,7 @@
     </atlantis:webstash>
     <section id="domain-promo" class="bg-green-official">
       <h2 class="text-center">[@L[cds.sales/homepage/sections/_domain-promo:header-text]@L]</h2>
-      <div class="domain-promo-content">
+      <div data-src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/nutcutlal-background.jpg" data-img-class="nutcutlal-bg-image" class="domain-promo-content">
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-sm-offset-6 col-xs-8 col-xs-offset-2 domain-promo-text">
@@ -638,7 +623,7 @@
         <div class="row">
           <div class="col-sm-4">
             <div class="feature">
-              <div class="why-gd-registrar"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload svgfallback"/>
+              <div class="why-gd-registrar"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.png" alt="Pin Point Globe" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.svg" alt="Pin Point Globe" class="lazyload svgfallback"/>
                 <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading1]@L]</h3>
                 <p>[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body1]@L]</p>
               </div>
@@ -646,7 +631,7 @@
           </div>
           <div class="col-sm-4">
             <div class="feature">
-              <div class="why-gd-support"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/more-names-icon.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/more-names-icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload svgfallback"/>
+              <div class="why-gd-support"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/more-names-icon.png" alt="TLD Boards" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/more-names-icon.svg" alt="TLD Boards" class="lazyload svgfallback"/>
                 <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading2]@L]</h3>
                 <p>[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body2]@L]</p>
               </div>
@@ -654,7 +639,7 @@
           </div>
           <div class="col-sm-4">
             <div class="feature">
-              <div class="why-gd-support"></div><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload svgfallback"/>
+              <div class="why-gd-support"></div><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png" alt="Support Icon" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg" alt="Support Icon" class="lazyload svgfallback"/>
               <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading3]@L]</h3>
               <p>[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body3]@L]</p>
             </div>
@@ -993,6 +978,10 @@
 }
 
       </style>
+      <style>
+        .hp-two-up-compare-img {background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/website_promo.jpg); }
+        
+      </style>
       <div id="website-promo" class="two-up-title-wrap bg-green-official">
         <div>
           <div class="container">
@@ -1003,7 +992,7 @@
             </div>
           </div>
         </div>
-        <div style="min-height: 100%;;" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/east-website_promo.png" class="two-up-wrap-compare  lazyload">
+        <div style="min-height: 100%;;" data-src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/east-website_promo.png" data-img-class="hp-two-up-compare-img" class="two-up-wrap-compare  lazyload">
           <div class="container">
             <div class="row">
               <div class="col-md-5 or-container-none col-sm-6  bg-gray-darkest">
@@ -1063,10 +1052,9 @@
 }
 #o365-promo .promo-flag {
   color: #000;
-  font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial, sans-serif;
-  font-size: 28px;
-  font-size: 2.8rem;
-  padding: 10px 20px;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  font-size: 1.25em;
+  padding: 15px 20px;
   text-transform: uppercase;
   line-height: 1;
   background-size: cover;
@@ -1103,7 +1091,7 @@
             </ul><a data-url="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='95786' /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/homepage/sections/_o365-promo:cta-text]@L]</a>
           </div>
           <div class="col-sm-6">
-            <div class="promo-flag">[@L[cds.sales/homepage/sections/_o365-promo:promo-flag]@L]</div><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/office365_laptop_002.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload o365-promo-image"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop_v2.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload svgfallback o365-promo-image"/>
+            <div class="promo-flag">[@L[cds.sales/homepage/sections/_o365-promo:promo-flag]@L]</div><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/office365_laptop_002.png" alt="Office 365 image" class="lazyload o365-promo-image"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop_v2.svg" alt="Office 365 image" class="lazyload svgfallback o365-promo-image"/>
           </div>
         </div>
       </div>
@@ -1141,7 +1129,7 @@ section#testimonial .customer .referance {
 
     </style>
     <section id="testimonial">
-      <div class="container walsheim-bold"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/testimonial-icon.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/testimonial-icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload svgfallback"/>
+      <div class="container walsheim-bold"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/testimonial-icon.png" alt="TLD Boards" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/testimonial-icon.svg" alt="TLD Boards" class="lazyload svgfallback"/>
         <div class="testimony">"Our style of business is simple and straightforward, and I appreciate the same quality in GoDaddy. I found the plans easy to understand, pricing reasonable and their reputation is among the best."</div>
         <div class="customer"><span class="referance">Ms. Jaya Prasad, </span><span class="company">Ideasugar</span></div>
       </div>
@@ -1191,7 +1179,7 @@ section#testimonial .customer .referance {
       <div class="container">
         <h2 class="text-center walsheim-black text-white">[@L[cds.sales/homepage/sections/_support-promo:header-text]@L]</h2>
         <div class="row">
-          <div class="col-xs-6 text-center"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="GoDaddy Support" class="lazyload support-promo-img"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="GoDaddy Support" class="lazyload svgfallback support-promo-img"/>
+          <div class="col-xs-6 text-center"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.png" alt="GoDaddy Support" class="lazyload support-promo-img"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.svg" alt="GoDaddy Support" class="lazyload svgfallback support-promo-img"/>
           </div>
           <div class="col-xs-6">
             <div class="support-promo-text text-white">
@@ -1201,7 +1189,7 @@ section#testimonial .customer .referance {
                 <div class="row">
                   <div class="col-md-4 col-xs-12"><a data-url="[@T[link:<external linktype='COMMUNITYURL'><param name='ci' value='95789' /></external>]@T]" class="btn btn-default-light">[@L[cds.sales/homepage/sections/_support-promo:cta-text]@L]</a></div>
                   <div class="col-md-8 col-xs-12">
-                    <div class="support-promo-number walsheim-medium">[@T[supportphone:<technical />]@T]</div>
+                    <div class="support-promo-number">[@T[supportphone:<technical />]@T]</div>
                   </div>
                 </div>
               </div>
@@ -1299,20 +1287,11 @@ ul li.no-check {
 .bg-green-official {
   background-color: #77c043;
 }
-.walsheim-regular {
-  font-family: 'Walsheim-Regular', Arial, sans-serif;
-}
-.walsheim-medium {
-  font-family: 'Walsheim-Medium', Arial, sans-serif;
-}
 .walsheim-bold {
   font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
 }
 .walsheim-black {
   font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
-}
-.tungsten {
-  font-family: Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif;
 }
 .hero-wrapper {
   min-height: 300px;
@@ -1452,13 +1431,25 @@ section {
       endOfPageScripts();
       
     </script>
-    <script type="text/javascript">
-      $('body').on('click','[data-url]',function(event){
-        var $clickedElement = $(event.currentTarget);
-        var $clickedUrl = $clickedElement.attr('data-url'); 
-        event.stopPropagation();
-        window.location.href=$clickedUrl;
+    <script>
+      ux.eldorado.ready(function(){
+        loadJsAsync("https://img1.wsimg.com/fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
+        loadJsAsync("https://img1.wsimg.com/fos/liveperson/js/liveperson_20150217.min.js", 'livepersonLibrary');
+        loadJsAsync("https://img1.wsimg.com/starfield/fos.share/v1.3/fos.share-20140505.min.js", 'fosShareScript');
       });
+      
+      ux.eldorado.ready(function(){
+        $('body').on('click','[data-url]',function(event){
+          var $clickedElement = $(event.currentTarget);
+          var $clickedUrl = $clickedElement.attr('data-url'); 
+          window.location.href=$clickedUrl;
+        });
+      
+        reSizeTiles();
+      
+        ux.util.lazy.loadViaSelector('.lazyload, .domain-promo-content');
+      });
+      
       function limitationsModal() {$('#limitationsModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });}
       var reSizeTiles = function(){
         var maxTitleHeight = 0;
@@ -1470,17 +1461,8 @@ section {
           }
       }
       
-      $(window).load(function () {
-        reSizeTiles();
-        $('.bigtext').bigtext().css('visibility', 'visible');
-        setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
-      });
-    </script>
-    <script src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>
-    <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript"></script>
-    <script type="text/javascript">
       var ignoreLivePerson = true;
-      $(document).ready(function() {
+      ux.eldorado.ready(function(){
         var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
                      qs = [],
                      date = new Date();

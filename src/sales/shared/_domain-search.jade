@@ -28,7 +28,7 @@ mixin domainSearchInput(domainSearchParams)
           .search-icon { display: none; }
         }
  
-  form.domain-search-form(method="get" action!="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single")
+  form.domain-search-form(onSubmit="return validateSearch(this)" method="get" action!="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single")
     input(type="hidden",name="ci",value=domainSearchParams.cicode)
     input(type="hidden",name="checkAvail",value="1")
     .input-group
@@ -39,13 +39,13 @@ mixin domainSearchInput(domainSearchParams)
           span.search-icon.uxicon.uxicon-magnifying-glass
           span.search-text !{domainSearchParams.buttonText}
   script.
-    $(".domain-search-form").on('submit', function(e) {
-      var input = $(this).find("input[name='domainToCheck']");
-      if (input && (input.val() == null || input.val() == "")) {
-        e.preventDefault();
+    validateSearch = function(e) {
+      var input = e.domainToCheck.value;
+      if (input == "") {
         window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
+        return false;
       }
-    });
+    };
 
 - domainSearchOffersInputCssRendered = false;
 mixin domainSearchOffersInput(prms)
