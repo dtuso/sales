@@ -1,0 +1,32 @@
+<Packages>
+  <Package id="cashparking_tier1_001mo" QtyIsDuration="false">
+    <ProductId>5300</ProductId>
+  </Package>
+  <Package id="cashparking_tier1_012mo" QtyIsDuration="false">
+    <ProductId>6850</ProductId>
+  </Package>
+  <Package id="cashparking_tier1_024mo" QtyIsDuration="false">
+    <ProductId>6851</ProductId>
+  </Package>
+  <Package id="cashparking_tier1_036mo" QtyIsDuration="false">
+    <ProductId>6852</ProductId>
+  </Package>
+  <Package id="cashparking_tier1_060mo" QtyIsDuration="false">
+    <ProductId>6854</ProductId>
+  </Package>
+  <Package id="cashparking_tier2_001mo" QtyIsDuration="false">
+    <ProductId>5304</ProductId>
+  </Package>
+  <Package id="cashparking_tier2_012mo" QtyIsDuration="false">
+    <ProductId>6870</ProductId>
+  </Package>
+  <Package id="cashparking_tier2_024mo" QtyIsDuration="false">
+    <ProductId>6871</ProductId>
+  </Package>
+  <Package id="cashparking_tier2_036mo" QtyIsDuration="false">
+    <ProductId>6872</ProductId>
+  </Package>
+  <Package id="cashparking_tier2_060mo" QtyIsDuration="false">
+    <ProductId>6874</ProductId>
+  </Package>
+</Packages>
