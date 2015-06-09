@@ -1,0 +1,26 @@
+<Packages>
+  <Package id="dns_tier1_001mo" QtyIsDuration="false">
+    <ProductId>70899</ProductId>
+  </Package>
+  <Package id="dns_tier1_003mo" QtyIsDuration="false">
+    <ProductId>70901</ProductId>
+  </Package>
+  <Package id="dns_tier1_006mo" QtyIsDuration="false">
+    <ProductId>70903</ProductId>
+  </Package>
+  <Package id="dns_tier1_012mo" QtyIsDuration="false">
+    <ProductId>70852</ProductId>
+  </Package>
+  <Package id="dns_tier1_024mo" QtyIsDuration="false">
+    <ProductId>70880</ProductId>
+  </Package>
+  <Package id="dns_tier1_036mo" QtyIsDuration="false">
+    <ProductId>70882</ProductId>
+  </Package>
+  <Package id="dns_tier1_060mo" QtyIsDuration="false">
+    <ProductId>70886</ProductId>
+  </Package>
+  <Package id="dns_tier1_120mo" QtyIsDuration="false">
+    <ProductId>70896</ProductId>
+  </Package>
+</Packages>
