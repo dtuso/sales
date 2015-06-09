@@ -1613,6 +1613,27 @@
       <Package id="webdesign_tier2_024mo" />
     </Packages>
   </PackageGroup>
+  <PackageGroup Name="cms-dns" ProductGroupId="89">
+    <Packages>
+      <Package id="dns_tier1_001mo" />
+      <Package id="dns_tier1_003mo" />
+      <Package id="dns_tier1_006mo" />
+      <Package id="dns_tier1_012mo" />
+      <Package id="dns_tier1_024mo" />
+      <Package id="dns_tier1_036mo" />
+      <Package id="dns_tier1_060mo" />
+      <Package id="dns_tier1_120mo" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="cms-dedicatedip" ProductGroupId="37">
+    <Packages>
+      <Package id="dedicatedip_tier1_003mo" />
+      <Package id="dedicatedip_tier1_012mo" />
+      <Package id="dedicatedip_tier1_024mo" />
+      <Package id="dedicatedip_tier1_036mo" />
+      <Package id="dedicatedip_tier1_060mo" />
+    </Packages>
+  </PackageGroup>
   <PackageGroup Name="cms-cashparking" ProductGroupId="7">
     <Packages>
       <Package id="cashparking_tier1_001mo" />
