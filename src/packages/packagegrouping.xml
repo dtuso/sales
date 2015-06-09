@@ -1567,6 +1567,12 @@
     <Packages>
       <Package id="bookkeeping_tier1_001mo" />
       <Package id="bookkeeping_tier1_012mo" />
+      <Package id="getpaid_tier1_001mo" />
+      <Package id="getpaid_tier1_012mo" />
+      <Package id="getpaid_tier2_001mo" />
+      <Package id="getpaid_tier2_012mo" />
+      <Package id="getpaid_tier3_001mo" />
+      <Package id="getpaid_tier3_012mo" />
     </Packages>
   </PackageGroup>
   <PackageGroup Name="cms-codesigning" ProductGroupId="65">
@@ -1613,37 +1619,39 @@
       <Package id="webdesign_tier2_024mo" />
     </Packages>
   </PackageGroup>
-  <PackageGroup Name="cms-calendar" ProductGroupId="32">
+  <PackageGroup Name="cms-dns" ProductGroupId="89">
     <Packages>
-      <Package id="calendar_tier1_012mo" />
-      <Package id="calendar_tier1_024mo" />
-      <Package id="calendar_tier1_036mo" />
-      <Package id="calendar_tier1_060mo" />
-      <Package id="calendar_tier1_120mo" />
-      <Package id="calendar_tier2_012mo" />
-      <Package id="calendar_tier2_024mo" />
-      <Package id="calendar_tier2_036mo" />
-      <Package id="calendar_tier2_060mo" />
-      <Package id="calendar_tier2_120mo" />
-      <Package id="calendar_tier3_012mo" />
-      <Package id="calendar_tier3_024mo" />
-      <Package id="calendar_tier3_036mo" />
-      <Package id="calendar_tier3_060mo" />
-      <Package id="calendar_tier3_120mo" />
+      <Package id="dns_tier1_001mo" />
+      <Package id="dns_tier1_003mo" />
+      <Package id="dns_tier1_006mo" />
+      <Package id="dns_tier1_012mo" />
+      <Package id="dns_tier1_024mo" />
+      <Package id="dns_tier1_036mo" />
+      <Package id="dns_tier1_060mo" />
+      <Package id="dns_tier1_120mo" />
     </Packages>
   </PackageGroup>
-  <PackageGroup Name="cms-onlinestorage" ProductGroupId="50">
+  <PackageGroup Name="cms-dedicatedip" ProductGroupId="37">
     <Packages>
-      <Package id="onlinestorage_tier1_012mo" />
-      <Package id="onlinestorage_tier1_024mo" />
-      <Package id="onlinestorage_tier1_036mo" />
-      <Package id="onlinestorage_tier1_060mo" />
-      <Package id="onlinestorage_tier1_120mo" />
-      <Package id="onlinestorage_tier2_012mo" />
-      <Package id="onlinestorage_tier2_024mo" />
-      <Package id="onlinestorage_tier2_036mo" />
-      <Package id="onlinestorage_tier2_060mo" />
-      <Package id="onlinestorage_tier2_120mo" />
+      <Package id="dedicatedip_tier1_003mo" />
+      <Package id="dedicatedip_tier1_012mo" />
+      <Package id="dedicatedip_tier1_024mo" />
+      <Package id="dedicatedip_tier1_036mo" />
+      <Package id="dedicatedip_tier1_060mo" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="cms-cashparking" ProductGroupId="7">
+    <Packages>
+      <Package id="cashparking_tier1_001mo" />
+      <Package id="cashparking_tier1_012mo" />
+      <Package id="cashparking_tier1_024mo" />
+      <Package id="cashparking_tier1_036mo" />
+      <Package id="cashparking_tier1_060mo" />
+      <Package id="cashparking_tier2_001mo" />
+      <Package id="cashparking_tier2_012mo" />
+      <Package id="cashparking_tier2_024mo" />
+      <Package id="cashparking_tier2_036mo" />
+      <Package id="cashparking_tier2_060mo" />
     </Packages>
   </PackageGroup>
 </PackageGroups>
