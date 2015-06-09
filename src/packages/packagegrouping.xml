@@ -1567,6 +1567,12 @@
     <Packages>
       <Package id="bookkeeping_tier1_001mo" />
       <Package id="bookkeeping_tier1_012mo" />
+      <Package id="getpaid_tier1_001mo" />
+      <Package id="getpaid_tier1_012mo" />
+      <Package id="getpaid_tier2_001mo" />
+      <Package id="getpaid_tier2_012mo" />
+      <Package id="getpaid_tier3_001mo" />
+      <Package id="getpaid_tier3_012mo" />
     </Packages>
   </PackageGroup>
   <PackageGroup Name="cms-codesigning" ProductGroupId="65">
