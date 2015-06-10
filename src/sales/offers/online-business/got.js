@@ -59,7 +59,7 @@ var got1Page = {
   got1Page.tldInfo.addTldIf('in', false);
 ##endif
 ##if(countrySiteAny(uk) || isManager())
-  got1Page.tldInfo.addTldIf('co.uk', true);
+  got1Page.tldInfo.addTldIf('co.uk', false);
   got1Page.tldInfo.addTldIf('uk',    false);
 ##endif
 ##if(countrySiteAny(fr) || isManager())
@@ -570,4 +570,6 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
 $(window).load(function () {
   $('.bigtext').bigtext({maxfontsize: 160});
   setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
+  if( /[\u00C0-\u017E]/.test($('.bigtext').text()) ) //Checks for characters that would be larger than typical latin
+    setTimeout( "$('.bigtext').bigtext().css('margin-top', '20px');",500 ); //it is, we need some buffer room up there
 });
