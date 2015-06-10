@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/domains/domain-name-search/en
-id: 5564de72f778fc108419c454
+id: 5570ad57f778fc06084fa19d
 name: MCXMO-1089
-comments: merch updates for 5/27/2015
+comments: merch updates for 6/10/2015
 ---
 
 {% include 'modules/doc-block.html' %}
@@ -672,6 +672,12 @@ Be seen online with <strong>.video</strong>.
 <strong>.sale</strong>
 <phrase key="TldDotGroup" />
 <strong>.group</strong>
+<phrase key="TldDotFamily" />
+<strong>.family</strong>
+<phrase key="TldDotTeam" />
+<strong>.team</strong>
+<phrase key="TldDotShow" />
+<strong>.show</strong>
 <phrase key="CarouselSlide1Default" />
 Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.work</strong>, <strong>.world</strong>, <strong>.space</strong>, <strong>.guru</strong>, and <strong>.rocks</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1AU" />
@@ -791,8 +797,8 @@ and
 are now available. 
 <phrase key="CarouselSlideDefaultSearch" />
 Search domains now.
-<phrase key="CarouselSlide2DefaultRebrand" />
-SAVE 30% or more on new domains: <br /><a data-ci="88763" href="[@T[link:<relative path="/tlds/club"></relative>]@T]"><span class="greenText">.club</span></a>, <a data-ci="90584" href="[@T[link:<relative path="/tlds/guru"></relative>]@T]"><span class="greenText">.guru</span></a>, <a data-ci="99242" href="[@T[link:<relative path="/tlds/video"></relative>]@T]"><span class="greenText">.video</span></a>, <a data-ci="99241" href="[@T[link:<relative path="/tlds/sale"></relative>]@T]"><span class="greenText">.sale</span></a>, and more.
+<phrase key="CarouselSlide2DefaultRebrand" comment="{def-2-N} holds tld links"/>
+SAVE 30% or more on new domains: <br />{def-2-0}, {def-2-1}, {def-2-2}, {def-2-3}, {def-2-4}, and more.
 <phrase key="CarouselSlide2DefaultRebrand2" />
 30% OFF 
 <phrase key="CarouselSlide2DefaultNow" />
