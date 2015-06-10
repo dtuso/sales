@@ -13,6 +13,9 @@ block marquee
   |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
   |  ##endif
 
+block bugBar
+  +tldBugs(["com","co","net","video"])
+
 block primaryTile
   | 
   | ##if(splitTestingSideIsActive(1462, B))
