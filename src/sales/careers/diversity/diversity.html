@@ -1,0 +1,315 @@
+---
+location: sales/careers/diversity
+name: GCE-37726
+comments: Add ERGs to Careers page
+assetPath: false
+metaTitle: "[@L[cds.sales/gd/careers/diversity:MetaTitle]@L]"
+metaDescription: "[@L[cds.sales/gd/careers/diversity:MetaDescription]@L]"
+metaKeywords: "[@L[cds.sales/gd/careers/diversity:MetaKeywords]@L]"
+metaCanonicalPath: "/careers/diversity"
+metaOgTitle: ""
+metaOgImage: ""
+metaOgDescription: ""
+---
+{% extends 'layouts/base.html' %}
+
+{% block metahead %}
+  {% parent %}
+    <link href="[@T[link:<css path='fos/201401/careers/css/career_main.css?version=6'/>]@T]" rel="stylesheet" type="text/css">
+    <style>
+
+      .career-diversity .diversity a {
+        text-decoration: underline;
+      }
+      .career-diversity .main-banner .content-wrapper {
+        margin: 11em 0 0 5em;
+      }
+      .career-diversity .main-banner.main-banner-allin {
+        background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/bg-main-banner-creativity.jpg?version=1");
+        background-position: center top;
+        height: 58em
+      }
+      .career-diversity .main-banner.main-banner-allin .main-banner-title {
+        margin-top: 0em
+      }
+      .career-diversity .main-banner.main-banner-wit {
+        background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/bg-main-banner-vision.jpg?version=1");
+        background-position: center top;
+        height: 72em
+      }
+      .career-diversity .main-banner.main-banner-wit .main-banner-title {
+        margin-top: 5em
+      }
+      .career-diversity .main-banner.main-banner-united {
+        background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/bg-main-banner-mission.jpg?version=1");
+        background-position: center top;
+        height: 72em
+      }
+      .career-diversity .main-banner.main-banner-united .main-banner-title {
+        margin-top: 4em
+      }
+      .career-diversity .main-banner.main-banner-veterans {
+        background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/bg-main-banner-vision.jpg?version=1");
+        background-position: center top;
+        height: 72em
+      }
+      .career-diversity .main-banner.main-banner-veterans .main-banner-title {
+        margin-top: 5em
+      }
+      .career-diversity .main-banner.main-banner-lit {
+        background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/bg-main-banner-mission.jpg?version=1");
+        background-position: center top;
+        height: 72em
+      }
+      .career-diversity .main-banner.main-banner-lit .main-banner-title {
+        margin-top: 4em
+      }
+      .career-diversity .main-banner.main-banner-fit {
+        background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/bg-main-banner-vision.jpg?version=1");
+        background-position: center top;
+        height: 72em
+      }
+      .career-diversity .main-banner.main-banner-fit .main-banner-title {
+        margin-top: 4em
+      }
+      .main-banner-wit,
+      .main-banner-united,
+      .main-banner-veterans,
+      .main-banner-lit,
+      .main-banner-fit {
+        background-color: #888;
+      }
+      .main-banner span.flag {
+        background-color: #ef6c0f;
+        color: #fff;
+        font-size: 0.4em;
+        top: -0.7em;
+        position: relative;
+        padding: 0.35em;
+      }
+
+    </style>
+{% endblock %}
+
+{% block body %}
+<section class="career-diversity godaddy-careers">
+  <!-- Start main-banner -->
+  <section class="main-banner main-banner-allin no-padding-top ">
+    <nav class="career-navigation">
+      <ul>
+        <li class="overview"><a href="[@T[link:<relative path="~/careers/overview" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationHome]@L]</a></li>
+        <li class="culture"><a href="[@T[link:<relative path="~/careers/culture" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationCulture]@L]</a></li>
+      ##if(activeLanguageAny([en-us],[es-us]))
+        <li class="diversity"><a href="[@T[link:<relative path="~/careers/diversity" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationDiversity]@L]</a></li>
+      ##endif
+        <li class="benefits"><a href="[@T[link:<relative path="~/careers/benefits" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationBenefits]@L]</a></li>
+        <li class="locations"><a href="[@T[link:<relative path="~/careers/locations" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationLocations]@L]</a></li>
+        <li class="interns"><a href="[@T[link:<relative path="~/careers/interns" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationInterns]@L]</a></li>
+        <li class="work"><a href="[@T[link:<relative path="~/careers/work" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationWork]@L]</a></li>
+        <li class="opportunities"><a href="[@T[link:<relative path="~/careers/opportunities" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationopportunities]@L]</a></li>
+      </ul>
+    </nav>
+    <div class="l-main-container container main-banner-content main-banner-content-allin">
+      <div class="content-wrapper row">
+        <div class="col-xs-7">
+          <h1 class="main-banner-title alternate">[@L[cds.sales/gd/careers/diversity:MainBannerTitle]@L]</h1>
+          <p class="main-banner-subtitle alternate">[@L[cds.sales/gd/careers/diversity:MainBannerSubtitle]@L]</p>
+          <div class="separator-container"><div class="separator separator-big separator-alternate"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End main-banner -->
+
+  <!-- Start wit-banner -->
+  <section class="main-banner main-banner-wit no-padding-top">
+    <div class="l-main-container container main-banner-content main-banner-content-wit">
+      <div class="content-wrapper row">
+        <div class="col-xs-7 col-md-offset-1">
+          <div class="main-banner-header">
+            <h1 class="main-banner-title">[@T[companyname:name]@T]<sup>&reg;</sup> <span class="flag flag-wit">[@L[cds.sales/gd/careers/diversity:WitBannerTitle]@L]</span></h1>
+            <div class="separator-container"><div class="separator separator-big"></div></div>
+            <p class="main-banner-subtitle small">[@L[cds.sales/gd/careers/diversity:WitBannerSubtitle]@L]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End wit-banner -->
+
+  <!-- Start united-banner -->
+  <section class="main-banner main-banner-united no-padding-top">
+    <div class="l-main-container container main-banner-content main-banner-content-united">
+      <div class="content-wrapper row">
+        <div class="col-xs-7 col-md-offset-1">
+          <div class="main-banner-header">
+            <h1 class="main-banner-title">[@T[companyname:name]@T]<sup>&reg;</sup> <span class="flag flag-united">[@L[cds.sales/gd/careers/diversity:UnitedBannerTitle]@L]</span></h1>
+            <div class="separator-container"><div class="separator separator-big"></div></div>
+            <p class="main-banner-subtitle small">[@L[cds.sales/gd/careers/diversity:UnitedBannerSubtitle]@L]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End united-banner -->
+
+  <!-- Start veterans-banner -->
+  <section class="main-banner main-banner-veterans no-padding-top">
+    <div class="l-main-container container main-banner-content main-banner-content-veterans">
+      <div class="content-wrapper row">
+        <div class="col-xs-7 col-md-offset-1">
+          <div class="main-banner-header">
+            <h1 class="main-banner-title">[@T[companyname:name]@T]<sup>&reg;</sup> <span class="flag flag-veterans">[@L[cds.sales/gd/careers/diversity:VeteransBannerTitle]@L]</span></h1>
+            <div class="separator-container"><div class="separator separator-big"></div></div>
+            <p class="main-banner-subtitle small">[@L[cds.sales/gd/careers/diversity:VeteransBannerSubtitle]@L]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End veterans-banner -->
+
+  <!-- Start lit-banner -->
+  <section class="main-banner main-banner-lit no-padding-top">
+    <div class="l-main-container container main-banner-content main-banner-content-lit">
+      <div class="content-wrapper row">
+        <div class="col-xs-7 col-md-offset-1">
+          <div class="main-banner-header">
+            <h1 class="main-banner-title">[@T[companyname:name]@T]<sup>&reg;</sup> <span class="flag flag-lit">[@L[cds.sales/gd/careers/diversity:LitBannerTitle]@L]</span></h1>
+            <div class="separator-container"><div class="separator separator-big"></div></div>
+            <p class="main-banner-subtitle small">[@L[cds.sales/gd/careers/diversity:LitBannerSubtitle]@L]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End lit-banner -->
+
+  <!-- Start fit-banner -->
+  <section class="main-banner main-banner-fit no-padding-top">
+    <div class="l-main-container container main-banner-content main-banner-content-fit">
+      <div class="content-wrapper row">
+        <div class="col-xs-7 col-md-offset-1">
+          <div class="main-banner-header">
+            <h1 class="main-banner-title">[@T[companyname:name]@T]<sup>&reg;</sup> <span class="flag flag-fit">[@L[cds.sales/gd/careers/diversity:FitBannerTitle]@L]</span></h1>
+            <div class="separator-container"><div class="separator separator-big"></div></div>
+            <p class="main-banner-subtitle small">[@L[cds.sales/gd/careers/diversity:FitBannerSubtitle]@L]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End fit-banner -->
+
+  <!-- Start build-company-banner -->
+  <section class="reasons-here">
+    <h3>[@L[cds.sales/gd/careers/diversity:ReasonsCarouselTitle]@L]</h3>
+    <div class="separator separator-title separator-alternate"></div>
+    <section class="carousel-container">
+      <div class="container carousel-equal-height">
+        <div data-ride="carousel" class="carousel slide " id="reasons-here">
+          <!-- Wrapper for slides -->
+          <div class="carousel-content-container">
+            <div class="carousel-inner carousel-inner-container">
+              <div class="item carousel-inner-item active">
+                <div class="carousel-inner-text-container">
+                  <h3 class="carousel-inner-title">[@L[cds.sales/gd/careers/diversity:ReasonsCarousel1Title]@L]</h3>
+                  <p class="carousel-inner-text">[@L[cds.sales/gd/careers/diversity:ReasonsCarousel1Content]@L]</p>
+                </div>
+              </div>
+              <div class="item carousel-inner-item">
+                <div class="carousel-inner-text-container">
+                  <h3 class="carousel-inner-title">[@L[cds.sales/gd/careers/diversity:ReasonsCarousel2Title]@L]</h3>
+                  <p class="carousel-inner-text">[@L[cds.sales/gd/careers/diversity:ReasonsCarousel2Content]@L]</p>
+                </div>
+              </div>
+              <div class="item carousel-inner-item">
+                <div class="carousel-inner-text-container">
+                  <h3 class="carousel-inner-title">[@L[cds.sales/gd/careers/diversity:ReasonsCarousel3Title]@L]</h3>
+                  <p class="carousel-inner-text">[@L[cds.sales/gd/careers/diversity:ReasonsCarousel3Content]@L]</p>
+                </div>
+              </div>
+              <div class="item carousel-inner-item">
+                <div class="carousel-inner-text-container">
+                  <h3 class="carousel-inner-title">[@L[cds.sales/gd/careers/diversity:ReasonsCarousel4Title]@L]</h3>
+                  <p class="carousel-inner-text">[@L[cds.sales/gd/careers/diversity:ReasonsCarousel4Content]@L]</p>
+                </div>
+              </div>
+              <div class="item carousel-inner-item">
+                <div class="carousel-inner-text-container">
+                  <h3 class="carousel-inner-title">[@L[cds.sales/gd/careers/diversity:ReasonsCarousel5Title]@L]</h3>
+                  <p class="carousel-inner-text">[@L[cds.sales/gd/careers/diversity:ReasonsCarousel5Content]@L]</p>
+                </div>
+              </div>
+            </div>
+            <!-- Controls -->
+            <a data-slide="prev" href="#reasons-here" class="left carousel-control-btn ico ico-carousel-arrow-left"></a>
+            <a data-slide="next" href="#reasons-here" class="right carousel-control-btn ico ico-carousel-arrow-right"></a>
+          </div>
+          <!-- Indicators -->
+          <ol class="carousel-indicators carousel-indicators-list">
+            <li class="carousel-indicators-obj active"><a href="#" data-slide-to="0" data-target="#reasons-here"></a></li>
+            <li class="carousel-indicators-obj"><a href="#" data-slide-to="1" data-target="#reasons-here"></a></li>
+            <li class="carousel-indicators-obj"><a href="#" data-slide-to="2" data-target="#reasons-here"></a></li>
+            <li class="carousel-indicators-obj"><a href="#" data-slide-to="3" data-target="#reasons-here"></a></li>
+            <li class="carousel-indicators-obj"><a href="#" data-slide-to="4" data-target="#reasons-here"></a></li>
+          </ol>      
+        </div>
+      </div>
+    </section>
+  </section>
+  <!-- End build-company-banner -->
+  <!-- Start more-jobs-section -->
+  <section class="more-jobs">
+    <div class="container">
+      <h2>[@L[cds.sales/gd/careers/diversity:MoreJobsTitle]@L]</h2>
+      <p class="subtitle">[@L[cds.sales/gd/careers/diversity:MoreJobsSubtitle]@L]</p>
+      <div class="row">
+        <div class="col-xs-4">
+          <div class="column icon">
+            <i class="career-ico career-ico-customer-care"></i>
+          </div>
+          <div class="column">
+            <h3>[@L[cds.sales/gd/careers/diversity:MoreJobsWork1Title]@L]</h3>
+            <p>[@L[cds.sales/gd/careers/diversity:MoreJobsWork1Content]@L]</p>
+            <a href="[@T[link:<relative path="~/careers/work" />]@T]#work-customer-care">[@L[cds.sales/gd/careers/diversity:MoreJobsMoreButton]@L]</a>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <div class="column icon">
+            <i class="career-ico career-ico-technical"></i>
+          </div>
+          <div class="column">
+            <h3>[@L[cds.sales/gd/careers/diversity:MoreJobsWork2Title]@L]</h3>
+            <p>[@L[cds.sales/gd/careers/diversity:MoreJobsWork2Content]@L]</p>
+            <a href="[@T[link:<relative path="~/careers/work" />]@T]#work-technical">[@L[cds.sales/gd/careers/diversity:MoreJobsMoreButton]@L]</a>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <div class="column icon">
+            <i class="career-ico career-ico-corporate"></i>
+          </div>
+          <div class="column">
+            <h3>[@L[cds.sales/gd/careers/diversity:MoreJobsWork3Title]@L]</h3>
+            <p>[@L[cds.sales/gd/careers/diversity:MoreJobsWork3Content]@L]</p>
+            <a href="[@T[link:<relative path="~/careers/work" />]@T]#work-corporate">[@L[cds.sales/gd/careers/diversity:MoreJobsMoreButton]@L]</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End more-jobs-section -->
+</section>
+
+{% endblock %}
+
+{% block footer %} 
+<script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery.slidethis/jquery-slide-this.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function () {
+    $('.move').scrollToSection();
+    $('.carousel-equal-height').setColumnsEqualHeight();   
+  });    
+</script>
+
+{% endblock %}

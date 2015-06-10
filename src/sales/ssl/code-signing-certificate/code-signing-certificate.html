@@ -1,8 +1,7 @@
 ---
 location: sales/ssl/code-signing-certificate.aspx
-id: 54b6e8e7f778fc0f24ed20d9
-name: GCE-34935
-comments: Prep for uxcore - css updates
+name: GCE-38635
+comments: fr-FR,es-ES:Layout issue displays
 ---
 {% extends 'layouts/base.html' %}
 
@@ -210,10 +209,27 @@ comments: Prep for uxcore - css updates
                                     <input type="hidden" name="prog_id" value="GoDaddy" />
                                     <input type="hidden" name="selectedPlan" id="selectedPlan" class="selectedPlan" value="frmCodeSign_0">
                                     <div class="select-box first" id="price-box" data-ci="88726">
+                                        <style>
+                                            .select-box .col-A,
+                                            .select-box .col-B,
+                                            .select-box .col-C {
+                                              padding: 0 2px 0 0;
+                                              position: static;
+                                              float: left;
+                                              min-height: 1px;
+                                              box-sizing: border-box;
+                                              display: block;
+                                            }
+                                            .select-box .col-A {min-width: 60px;}
+                                            .select-box .col-B {min-width: 90px;}
+                                            .select-box .col-C {min-width: 82px;}
+                                        </style>
                                         <div class="select-box-head">
                                             <div  class="select-box-current">
-                                                <span>[@L[cds.sales/gd/ssl/code-signing-certificate2:1-year]@L]</span>
-                                                <span class="price">[@T[productprice:<current productid="3681" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
+                                              <div class="row">
+                                                <span class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:1-year]@L]</span>
+                                                <span class="price col-B">[@T[productprice:<current productid="3681" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
+                                              </div>
                                             </div>
                                             <div class="select-box-cta"><i class="ico ico-download"></i></div>
                                         </div><!-- select-box-head -->
@@ -221,40 +237,40 @@ comments: Prep for uxcore - css updates
                                             <ul class="select-box-options">
                                                 <li class="selected">
                                                     <label>
-                                                        <input type="radio" name="product" id="3681_1_1" value="3681|1|1" checked="true">
-                                                        <div>
-                                                            <span>[@L[cds.sales/gd/ssl/code-signing-certificate2:1-year]@L]</span>
-                                                            <span class="price">[@T[productprice:<current productid="3681" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
-                                                            <span class="save "></span>
-                                                        </div>
+                                                      <input type="radio" name="product" id="3681_1_1" value="3681|1|1" checked="true">
+                                                      <div class="row">
+                                                        <span class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:1-year]@L]</span>
+                                                        <span class="price col-B">[@T[productprice:<current productid="3681" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
+                                                        <span class="save lastChild col-C"></span>
+                                                      </div>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="radio" name="product" id="3682_1_1" value="3682|1|1">
-                                                        <div>
-                                                            <span>[@L[cds.sales/gd/ssl/code-signing-certificate2:2-year]@L]</span>
-                                                            <span class="price">[@T[productprice:<current productid="3682" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
-                                                            ##if(productHasSavingsMoreThan(3682, 3681, 0))
-                                                            <span class="save ">[@T[productcompare:<percent primaryproductid="3682" secondaryproductid="3681" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/ssl/code-signing-certificate2:save]@L] {0}&#8225;]]></html></percent>]@T]</span>
-                                                            ##else
-                                                            <span class="save "></span>
-                                                            ##endif
-                                                        </div>
+                                                      <input type="radio" name="product" id="3682_1_1" value="3682|1|1">
+                                                      <div class="row">
+                                                        <span class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:2-year]@L]</span>
+                                                        <span class="price col-B">[@T[productprice:<current productid="3682" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
+                                                        ##if(productHasSavingsMoreThan(3682, 3681, 0))
+                                                        <span class="save lastChild col-C">[@T[productcompare:<percent primaryproductid="3682" secondaryproductid="3681" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/ssl/code-signing-certificate2:save]@L] {0}&#8225;]]></html></percent>]@T]</span>
+                                                        ##else
+                                                        <span class="save lastChild col-C"></span>
+                                                        ##endif
+                                                      </div>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="radio" name="product" id="3683_1_1" value="3683|1|1">
-                                                        <div>
-                                                            <span>[@L[cds.sales/gd/ssl/code-signing-certificate2:3-year]@L]</span>
-                                                            <span class="price">[@T[productprice:<current productid="3683" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
-                                                            ##if(productHasSavingsMoreThan(3683, 3681, 0))
-                                                            <span class="save ">[@T[productcompare:<percent primaryproductid="3683" secondaryproductid="3681" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/ssl/code-signing-certificate2:save]@L] {0}&#8225;]]></html></percent>]@T]</span>
-                                                            ##else
-                                                            <span class="save "></span>
-                                                            ##endif
-                                                        </div>
+                                                      <input type="radio" name="product" id="3683_1_1" value="3683|1|1">
+                                                      <div class="row">
+                                                        <span class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:3-year]@L]</span>
+                                                        <span class="price col-B">[@T[productprice:<current productid="3683" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
+                                                        ##if(productHasSavingsMoreThan(3683, 3681, 0))
+                                                        <span class="save lastChild col-C">[@T[productcompare:<percent primaryproductid="3683" secondaryproductid="3681" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/ssl/code-signing-certificate2:save]@L] {0}&#8225;]]></html></percent>]@T]</span>
+                                                        ##else
+                                                        <span class="save lastChild col-C"></span>
+                                                        ##endif
+                                                      </div>
                                                     </label>
                                                 </li>
                                             </ul>
@@ -378,8 +394,10 @@ comments: Prep for uxcore - css updates
                                     <div class="select-box first" id="price-box" data-ci="88729">
                                         <div class="select-box-head">
                                             <div class="select-box-current">
-                                                <span>[@L[cds.sales/gd/ssl/code-signing-certificate2:1-year]@L]</span>
-                                                <span class="price">[@T[productprice:<current productid="1130" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
+                                              <div class="row">
+                                                <span class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:1-year]@L]</span>
+                                                <span class="price col-B">[@T[productprice:<current productid="1130" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
+                                              </div>
                                             </div>
                                             <div class="select-box-cta"><i class="ico ico-download"></i></div>
                                         </div><!-- select-box-head -->
@@ -387,35 +405,40 @@ comments: Prep for uxcore - css updates
                                             <ul class="select-box-options">
                                                 <li class="selected">
                                                     <label>
-                                                        <input type="radio" name="product" id="1130_1_1" value="1130|1|1" checked="true">
-                                                        <div>
-                                                            <span>[@L[cds.sales/gd/ssl/code-signing-certificate2:1-year]@L]</span>
-                                                            <span class="price">[@T[productprice:<current productid="1130" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
-                                                        </div>
+                                                      <input type="radio" name="product" id="1130_1_1" value="1130|1|1" checked="true">
+                                                      <div class="row">
+                                                        <span class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:1-year]@L]</span>
+                                                        <span class="price col-B">[@T[productprice:<current productid="1130" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
+                                                        <span class="save lastChild col-C"></span>
+                                                      </div>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="radio" name="product" id="1132_1_1" value="1132|1|1">
-                                                        <div>
-                                                        <span>[@L[cds.sales/gd/ssl/code-signing-certificate2:2-year]@L]</span>
-                                                        <span class="price">[@T[productprice:<current productid="1132" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
+                                                      <input type="radio" name="product" id="1132_1_1" value="1132|1|1">
+                                                      <div class="row">
+                                                        <span class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:2-year]@L]</span>
+                                                        <span class="price col-B">[@T[productprice:<current productid="1132" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
                                                         ##if(productHasSavingsMoreThan(1132, 1130, 0))
-                                                            <span class="save lastChild">[@T[productcompare:<percent primaryproductid="1132" secondaryproductid="1130" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/ssl/code-signing-certificate2:save]@L] {0}&#8225;]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild col-C">[@T[productcompare:<percent primaryproductid="1132" secondaryproductid="1130" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/ssl/code-signing-certificate2:save]@L] {0}&#8225;]]></html></percent>]@T]</span>
+                                                        ##else
+                                                        <span class="save lastChild col-C"></span>
                                                         ##endif
-                                                        </div>
+                                                      </div>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="radio" name="product" id="1153_1_1" value="1153|1|1">
-                                                        <div>
-                                                        <span>[@L[cds.sales/gd/ssl/code-signing-certificate2:3-year]@L]</span>
-                                                        <span class="price">[@T[productprice:<current productid="1153" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
+                                                      <input type="radio" name="product" id="1153_1_1" value="1153|1|1">
+                                                      <div class="row">
+                                                        <span class="col-A">[@L[cds.sales/gd/ssl/code-signing-certificate2:3-year]@L]</span>
+                                                        <span class="price col-B">[@T[productprice:<current productid="1153" period="yearly" />]@T]/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span>
                                                         ##if(productHasSavingsMoreThan(1153, 1130, 0))
-                                                            <span class="save lastChild">[@T[productcompare:<percent primaryproductid="1153" secondaryproductid="1130" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/ssl/code-signing-certificate2:save]@L] {0}&#8225;]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild col-C">[@T[productcompare:<percent primaryproductid="1153" secondaryproductid="1130" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/ssl/code-signing-certificate2:save]@L] {0}&#8225;]]></html></percent>]@T]</span>
+                                                        ##else
+                                                        <span class="save lastChild col-C"></span>
                                                         ##endif
-                                                        </div>
+                                                      </div>
                                                     </label>
                                                 </li>
                                             </ul>
