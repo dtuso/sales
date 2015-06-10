@@ -183,7 +183,7 @@ var got1Page = {
   got1Page.tldInfo.addTldIf('in', false);
 ##endif
 ##if(countrySiteAny(uk) || isManager())
-  got1Page.tldInfo.addTldIf('co.uk', true);
+  got1Page.tldInfo.addTldIf('co.uk', false);
   got1Page.tldInfo.addTldIf('uk',    false);
 ##endif
 ##if(countrySiteAny(fr) || isManager())
@@ -694,6 +694,8 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
 $(window).load(function () {
   $('.bigtext').bigtext({maxfontsize: 160});
   setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
+  if( /[\u00C0-\u017E]/.test($('.bigtext').text()) ) //Checks for characters that would be larger than typical latin
+    setTimeout( "$('.bigtext').bigtext().css('margin-top', '20px');",500 ); //it is, we need some buffer room up there
 });
       </script>
       <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>
@@ -1737,7 +1739,7 @@ $(window).load(function () {
                   <h4 class="headline-primary">[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-text]@L]</h4>
                   <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-price]@L]</div>
                   <div data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer]@L] 
-                    <button data-ci="95736" class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer-link]@L]</button> 
+                    <button data-ci-workaround="95736" class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer-link]@L]</button> 
                     ##if(countrySiteAny(uk))
                      
                     <div>[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
@@ -1763,7 +1765,7 @@ $(window).load(function () {
                   <h4 class="headline-primary">[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-text]@L]</h4>
                   <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]" class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-price]@L]</div>
                   <div data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer]@L] 
-                    <button data-ci="95735" class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer-link]@L]</button> 
+                    <button data-ci-workaround="95735" class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer-link]@L]</button> 
                     ##if(countrySiteAny(uk))
                      
                     <div>[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
