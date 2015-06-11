@@ -7,6 +7,7 @@
   "bm":                      "./products/business-marketing/",
   "build-a-website":         "./expansion-pages/website-builder/build-a-website/",
   "build-my-own-website":    "./product-pages/build-my-own-website/",
+  "car":                     "./careers/",
   "cce":                     "./cce/",
   "contact-us":              "./contact-us/",
   "csc":                     "./ssl/code-signing-certificate/",

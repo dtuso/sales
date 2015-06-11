@@ -1,0 +1,17 @@
+---
+location: sales/careers/diversity.rule
+name: GCE-37726
+comments: Add new Diversity careers page
+---
+[
+  { 
+    "Type": "Redirect",
+    "Condition": "siteContextAny(wwd,br,pl)",
+    "Data": "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+  },
+  { 
+    "Type": "Redirect",
+    "Condition": "!activeLanguageAny([en-us],[es-us])",
+    "Data": "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+  }
+]

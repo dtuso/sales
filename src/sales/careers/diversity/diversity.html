@@ -21,73 +21,45 @@ metaOgDescription: ""
       .career-diversity .diversity a {
         text-decoration: underline;
       }
-      .career-diversity .main-banner .content-wrapper {
-        margin: 11em 0 0 5em;
-      }
-      .career-diversity .main-banner.main-banner-allin {
-        background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/bg-main-banner-creativity.jpg?version=1");
-        background-position: center top;
-        height: 58em
-      }
-      .career-diversity .main-banner.main-banner-allin .main-banner-title {
-        margin-top: 0em
-      }
-      .career-diversity .main-banner.main-banner-wit {
-        background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/bg-main-banner-vision.jpg?version=1");
-        background-position: center top;
-        height: 72em
-      }
-      .career-diversity .main-banner.main-banner-wit .main-banner-title {
-        margin-top: 5em
-      }
-      .career-diversity .main-banner.main-banner-united {
-        background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/bg-main-banner-mission.jpg?version=1");
-        background-position: center top;
-        height: 72em
-      }
-      .career-diversity .main-banner.main-banner-united .main-banner-title {
-        margin-top: 4em
-      }
-      .career-diversity .main-banner.main-banner-veterans {
-        background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/bg-main-banner-vision.jpg?version=1");
-        background-position: center top;
-        height: 72em
-      }
-      .career-diversity .main-banner.main-banner-veterans .main-banner-title {
-        margin-top: 5em
-      }
-      .career-diversity .main-banner.main-banner-lit {
-        background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/bg-main-banner-mission.jpg?version=1");
-        background-position: center top;
-        height: 72em
-      }
-      .career-diversity .main-banner.main-banner-lit .main-banner-title {
-        margin-top: 4em
-      }
-      .career-diversity .main-banner.main-banner-fit {
-        background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/bg-main-banner-vision.jpg?version=1");
-        background-position: center top;
-        height: 72em
-      }
-      .career-diversity .main-banner.main-banner-fit .main-banner-title {
-        margin-top: 4em
-      }
-      .main-banner-wit,
-      .main-banner-united,
-      .main-banner-veterans,
-      .main-banner-lit,
-      .main-banner-fit {
+      .career-diversity .main-banner {
         background-color: #888;
+        background-position: center top;
+        background-size: cover!important;
       }
-      .main-banner span.flag {
-        background-color: #ef6c0f;
-        color: #fff;
-        font-size: 0.4em;
-        top: -0.7em;
-        position: relative;
-        padding: 0.35em;
+      .career-diversity.godaddy-careers .main-banner .content-wrapper {
+        margin: 12em 0;
+      }
+      .career-diversity .main-banner .main-banner-title {
+        font-weight: 800;
+      }
+      .career-diversity .main-banner h2.main-banner-title {
+        font-weight: 300;
+        margin-right: 0.2em;
       }
 
+      .career-diversity .main-banner.main-banner-allin {background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/diversity/marquee-img-02-v1.jpg");}
+      .career-diversity .main-banner.main-banner-wit {background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/diversity/women-tech-img-02-v1.jpg");}
+      .career-diversity .main-banner.main-banner-united {background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/diversity/united-img-02-v1.jpg");}
+      .career-diversity .main-banner.main-banner-veterans {background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/diversity/veterans-img-02-v1.jpg");}
+      .career-diversity .main-banner.main-banner-lit {background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/diversity/latinos-img-02-v1.jpg");}
+      .career-diversity .main-banner.main-banner-fit {background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/diversity/fitness-img-02-v1.jpg");}
+
+      .career-diversity .main-banner .flag {  
+        background-color: transparent;
+        background-repeat: no-repeat;
+      }
+      .career-diversity .main-banner .flag-wit      {height:70px;width:312px;background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/diversity/gdcareers-diversity-women-tech-text-flag-02-v01.png");}
+      .career-diversity .main-banner .flag-united   {height:70px;width:177px;background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/diversity/gdcareers-diversity-united-text-flag-02-v01.png");}
+      .career-diversity .main-banner .flag-veterans {height:70px;width:217px;background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/diversity/gdcareers-diversity-veterans-text-flag-02-v01.png");}
+      .career-diversity .main-banner .flag-lit      {height:70px;width:316px;background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/diversity/gdcareers-diversity-latinos-text-flag-02-v01.png");}
+      .career-diversity .main-banner .flag-fit      {height:70px;width:314px;background-image: url("[@T[link:<imageroot />]@T]fos/201401/careers/img/diversity/gdcareers-diversity-fitness-text-flag-02-v01.png");}
+      .career-diversity .main-banner-background-overlay {
+        background-color: rgba(0,0,0,0.2);
+      }
+      .career-diversity .main-banner .main-banner-title,
+      .career-diversity .main-banner .flag {
+        float:left;
+      }
     </style>
 {% endblock %}
 
@@ -95,26 +67,30 @@ metaOgDescription: ""
 <section class="career-diversity godaddy-careers">
   <!-- Start main-banner -->
   <section class="main-banner main-banner-allin no-padding-top ">
-    <nav class="career-navigation">
-      <ul>
-        <li class="overview"><a href="[@T[link:<relative path="~/careers/overview" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationHome]@L]</a></li>
-        <li class="culture"><a href="[@T[link:<relative path="~/careers/culture" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationCulture]@L]</a></li>
-      ##if(activeLanguageAny([en-us],[es-us]))
-        <li class="diversity"><a href="[@T[link:<relative path="~/careers/diversity" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationDiversity]@L]</a></li>
-      ##endif
-        <li class="benefits"><a href="[@T[link:<relative path="~/careers/benefits" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationBenefits]@L]</a></li>
-        <li class="locations"><a href="[@T[link:<relative path="~/careers/locations" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationLocations]@L]</a></li>
-        <li class="interns"><a href="[@T[link:<relative path="~/careers/interns" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationInterns]@L]</a></li>
-        <li class="work"><a href="[@T[link:<relative path="~/careers/work" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationWork]@L]</a></li>
-        <li class="opportunities"><a href="[@T[link:<relative path="~/careers/opportunities" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationopportunities]@L]</a></li>
-      </ul>
-    </nav>
-    <div class="l-main-container container main-banner-content main-banner-content-allin">
-      <div class="content-wrapper row">
-        <div class="col-xs-7">
-          <h1 class="main-banner-title alternate">[@L[cds.sales/gd/careers/diversity:MainBannerTitle]@L]</h1>
-          <p class="main-banner-subtitle alternate">[@L[cds.sales/gd/careers/diversity:MainBannerSubtitle]@L]</p>
-          <div class="separator-container"><div class="separator separator-big separator-alternate"></div></div>
+
+    <div class="main-banner-background-overlay">
+      <nav class="career-navigation">
+        <ul>
+          <li class="overview"><a href="[@T[link:<relative path="~/careers/overview" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationHome]@L]</a></li>
+          <li class="culture"><a href="[@T[link:<relative path="~/careers/culture" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationCulture]@L]</a></li>
+        ##if(activeLanguageAny([en-us],[es-us]))
+          <li class="diversity"><a href="[@T[link:<relative path="~/careers/diversity" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationDiversity]@L]</a></li>
+        ##endif
+          <li class="benefits"><a href="[@T[link:<relative path="~/careers/benefits" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationBenefits]@L]</a></li>
+          <li class="locations"><a href="[@T[link:<relative path="~/careers/locations" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationLocations]@L]</a></li>
+          <li class="interns"><a href="[@T[link:<relative path="~/careers/interns" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationInterns]@L]</a></li>
+          <li class="work"><a href="[@T[link:<relative path="~/careers/work" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationWork]@L]</a></li>
+          <li class="opportunities"><a href="[@T[link:<relative path="~/careers/opportunities" />]@T]">[@L[cds.sales/gd/careers/diversity:CareerNavigationopportunities]@L]</a></li>
+        </ul>
+      </nav>
+      <div class="l-main-container container main-banner-content main-banner-content-allin">
+        <div class="content-wrapper row">
+          <div class="col-xs-8 col-md-offset-1">
+            <div class="row">
+              <h1 class="main-banner-title">[@L[cds.sales/gd/careers/diversity:MainBannerTitle-redo]@L]</h1>
+            </div>
+            <p class="main-banner-subtitle">[@L[cds.sales/gd/careers/diversity:MainBannerSubtitle-redo]@L]</p>
+          </div>
         </div>
       </div>
     </div>
@@ -123,13 +99,19 @@ metaOgDescription: ""
 
   <!-- Start wit-banner -->
   <section class="main-banner main-banner-wit no-padding-top">
-    <div class="l-main-container container main-banner-content main-banner-content-wit">
-      <div class="content-wrapper row">
-        <div class="col-xs-7 col-md-offset-1">
-          <div class="main-banner-header">
-            <h1 class="main-banner-title">[@T[companyname:name]@T]<sup>&reg;</sup> <span class="flag flag-wit">[@L[cds.sales/gd/careers/diversity:WitBannerTitle]@L]</span></h1>
-            <div class="separator-container"><div class="separator separator-big"></div></div>
-            <p class="main-banner-subtitle small">[@L[cds.sales/gd/careers/diversity:WitBannerSubtitle]@L]</p>
+
+    <div class="main-banner-background-overlay">
+      <div class="l-main-container container main-banner-content main-banner-content-wit">
+        <div class="content-wrapper row">
+          <div class="col-xs-7 col-md-offset-1">
+            <div class="main-banner-header">
+              <div class="row">
+                <h2 class="main-banner-title">[@T[companyname:name]@T]<sup>&reg;</sup></h2>
+                <div class="flag flag-wit" title="[@L[cds.sales/gd/careers/diversity:WitBannerTitle]@L]">&nbsp;</div>
+              </div>
+              <div class="separator-container"><div class="separator separator-big"></div></div>
+              <p class="main-banner-subtitle small">[@L[cds.sales/gd/careers/diversity:WitBannerSubtitle]@L]</p>
+            </div>
           </div>
         </div>
       </div>
@@ -139,13 +121,18 @@ metaOgDescription: ""
 
   <!-- Start united-banner -->
   <section class="main-banner main-banner-united no-padding-top">
-    <div class="l-main-container container main-banner-content main-banner-content-united">
-      <div class="content-wrapper row">
-        <div class="col-xs-7 col-md-offset-1">
-          <div class="main-banner-header">
-            <h1 class="main-banner-title">[@T[companyname:name]@T]<sup>&reg;</sup> <span class="flag flag-united">[@L[cds.sales/gd/careers/diversity:UnitedBannerTitle]@L]</span></h1>
-            <div class="separator-container"><div class="separator separator-big"></div></div>
-            <p class="main-banner-subtitle small">[@L[cds.sales/gd/careers/diversity:UnitedBannerSubtitle]@L]</p>
+    <div class="main-banner-background-overlay">
+      <div class="l-main-container container main-banner-content main-banner-content-united">
+        <div class="content-wrapper row">
+          <div class="col-xs-7 col-md-offset-1">
+            <div class="main-banner-header">
+              <div class="row">
+                <h2 class="main-banner-title">[@T[companyname:name]@T]<sup>&reg;</sup></h2>
+                <div class="flag flag-united" title="[@L[cds.sales/gd/careers/diversity:UnitedBannerTitle]@L]">&nbsp;</div>
+              </div>
+              <div class="separator-container"><div class="separator separator-big"></div></div>
+              <p class="main-banner-subtitle small">[@L[cds.sales/gd/careers/diversity:UnitedBannerSubtitle]@L]</p>
+            </div>
           </div>
         </div>
       </div>
@@ -155,13 +142,19 @@ metaOgDescription: ""
 
   <!-- Start veterans-banner -->
   <section class="main-banner main-banner-veterans no-padding-top">
-    <div class="l-main-container container main-banner-content main-banner-content-veterans">
-      <div class="content-wrapper row">
-        <div class="col-xs-7 col-md-offset-1">
-          <div class="main-banner-header">
-            <h1 class="main-banner-title">[@T[companyname:name]@T]<sup>&reg;</sup> <span class="flag flag-veterans">[@L[cds.sales/gd/careers/diversity:VeteransBannerTitle]@L]</span></h1>
-            <div class="separator-container"><div class="separator separator-big"></div></div>
-            <p class="main-banner-subtitle small">[@L[cds.sales/gd/careers/diversity:VeteransBannerSubtitle]@L]</p>
+
+    <div class="main-banner-background-overlay">
+      <div class="l-main-container container main-banner-content main-banner-content-veterans">
+        <div class="content-wrapper row">
+          <div class="col-xs-7 col-md-offset-1">
+            <div class="main-banner-header">
+              <div class="row">
+                <h2 class="main-banner-title">[@T[companyname:name]@T]<sup>&reg;</sup></h2>
+                <div class="flag flag-veterans" title="[@L[cds.sales/gd/careers/diversity:VeteransBannerTitle]@L]">&nbsp;</div>
+              </div>
+              <div class="separator-container"><div class="separator separator-big"></div></div>
+              <p class="main-banner-subtitle small">[@L[cds.sales/gd/careers/diversity:VeteransBannerSubtitle]@L]</p>
+            </div>
           </div>
         </div>
       </div>
@@ -171,13 +164,19 @@ metaOgDescription: ""
 
   <!-- Start lit-banner -->
   <section class="main-banner main-banner-lit no-padding-top">
-    <div class="l-main-container container main-banner-content main-banner-content-lit">
-      <div class="content-wrapper row">
-        <div class="col-xs-7 col-md-offset-1">
-          <div class="main-banner-header">
-            <h1 class="main-banner-title">[@T[companyname:name]@T]<sup>&reg;</sup> <span class="flag flag-lit">[@L[cds.sales/gd/careers/diversity:LitBannerTitle]@L]</span></h1>
-            <div class="separator-container"><div class="separator separator-big"></div></div>
-            <p class="main-banner-subtitle small">[@L[cds.sales/gd/careers/diversity:LitBannerSubtitle]@L]</p>
+
+    <div class="main-banner-background-overlay">
+      <div class="l-main-container container main-banner-content main-banner-content-lit">
+        <div class="content-wrapper row">
+          <div class="col-xs-7 col-md-offset-1">
+            <div class="main-banner-header">
+              <div class="row">
+                <h2 class="main-banner-title">[@T[companyname:name]@T]<sup>&reg;</sup></h2>
+                <div class="flag flag-lit" title="[@L[cds.sales/gd/careers/diversity:LitBannerTitle]@L]">&nbsp;</div>
+              </div>
+              <div class="separator-container"><div class="separator separator-big"></div></div>
+              <p class="main-banner-subtitle small">[@L[cds.sales/gd/careers/diversity:LitBannerSubtitle]@L]</p>
+            </div>
           </div>
         </div>
       </div>
@@ -187,13 +186,19 @@ metaOgDescription: ""
 
   <!-- Start fit-banner -->
   <section class="main-banner main-banner-fit no-padding-top">
-    <div class="l-main-container container main-banner-content main-banner-content-fit">
-      <div class="content-wrapper row">
-        <div class="col-xs-7 col-md-offset-1">
-          <div class="main-banner-header">
-            <h1 class="main-banner-title">[@T[companyname:name]@T]<sup>&reg;</sup> <span class="flag flag-fit">[@L[cds.sales/gd/careers/diversity:FitBannerTitle]@L]</span></h1>
-            <div class="separator-container"><div class="separator separator-big"></div></div>
-            <p class="main-banner-subtitle small">[@L[cds.sales/gd/careers/diversity:FitBannerSubtitle]@L]</p>
+
+    <div class="main-banner-background-overlay">
+      <div class="l-main-container container main-banner-content main-banner-content-fit">
+        <div class="content-wrapper row">
+          <div class="col-xs-7 col-md-offset-1">
+            <div class="main-banner-header">
+              <div class="row">
+                <h2 class="main-banner-title">[@T[companyname:name]@T]<sup>&reg;</sup></h2>
+                <div class="flag flag-fit" title="[@L[cds.sales/gd/careers/diversity:FitBannerTitle]@L]">&nbsp;</div>
+              </div>
+              <div class="separator-container"><div class="separator separator-big"></div></div>
+              <p class="main-banner-subtitle small">[@L[cds.sales/gd/careers/diversity:FitBannerSubtitle]@L]</p>
+            </div>
           </div>
         </div>
       </div>
